@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,8 +10,14 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 
-const pages = ['Why DU', 'GreekLife 101', 'Alumni'];
+const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'Why DU', path: '/why-Du' },
+  { name: 'GreekLife 101', path: '/greek-life' },
+  { name: 'Alumni', path: '/alumni' },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -25,7 +31,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar style={{backgroundColor: "white"}} position="sticky" sx={{ width: '100%' }}>
+    <AppBar style={{ backgroundColor: 'white' }} position="sticky" sx={{ width: '100%' }}>
       <Container maxWidth={false} sx={{ padding: 0 }}>
         <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-between' }}>
           {/* Logo and Logo Text */}
@@ -52,11 +58,12 @@ function ResponsiveAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.name}
+                component={Link}
+                to={page.path}
                 sx={{ my: 2, color: '#CFB53B', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -90,8 +97,10 @@ function ResponsiveAppBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" component={Link} to={page.path} sx={{ textDecoration: 'none', color: 'inherit' }}>
+                    {page.name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
