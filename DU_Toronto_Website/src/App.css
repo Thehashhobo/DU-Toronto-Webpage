@@ -1,7 +1,17 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -39,4 +49,79 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Footer Section Container */
+.footer-section {
+  display: flex;
+  flex-direction: column; /* Stack all sections vertically by default */
+  align-items: flex-start; /* Align all sections to the left */
+  padding: 2rem 10%;
+  background-color: #000;
+  color: #ffcc00; /* Yellow text color for headings */
+}
+
+/* Footer Subsections Styling */
+.footer-links, .footer-social, .footer-info {
+  margin-bottom: 1.5rem; /* Space between stacked sections */
+}
+
+.footer-links h3, .footer-social h3, .footer-info h3 {
+  font-size: 1.8rem; /* Consistent font size for all headings */
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Make headings uppercase for consistency */
+}
+
+/* Footer Links Styling */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Social Styling */
+.footer-social .social-icons {
+  display: flex;
+  gap: 1rem; /* Space between social icons */
+}
+
+.footer-social .social-icons a {
+  color: #fff;
+  font-size: 1.8rem; /* Set a slightly larger icon size for consistency */
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #ffcc00; /* Yellow color on hover */
+}
+
+/* Footer General Info Styling */
+.footer-info {
+  margin-top: -0.2rem; /* Adjust top margin to align with other sections */
+  line-height: 1.8;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
 }
