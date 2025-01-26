@@ -10,8 +10,35 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
 
 const pages = ['Why DU', 'GreekLife 101', 'Alumni'];
+const oldGold = '#CFB53B';
+
+const theme = createTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontSize: '1.1rem',
+        },
+      }
+    }
+  },
+  typography: {
+    fontFamily: 'Merriweather, serif',
+    h6: {
+      fontSize: '1.5rem',
+    },
+  },
+  palette: {
+    primary: {
+      main: oldGold,
+    },
+  },
+});
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -25,85 +52,87 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" sx={{ width: '100%', backgroundColor: 'white', height: '64px' }}>
-      <Container maxWidth={false} sx={{ padding: 0, height: '100%' }}>
-        <Toolbar disableGutters sx={{height: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'stretch' }}>
-          {/* Logo and Logo Text */}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <AdbIcon sx={{ mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#"
-              sx={{
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: '#CFB53B',
-                textDecoration: 'none',
-              }}
-            >
-              LOGO
-            </Typography>
-          </Box>
-
-          {/* Navigation Buttons */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 0, color: '#CFB53B', display: 'block', height: '100%', borderRadius: 0,
-                  '&:hover': {
-                    backgroundColor: '#C4C4C4',
-                    color: '#0F52BA',
-                  }
-                 }}
+    <ThemeProvider theme={theme}>
+      <AppBar position="sticky" sx={{ width: '100%', backgroundColor: 'white', height: '64px' }}>
+        <Container maxWidth={false} sx={{ padding: 0, height: '100%' }}>
+          <Toolbar disableGutters sx={{height: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'stretch' }}>
+            {/* Logo and Logo Text */}
+            <Box sx={{ display: 'flex', alignItems: 'center', padding: '0 1rem', height: '100%' }}>
+              {/* <AdbIcon sx={{ mr: 1 }} /> */}
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="#"
+                sx={{
+                  fontFamily: 'monospace',
+                  fontWeight: 700,
+                  letterSpacing: '.05rem',
+                  color: oldGold,
+                  textDecoration: 'none',
+                }}
               >
-                {page}
-              </Button>
-            ))}
-          </Box>
+                DU
+              </Typography>
+            </Box>
 
-          {/* Mobile Menu Icon */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="default"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
-            >
+            {/* Navigation Buttons */}
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 0, color: 'black', display: 'block', height: '100%', borderRadius: 0,
+                    '&:hover': {
+                      backgroundColor: '#C4C4C4',
+                      // color: '#0F52BA',
+                    }
+                  }}
+                >
+                  {page}
+                </Button>
               ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            </Box>
+
+            {/* Mobile Menu Icon */}
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="menu"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="primary"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{ display: { xs: 'block', md: 'none' } }}
+              >
+                {pages.map((page) => (
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </ThemeProvider>
   );
 }
 
