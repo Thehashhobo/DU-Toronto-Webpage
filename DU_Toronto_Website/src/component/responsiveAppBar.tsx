@@ -31,9 +31,9 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar style={{ backgroundColor: 'white' }} position="sticky" sx={{ width: '100%' }}>
-      <Container maxWidth={false} sx={{ padding: 0 }}>
-        <Toolbar disableGutters sx={{ display: 'flex', justifyContent: 'space-between' }}>
+    <AppBar position="sticky" sx={{ width: '100%', backgroundColor: 'white', height: '64px' }}>
+      <Container maxWidth={false} sx={{ padding: 0, height: '100%' }}>
+        <Toolbar disableGutters sx={{height: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'stretch' }}>
           {/* Logo and Logo Text */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <AdbIcon sx={{ mr: 1 }} />
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* Navigation Buttons */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
