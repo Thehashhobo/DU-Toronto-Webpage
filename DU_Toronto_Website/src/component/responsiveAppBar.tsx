@@ -54,19 +54,31 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          {/* Navigation Buttons */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
-            {pages.map((page) => (
-              <Button
-                key={page.name}
-                component={Link}
-                to={page.path}
-                sx={{ my: 2, color: '#CFB53B', display: 'block' }}
-              >
-                {page.name}
-              </Button>
-            ))}
-          </Box>
+ {/* Navigation Buttons */}
+    <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
+      {pages.map((page) => (
+        <Button
+          key={page.name}
+          component={Link}
+          to={page.path}
+          sx={{
+            my: 0,
+            color: '#CFB53B',
+            display: 'flex', // Make the button a flex container
+            justifyContent: 'center', // Center content horizontally
+            alignItems: 'center', // Center content vertically
+            height: '100%',
+            borderRadius: 0,
+            '&:hover': {
+              backgroundColor: '#C4C4C4',
+              color: '#0F52BA',
+            },
+          }}
+        >
+          {page.name}
+        </Button>
+      ))}
+    </Box>
 
           {/* Mobile Menu Icon */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -98,9 +110,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" component={Link} to={page.path} sx={{ textDecoration: 'none', color: 'inherit' }}>
-                    {page.name}
-                  </Typography>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
