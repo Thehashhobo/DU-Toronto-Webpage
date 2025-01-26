@@ -2,7 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import AppBar from './component/responsiveAppBar'
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage'
+import WhyDUPage from './pages/WhyDUPage'
+import GreekLifePage from './pages/GreekLifePage'
+import AlumniPage from './pages/AlumniPage'
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 
 import './App.css'
 
@@ -13,13 +17,12 @@ const App: React.FC = () => {
       {/* <ScrollToTop /> */}
       <AppBar />
 
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/management" element={<ManagementPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/rentals" element={<RentalsPage />} />
-          <Route path="/trainings" element={<TrainingsPage />} />
-        </Routes> */}
+          <Route path="/why-Du" element={<WhyDUPage />} />
+          <Route path="/greek-life" element={<GreekLifePage />} />
+          <Route path="/alumni" element={<AlumniPage />} />
+        </Routes>
         {/* <div className="footer-section">
         <div className="footer-links">
           <h3>Links</h3>

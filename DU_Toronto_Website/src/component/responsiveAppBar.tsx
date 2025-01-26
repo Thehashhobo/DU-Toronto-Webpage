@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,8 +12,14 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
-const pages = ['Why DU', 'GreekLife 101', 'Alumni'];
+const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'Why DU', path: '/why-Du' },
+  { name: 'GreekLife 101', path: '/greek-life' },
+  { name: 'Alumni', path: '/alumni' },
+];
 const oldGold = '#CFB53B';
 
 const theme = createTheme({
@@ -76,23 +82,30 @@ function ResponsiveAppBar() {
               </Typography>
             </Box>
 
-            {/* Navigation Buttons */}
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 0, color: 'black', display: 'block', height: '100%', borderRadius: 0,
-                    '&:hover': {
-                      backgroundColor: '#C4C4C4',
-                      // color: '#0F52BA',
-                    }
-                  }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
+   {/* Navigation Buttons */}
+      <Box sx={{ display: { xs: 'none', md: 'flex' }, height: '100%' }}>
+        {pages.map((page) => (
+          <Button
+            key={page.name}
+            component={Link}
+          to={page.path}
+            sx={{
+            my: 0,
+            color: 'black',
+            display: 'flex', // Make the button a flex container
+            justifyContent: 'center', // Center content horizontally
+            alignItems: 'center', // Center content vertically
+            height: '100%',
+            borderRadius: 0,
+              '&:hover': {
+                backgroundColor: '#C4C4C4',
+              },
+           }}
+          >
+            {page.name}
+          </Button>
+        ))}
+      </Box>
 
             {/* Mobile Menu Icon */}
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -123,8 +136,8 @@ function ResponsiveAppBar() {
                 sx={{ display: { xs: 'block', md: 'none' } }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
