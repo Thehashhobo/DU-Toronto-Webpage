@@ -1,103 +1,224 @@
-import Image from "next/image";
+import H1 from "../../public/images/H1.jpg";
+import F1 from "../../public/images/F2.jpg";
+// import H2 from "../../public/images/H2.jpg";
+// import H3 from "../../public/images/H3.jpg";
+// import ServiceCard from "./components/ServiceCard";
+import WhyDu from "@/components/WhyDu";
+import AnimatedCard from "@/components/AnimatedCard";
+import MemberCard from "@/components/MemberCard";
+import MemberGridWithModal from "@/components/MemberGridWithModal ";
+// import Reviews from "./components/Reviews";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-roboto">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-Mea_Culpa)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const animatedCards = [
+  {
+    title: "About Us",
+    description:
+      "Learn more about our fraternity, our values, and our commitment",
+    image: H1.src,
+    link: "/about",
+  },
+  {
+    title: "Become a Member",
+    description:
+      "We are always looking for new members who share our values strive for excellence.",
+    image: H1.src,
+    link: "/membership",
+  },
+  {
+    title: "Alumni",
+    description:
+      "Build relatinoship and brotherly connections that will last a lifetime.",
+    image: H1.src,
+    link: "/alumni",
+  },
+  {
+    title: "Our House",
+    description:
+      "Live in a home that is more than just a place to stay.",
+    image: H1.src,
+    link: "/house",
+  },
+];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-roboto font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+const membersCards = [
+  {
+    name: "President",
+    description:
+      "Learn more about our fraternity, our values, and our commitment",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+  {
+    name: "Vice President",
+    description:
+      "Live in a house that is more than just a place to stay.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+  {
+    name: "Minister of Recruitment",
+    description:
+      "We are always looking for new members who share our values and commitment to excellence.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+  {
+    name: "Minister of Finance",
+    description:
+      "Build friendships and connections that will last a lifetime.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+  {
+    name: "Minister of Brotherhood Excellence",
+    description:
+      "Live in a house that is more than just a place to stay.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+    {
+    name: "Minister of Risk Management",
+    description:
+      "Live in a house that is more than just a place to stay.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+  {
+    name: "Minister of Administration",
+    description:
+      "Live in a house that is more than just a place to stay.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+    {
+    name: "Minister of External Relations",
+    description:
+      "Live in a house that is more than just a place to stay.",
+    image: H1.src,
+    facebook: "https://facebook.com/",
+    twitter: "https://twitter.com/",
+    instagram: "https://instagram.com/",
+  },
+];
+  return (
+    <main className="flex flex-col min-h-screen justify-start items-start pt-16">
+      <section
+        className="relative w-full h-[60vh] md:h-[92vh] bg-cover bg-center justify-start overflow-hidden"
+      >
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="H1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay and Content */}
+        <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
+          <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3">
+            Delta Upsilon 
+          </p>
+          <h1 className="font-[family-name:var(--font-Roboto)] text-4xl uppercase text-center font-bold md:text-7xl ml-0.5 mr-0.5 relative -translate-y-3">
+            Toronto Chapter
+          </h1>
+          <p className="font-[family-name:var(--font-Roboto)] text-primary text-2xl text-center mt-2 ml-0.5 mr-0.5 relative -translate-y-3">
+            Building Better Men Since 1899
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-md mt-2">
+            <a href="/services" className="btn">
+              Learn More
+            </a>
+            <a href="/contacts" className="btn">
+              Contact Us
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      
+
+      </section>
+
+      {/* Coat of Arms */}
+      <section className="flex flex-col md:flex-row w-[90%] h-[56vh] md:h-[36vh] mx-auto text-[color:var(--textColor)]">
+        <div className="flex flex-col md:self-center md:flex-4 mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
+          <h2 className="text-xl md:text-4xl font-[family-name:var(--font-Roboto)] font-bold text-textColor">
+            Delta Upsilon is not your typical fraternity. Our non-secret heritage and our dedication to creating a modern fraternity experience help us in{' '}
+            <span className="font-[family-name:var(--font-Cabin)] border-b-4 text-[color:var(--color-primary)]">
+              Building Better Men
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] font-bold text-[#012d69] mt-2">
+            Fraternity membership is one of the most valuable extra-curricular experiences
+          </p>
+        </div>
+        
+        <img
+          src="/images/Coat of Arms.png"
+          alt="Delta Upsilon Coat of Arms"
+          className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
+          style={{ objectFit: "contain" }}
+        />
+      </section>
+          {/* Nav Cards */}
+    <section className="w-full">
+      <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+        {animatedCards.map((card, idx) => (
+          <AnimatedCard
+            key={card.title + idx}
+            title={card.title}
+            description={card.description}
+            image={card.image}
+            link={card.link}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        ))}
+      </div>
+    </section>
+
+      {/* Info Section */}
+      {/* <hr className="w-full h-[1.5px] bg-[#59890c]"/>  */}
+      <div className="relative w-[90%] mx-auto text-[color:var(--textColor)] border-2 shadow-xl drop-shadow-textColor border-secondary p-3 mt-3 mb-3 "
+            style={{
+            backgroundImage: `url(${F1.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          >
+          {/* Blur and opacity overlay */}
+          <div className="absolute inset-0 bg-black/5  z-0" />
+        <WhyDu/>
+      </div>
+      
+      <section className="flex flex-col items-center justify-center align-middle w-[90vw] h-[200vh] md:h-[115vh] mx-auto bg-[--background] text-[color:var(--textColor)]">
+          <h2 className="text-2xl text-center md:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-textColor mb-12">
+            <span className="font-[family-name:var(--font-Cabin)] text-[color:var(--color-primary]">
+              Own Your Journey {" "}
+            </span>
+             with those who push you
+          </h2>
+      {/* Member Section */}    
+      <MemberGridWithModal members={membersCards} />
+        
+      </section>
+      <hr className="w-full h-[1.5px] bg-secondary"/> 
+      {/* <Reviews/> */}
+
+    </main>
   );
 }
