@@ -18,19 +18,19 @@ export default function Footer() {
           {/* Footer content */}
           <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-start">
             {/* Footer Links */}
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-lg md:text-4xl font-[family-name:var(--font-Cabin)]  text-primary font-bold uppercase mb-4">
+            <div className="mb-6 md:mb-0 w-full text-center md:w-auto">
+            <h3 className="text-2xl md:text-4xl font-[family-name:var(--font-Cabin)] text-secondary font-bold uppercase mb-4">
                 Delta Upsilon Toronto</h3>
             <img
             src="/images/L3.png"
             alt="Delta Upsilon Coat of Arms"
-            className="md:flex-1 h-42 md:h-42 my-2 md:mt-5"
+            className="md:flex-1 h-42 md:h-42 my-2 md:mt-5 mx-auto"
             style={{ objectFit: "contain" }}
           />
             </div>
 
             <div className="mb-6 md:mb-0">
-              <h3 className="text-lg text-primary md:text-3xl font-bold uppercase mb-4">Links</h3>
+              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">Links</h3>
               <ul className="list-disc ml-1 space-y-1">
                 <li>
                   <Link href="/" className="text-primary hover:underline">
@@ -67,7 +67,7 @@ export default function Footer() {
 
             {/* Footer Social */}
             <div className="mb-6 md:mb-0">
-              <h3 className="text-lg text-primary md:text-3xl font-bold uppercase mb-4">Contacts</h3>
+              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">Contacts</h3>
               <div className="flex flex-col gap-3 space-x-4">
               <a
               href="/contacts"
@@ -77,16 +77,16 @@ export default function Footer() {
               </a>
 
               <div className="flex space-x-4">
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-secondary">
+                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                   <FacebookFilled />
                 </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-secondary">
+                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                   <TwitterCircleFilled />
                 </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-secondary">
+                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                   <InstagramFilled />
                 </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-secondary">
+                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                   <YoutubeFilled />
                 </a>
               </div>
@@ -96,7 +96,7 @@ export default function Footer() {
 
             {/* Footer Info */}
             <div>
-              <h3 className="text-lg text-primary md:text-3xl font-bold uppercase mb-4">General Inquiries</h3>
+              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">General Inquiries</h3>
               <p className="text-primary mb-2">
                 <strong>Location:</strong> 182 St George St, Toronto, ON
               </p>

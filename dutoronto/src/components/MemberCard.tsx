@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import { FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 interface MemberCardProps {
@@ -18,13 +18,12 @@ const MemberCard: React.FC<MemberCardProps> = ({
   name,
   description,
   facebook,
-  twitter,
   instagram,
   linkedin,
   onClick
 }) => {
   return (
-    <div onClick={onClick} 
+    <div onClick={onClick ? onClick : undefined}
       className="cursor-pointer max-w-xs w-full bg-[#fafafa] border-2 border-secondary px-8 py-4 rounded-none mx-auto flex flex-col justify-between items-start shadow-lg h-full
       transform transition-transform duration-300 scale-100 hover:scale-105 hover:shadow-none">
       <div>
@@ -40,7 +39,7 @@ const MemberCard: React.FC<MemberCardProps> = ({
         {facebook && (
           <a
             href={facebook}
-            onClick={(e) => e.stopPropagation()}
+            onClick={onClick ? (e) => e.stopPropagation() : undefined}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow-300 rounded-full w-12 h-12 flex items-center justify-center text-gray-800 text-2xl hover:bg-yellow-400 transition"
@@ -51,7 +50,7 @@ const MemberCard: React.FC<MemberCardProps> = ({
         {instagram && (
           <a
             href={instagram}
-            onClick={(e) => e.stopPropagation()}
+            onClick={onClick ? (e) => e.stopPropagation() : undefined}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow-300 rounded-full w-12 h-12 flex items-center justify-center text-gray-800 text-2xl hover:bg-yellow-400 transition"
@@ -62,7 +61,7 @@ const MemberCard: React.FC<MemberCardProps> = ({
         {linkedin && (
           <a
             href={linkedin}
-            onClick={(e) => e.stopPropagation()}
+            onClick={onClick ? (e) => e.stopPropagation() : undefined}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow-300 rounded-full w-12 h-12 flex items-center justify-center text-gray-800 text-2xl hover:bg-yellow-400 transition"

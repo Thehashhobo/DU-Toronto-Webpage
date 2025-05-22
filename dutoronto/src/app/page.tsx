@@ -116,9 +116,9 @@ const membersCards = [
   },
 ];
   return (
-    <main className="flex flex-col min-h-screen justify-start items-start pt-16">
+    <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[92vh] bg-cover bg-center justify-start overflow-hidden"
+        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-center justify-start overflow-hidden"
       >
         {/* Video Background */}
         <video
@@ -176,7 +176,7 @@ const membersCards = [
           style={{ objectFit: "contain" }}
         />
       </section>
-          {/* Nav Cards */}
+    {/* Nav Cards */}
     <section className="w-full">
       <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
         {animatedCards.map((card, idx) => (
@@ -205,9 +205,9 @@ const membersCards = [
         <WhyDu/>
       </div>
       
-      <section className="flex flex-col items-center justify-center align-middle w-[90vw] h-[200vh] md:h-[115vh] mx-auto bg-[--background] text-[color:var(--textColor)]">
+      <section className="flex flex-col items-center justify-center align-middle w-[90vw] h-[370vh] md:h-[115vh] mx-auto bg-[--background] text-[color:var(--textColor)]">
           <h2 className="text-2xl text-center md:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-textColor mb-12">
-            <span className="font-[family-name:var(--font-Cabin)] text-[color:var(--color-primary]">
+            <span className="font-[family-name:var(--font-Cabin)] text-primary">
               Own Your Journey {" "}
             </span>
              with those who push you

@@ -1,18 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../public/images/Logo.webp"
 import Link from "next/link";
 
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+  const onScroll = () => {
+    setScrolled(window.scrollY > 60);
+  };
+
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
+
 
   function handleToggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  // helper to reduce code duplication
+  function getNavLinkClass(isScrolled: boolean) {
+  return `
+    block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 rounded-sm md:p-0 transition-colors duration-300
+    ${isScrolled ? "text-gray-900 hover:text-primary" : " text-primary hover:text-white"}
+  `;
+  }
+
   return (
-    <nav className="bg-[var(--background)] fixed w-full z-20 top-0 left-0">
+    <nav className={`
+        fixed w-full z-20 top-0 left-0 transition-all duration-300
+        ${isScrolled ? "bg-[var(--background)] shadow-md" : "bg-transparent"}
+      `}
+    >
       <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-4 mx-auto p-3 md:py-1 px-8">
         {/* Nav links 1 */}
         <div
@@ -25,8 +48,8 @@ export default function Navbar() {
           <ul className="flex flex-col md:flex-row md:space-x-8">
             <li>
               <a
-                href="/services"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                href="/"
+                className={getNavLinkClass(isScrolled)}
               >
                 HOME
               </a>
@@ -34,15 +57,15 @@ export default function Navbar() {
             <li>
               <a
                 href="/about"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                className={getNavLinkClass(isScrolled)}
               >
                 ABOUT
               </a>
             </li>
             <li>
               <a
-                href="/careers"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                href="/membership"
+                className={getNavLinkClass(isScrolled)}
               >
                 MEMBERSHIP
               </a>
@@ -56,6 +79,7 @@ export default function Navbar() {
               src={Logo.src}
               className="h-18"
               alt="Flowbite Logo"
+              
             />
           </a>
           {/* Hamburger menu (mobile only) */}
@@ -93,24 +117,24 @@ export default function Navbar() {
           <ul className="flex flex-col md:flex-row md:space-x-8">
             <li>
               <a
-                href="/services"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                href="/alumni"
+                className={getNavLinkClass(isScrolled)}
               >
                 ALUMNI
               </a>
             </li>
             <li>
               <a
-                href="/about"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                href="/house"
+                className={getNavLinkClass(isScrolled)}
               >
                 HOUSE
               </a>
             </li>
             <li>
               <a
-                href="/careers"
-                className="block font-[family-name:var(--font-Cabin)] font-bold text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0"
+                href="/contact"
+                className={getNavLinkClass(isScrolled)}
               >
                 CONTACT
               </a>

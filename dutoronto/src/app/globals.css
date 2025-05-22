@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #d5d5d5; /* bg-[var(--background)] */ 
+  --background: #dddddd; /* bg-[var(--background)] d1d5cd */ 
   --foreground: #171717;
+
 
 }
 
@@ -18,7 +19,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #fece5f;
+  --color-primary: #edc058;
   --color-secondary: #0F52BA;
   --color-textColor: #302700;
   --font-sans: var(--font-geist-sans);
