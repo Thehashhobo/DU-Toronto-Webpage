@@ -72,7 +72,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       {/* Description (only visible on hover, fades in) */}
       <animated.div
         style={descStyle}
-        className="absolute inset-0 flex flex-col items-center justify-center z-20 px-6"
+        className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6"
       >
         <p className="text-lg text-white text-center font-semibold px-8">{description}</p>
       </animated.div>

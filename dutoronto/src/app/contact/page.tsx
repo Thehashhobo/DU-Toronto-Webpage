@@ -61,7 +61,7 @@ export default function Contact() {
 
               {/* Alumni */ }
               <div className="ml-6">
-                  <h1 className="text-3xl font-bold mb-2">Membership Inquires</h1>
+                  <h1 className="text-3xl font-bold mb-2">Alumni Inquires</h1>
                   <p className="mb-4">
                       For Question related to ???, please contact us our Minister of External Relations.
                   </p>
