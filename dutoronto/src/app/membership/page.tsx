@@ -4,7 +4,141 @@ import ContactForm from "@/components/ContactForm";
 import H1 from "../../../public/images/H1.jpg"
 import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const quickFacts = [
+  { label: "Chartered", value: "December 4, 1899" },
+  { label: "Motto", value: 'Δικαια Υποθηκη - "Justice Our Foundation"' },
+  { label: "Nickname", value: "GOAT, Delta Upsilon members are Goats baaaah" },
+  { label: "Colors", value: "Old Gold & Sapphire Blue" },
+  { label: "Mascot", value: "Mallard Duck" },
+  { label: "Headquarters", value: "8705 Founders Road, Indianapolis, IN, USA" },
+  { label: "Mission", value: "Building Better Men" },
+  { label: "Prime Minister's of Canada", value: "1" },
+];
+
+const faqs = [
+  {
+    question: "What is Delta Upsilon?",
+    answer: "Delta Upsilon is a non-secret, non-hazing international fraternity focused on building better men through shared values and brotherhood.",
+  },
+  {
+    question: "Is membership open to all students?",
+    answer: "Yes! We value diversity and welcome all students who align with our mission and values.",
+  },
+  {
+    question: "What makes DU different from other fraternities?",
+    answer: "We are the only international fraternity to be non-secret since our founding in 1834. Our mission and Four Founding Principles guide all our decisions.",
+  },
+  {
+    question: "How do I join?",
+    answer: "You can reach out during our recruitment period, attend events, and connect with current brothers to learn more.",
+  },
+];
+
+const FAQSection = () => {
+  const [featuredIndex, setFeaturedIndex] = useState<number | null>(null);
+
+  const featuredFaq = featuredIndex !== null ? faqs[featuredIndex] : null;
+
+  return (
+    <section className="w-full px-4 py-20 bg-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[color:var(--color-primary)] uppercase">
+        Frequently Asked Questions
+      </h2>
+
+      {/* Featured FAQ (spans full width above grid) */}
+      {featuredFaq && (
+  <div
+    className="mb-10 bg-blue-50 border border-blue-200 shadow-md rounded-xl px-6 py-6 transition-all duration-500 ease-out animate-fade-in-up"
+    key={featuredIndex} // ensures re-animation on change
+  >
+    <div className="flex justify-between items-start mb-2">
+      <h3 className="text-2xl md:text-3xl font-bold text-blue-800 max-w-4xl">
+        {featuredFaq.question}
+      </h3>
+      <button
+        className="text-sm text-blue-600 hover:underline"
+        onClick={() => setFeaturedIndex(null)}
+      >
+        Close
+      </button>
+    </div>
+    <p className="text-base md:text-lg text-gray-700 max-w-4xl">
+      {featuredFaq.answer}
+    </p>
+  </div>
+)}
+
+      {/* Grid of FAQs */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            onClick={() => setFeaturedIndex(index)}
+            className="cursor-pointer border border-gray-200 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 px-4 py-5 transition-all duration-300"
+          >
+            <h3 className="text-lg font-medium text-gray-800">{faq.question}</h3>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+const QuickFactsSection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visibleItems, setVisibleItems] = useState<boolean[]>(Array(quickFacts.length).fill(false));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          quickFacts.forEach((_, index) => {
+            setTimeout(() => {
+              setVisibleItems((prev) => {
+                const updated = [...prev];
+                updated[index] = true;
+                return updated;
+              });
+            }, index * 150); // stagger delay
+          });
+
+          observer.disconnect(); // only run once
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="relative w-full bg-white py-12 flex justify-center items-center">
+      <div ref={ref} className="max-w-4xl w-full px-4">
+        <h2 className="text-left text-3xl md:text-4xl font-bold text-[color:var(--color-primary)] uppercase mb-8">
+          Quick Facts
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-16 text-gray-800 text-left">
+          {quickFacts.map(({ label, value }, index) => (
+            <div
+              key={label}
+              className={`transition-all duration-700 ease-out transform ${
+                visibleItems[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              } flex flex-col space-y-1 relative pl-4 border-l border-[color:var(--color-primary)]`}
+            >
+              <span className="text-lg font-semibold">{label}</span>
+              <span className="text-base text-gray-600">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const ImpactSection = () => {
   const underlineRef = useRef<HTMLDivElement>(null);
@@ -47,10 +181,10 @@ const ImpactSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center px-6 py-12 bg-white text-center w-full">
-      <h2 className="text-3xl font-bold mb-2 text-[color:var(--color-secondary)]">The Delta Upsilon Difference.</h2>
+    <div className="flex flex-col items-center px-6 py-12 bg-gray text-center w-full">
+      <h2 className="text-3xl font-bold mb-2 text-[color:var(--color-secondary)]">The DU Difference.</h2>
       <p className="text-gray-600 max-w-2xl mb-8">
-        We have shaped thoughtful leaders, prominent scholars, and driven students. Our impact is built on real actions that leave a lasting mark on campus and beyond.
+        Delta Upsilon's principles have shaped thoughtful leaders, prominent scholars, and driven students. Our impact is built on real actions that leave a lasting mark on campus and beyond.
       </p>
 
       <div className="relative w-full border-b border-gray-300 mb-8">
@@ -151,6 +285,8 @@ const ImpactSection = () => {
 
 export default function Membership() { 
 
+  const [featured, setFeatured] = useState<null | number>(null);
+
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
@@ -169,9 +305,9 @@ export default function Membership() {
             Share a Home with your Brothers
           </p> */}
         </div>
-      
-
       </section>
+
+      <FAQSection/>
 
       {/* Coat of Arms */}
       <section className="flex flex-col md:flex-row w-[90%] h-[56vh] md:h-[36vh] mx-auto text-[color:var(--textColor)]">
@@ -194,6 +330,8 @@ export default function Membership() {
           style={{ objectFit: "contain" }}
         />
       </section>
+
+      <QuickFactsSection/>
 
       <ImpactSection/>
         
