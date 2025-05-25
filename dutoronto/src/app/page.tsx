@@ -132,7 +132,7 @@ const membersCards = [
           Your browser does not support the video tag.
         </video>
         {/* Overlay and Content */}
-        <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
+        <div className="font-[family-name:var(--font-Old)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
           <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3">
             Delta Upsilon 
           </p>
