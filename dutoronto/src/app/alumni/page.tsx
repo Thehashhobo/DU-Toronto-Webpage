@@ -23,7 +23,7 @@ export default function Alumni() {
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-position-[center_top_-4rem] justify-start overflow-hidden"
+        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-position-[center_top_-4rem] justify-center overflow-hidden"
         style={{backgroundImage: `url(${Lester.src})`}}
       >
         {/* Overlay and Content */}
@@ -37,12 +37,9 @@ export default function Alumni() {
           <p className="font-[family-name:var(--font-Roboto)] md:bottom-7 text-primary text-2xl text-center mt-2 ml-0.5 mr-0.5 relative -translate-y-3">
             Stay Connected with Your Brothers
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-md mt-2">
-            <a href="#learn_more" className="btn">
-              Learn More
-            </a>
-            <a href="/contacts" className="btn">
-              Contact Us
+          <div className="gap-8 max-w-screen-md mt-2">
+            <a href="#sign_up" className="btn">
+              Sign Up
             </a>
           </div>
         </div>
@@ -51,7 +48,7 @@ export default function Alumni() {
       </section >
         <hr className="w-[75vw] mx-auto z-15 mt-6 h-[0.75px] bg-textColor"/> 
       {/* overview */}
-      <section id="learn_more" className="flex flex-col md:flex-row w-[90%] h-[75vh] md:h-[75vh] mx-auto text-[color:var(--textColor)]">
+      <section id="sign_up" className="flex flex-col md:flex-row w-[90%] h-[75vh] md:h-[75vh] mx-auto text-[color:var(--textColor)]">
         <img
           src={H2.src}
           alt="Delta Upsilon Coat of Arms"
@@ -70,6 +67,7 @@ export default function Alumni() {
           </p>
         </div>
       </section>
+
           
         
       <hr className="w-full h-[1.5px] bg-secondary"/> 
