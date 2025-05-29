@@ -53,30 +53,24 @@ export default function House() {
             
 
       </section>
-        <hr className="w-[75vw] mx-auto z-14 mt-6 h-[0.75px] bg-textColor"/> 
+        <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 h-[0.8px] bg-primary"/> 
       {/* overview */}
-      <section className="flex flex-col md:flex-row w-[90%] md:h-[70vh] lg:h-[55vh] mx-auto text-[color:var(--textColor)] 2xl:mb-24 items-start">
+      <section className="flex flex-col mt-2 md:flex-row w-[90%] md:h-[70vh] lg:h-[55vh] mx-auto text-[color:var(--textColor)] 2xl:mb-2 items-center">
         <img
           src={H2.src}
-          alt="Delta Upsilon Coat of Arms"
+          alt="Delta Upsilon hosue in snow"
           className="md:flex-1 h-[50vw] md:h-[25vw] my-2 md:mt-5 border-2 border-secondary shadow-lg"
           style={{ objectFit: "contain" }}
         />
         <HouseInfo/>
-        {/* <div className="flex flex-col md:self-center md:flex-3 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
-          <h2 className="text-xl md:text-4xl 2xl:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-primary">
-            182 St. George St
-            <span className="font-[family-name:var(--font-Cabin)] border-b-4 text-[color:var(--color-primary)]">
-              Building Better Men
-            </span>
-          </h2>
-          
-        </div> */}
-      </section>
+        
 
+        
+      </section>
+          <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-24 h-[0.8px] bg-primary"/> 
       {/* details */}
       <section className="relative w-full md:h-[60vw] lg:h-[50vw] xl:h-[40vw] 2xl:h-[38vw] flex flex-col items-center justify-center text-center px-2  mb-3">
-        <div className="z-15 absolute md:top-[-35] md:left-[45] w-[20vw] h-[70vh]">
+        <div className="hidden md:block z-15 absolute md:top-[-35] md:left-[45] w-[20vw] h-[70vh]">
               <img src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       {/* Background Circle */}
@@ -119,11 +113,11 @@ export default function House() {
         <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
         <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
       </div>
-              <div className="z-15 absolute md:top-[-35] md:right-[45] w-[20vw] h-[70vh]">
+        <div className="z-15 absolute hidden md:block md:top-[-35] md:right-[45] w-[20vw] h-[70vh]">
             <img src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       </section>
-          
+          <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-6 h-[0.8px] bg-primary"/> 
         
       <hr className="w-full h-[1.5px] bg-secondary"/> 
       {/* <Reviews/> */}

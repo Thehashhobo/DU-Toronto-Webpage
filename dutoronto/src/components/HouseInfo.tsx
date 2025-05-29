@@ -37,13 +37,13 @@ export default function FratHouseSection() {
   };
 
   return (
-    <div className="flex flex-col md:flex-3 md:mr-0 md:mb-5 md:ml-5 p-3 md:p-6 border-secondary">
+    <div className="flex flex-col md:flex-3 md:mr-0 md:mt-4 md:ml-5 p-3 md:p-6 border-2 border-double border-secondary">
       <h2 className="text-xl md:text-4xl 2xl:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-primary mb-6">
         182 St. George St
       </h2>
 
       {houseInfo.map((section, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} className="pb-4">
           <button
             onClick={() => toggle(index)}
             className="w-full md:ml-8 text-left text-lg md:text-xl xl:text-3xl font-bold text-textColor hover:text-primary transition"
@@ -51,7 +51,7 @@ export default function FratHouseSection() {
             {section.title}
           </button>
           {openIndex === index && (
-            <p className="mt-2 md:ml-8 text-gray-700 text-base md:text-lg">{section.content}</p>
+            <p className="animate-fade-fast mt-2 md:ml-8 text-gray-700 text-base md:text-lg">{section.content}</p>
           )}
         </div>
       ))}

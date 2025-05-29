@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-start">
             {/* Footer Links */}
             <div className="mb-6 md:mb-0 w-full text-center md:w-auto">
-            <h3 className="text-2xl md:text-4xl font-[family-name:var(--font-Cabin)] text-secondary font-bold uppercase mb-4">
+            <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-Cabin)] text-secondary font-bold uppercase mb-4">
                 Delta Upsilon Toronto</h3>
             <img
             src="/images/L3.png"
