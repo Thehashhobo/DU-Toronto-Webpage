@@ -2,20 +2,32 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../public/images/Logo.webp"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setScrolled] = useState(false);
+
+  // List of routes that should always use the "scrolled" style by default
+  const alwaysScrolledRoutes = ["/contact"]; 
+
+  const [isScrolled, setScrolled] = useState(
+    typeof window !== "undefined"
+      ? window.scrollY > 60 || alwaysScrolledRoutes.includes(pathname)
+      : alwaysScrolledRoutes.includes(pathname)
+  );
 
   useEffect(() => {
-  const onScroll = () => {
-    setScrolled(window.scrollY > 60);
-  };
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60 || alwaysScrolledRoutes.includes(pathname));
+    };
 
-  window.addEventListener("scroll", onScroll);
-  return () => window.removeEventListener("scroll", onScroll);
-}, []);
+    onScroll(); // Set initial state on mount
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
 
   function handleToggleMenu() {
