@@ -2,15 +2,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
 
-interface AnimatedCardProps {
-  title: string;
+interface AlumniCardProps {
+  name: string;
   description: string;
   image: string;
   link: string;
 }
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  title,
+const AlumniCard: React.FC<AlumniCardProps> = ({
+  name,
   description,
   image,
   link,
@@ -42,10 +42,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   }, []);
 
   // Overlay animation (background darkens on hover)
-  const overlayStyle = useSpring({
-    opacity: hovered ? 0.8 : 0.5,
-    config: { tension: 120, friction: 18 },
-  });
 
   // Description animation (fade in and slide up)
   const descStyle = useSpring({
@@ -56,14 +52,14 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 
   // Title animation (move to top on hover)
   const titleStyle = useSpring({
-    transform: hovered ? "translateY(150%)" : "translateY(220%)",
+    transform: hovered ? "translateY(0%)" : "translateY(100%)",
     config: { tension: 120, friction: 18 },
   });
 
   return (
     <div
       ref={cardRef}
-      className={`relative min-w-[18rem] w-72 md:w-80 h-110 overflow-hidden shadow-xl cursor-pointer bg-white transition items-center mx-auto mt-6 border-1 border-secondary flex-shrink-0 ${
+      className={`relative flex min-w-[18rem] w-72 md:w-80 h-110 items-end overflow-hidden shadow-xl cursor-pointer bg-white transition mx-auto mt-6 border-1 border-secondary flex-shrink-0 ${
         inView ? "animate-fade-in-scale" : "opacity-0"
       }`}
       onMouseEnter={() => setHovered(true)}
@@ -72,40 +68,28 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       {/* Card background image */}
       <img
         src={image}
-        alt={title}
+        alt={name}
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Overlay for darkening background on hover */}
-      <animated.div
-        style={overlayStyle}
-        className="absolute inset-0 bg-gray-900 pointer-events-none"
-      />
 
-      {/* Title (moves to top on hover) */}
+      {/* Name (moves to top on hover) */}
       <animated.div
         style={titleStyle}
-        className="flex justify-center items-center w-full absolute top-0 left-0 right-0 z-10 h-16"
+        className="flex flex-col justify-center items-center w-full z-10 bg-background p-2 border-t-3 border-t-secondary"
       >
         <h2
-          className="font-[family-name:var(--font-Roboto)] text-4xl font-bold text-primary text-center"
-          style={{ textShadow: "2px 4px 2px #000000" }}
+          className="font-[family-name:var(--font-Roboto)] text-3xl font-bold text-primary text-center "
         >
-          {title}
+          {name}
         </h2>
-      </animated.div>
-
-      {/* Description (only visible on hover, fades in) */}
-      <animated.div
-        style={descStyle}
-        className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6"
-      >
-        <p className="text-lg text-white text-center font-semibold px-8">
+        <p className="text-lg text-textColor text-center font-semibold px-8">
           {description}
         </p>
       </animated.div>
+
     </div>
   );
 };
 
-export default AnimatedCard;
+export default AlumniCard;

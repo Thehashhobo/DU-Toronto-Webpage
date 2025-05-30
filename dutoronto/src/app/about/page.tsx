@@ -1,23 +1,44 @@
 import ContactForm from "@/components/ContactForm";
 import H1 from "../../../public/images/H1.jpg"
+import A1 from "../../../public/images/A1.jpg"
 import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import AlumniCard from "@/components/AlumniCards";
+import History from "@/components/History";
 
 export default function About() {
 
 
-  const recruitment = {
-    name: "Recruitment Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-  }
+const animatedCards = [
+  {
+    name: "Lester B. Pearson",
+    description:
+      "14th prime minister of Canada",
+    image: A1.src,
+    link: "/about",
+  },
+  {
+    name: "Become a Member",
+    description:
+      "We are always looking for new members who share our values strive for excellence.",
+    image: H1.src,
+    link: "/membership",
+  },
+  {
+    name: "Alumni",
+    description:
+      "Build relatinoship and brotherly connections that will last a lifetime.",
+    image: H1.src,
+    link: "/alumni",
+  },
+  {
+    name: "Our House",
+    description:
+      "Live in a home that is more than just a place to stay.",
+    image: H1.src,
+    link: "/house",
+  },
+];
 
-  const alumni = {
-    name: "ER Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-    }   
 
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
@@ -69,6 +90,32 @@ export default function About() {
           className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
           style={{ objectFit: "contain" }}
         />
+      </section>
+      
+      {/* history Section */}
+      <section className="overflow-x-auto w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap h-[50vh]">
+        <History/>
+      </section>
+
+      {/* PROMINENT ALUMNI  */}
+      <section className="flex flex-col w-[100%] mx-auto my-5">
+        <h1 className=" font-[family-name:var(--font-Cabin)] text-5xl font-bold mb-4 text-center bg-primary border-t-[12] border-b-[12] border-secondary py-4">Prominent Alumni</h1>
+        <h1 className="font-[family-name:var(--font-Cabin)] text-primary opacity-90 mx-auto w-[90%] md:w-[80%] text-xl md:text-2xl text-center font-bold">
+          We shape men who shape the world. Delta Upsilon proudly celebrates the achievements of our brothers who have made meaningful impacts in their careers and communities.
+        </h1>
+         <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+          {animatedCards.map((card, idx) => (
+            <AlumniCard
+              key={card.name + idx}
+              name={card.name}
+              description={card.description}
+              image={card.image}
+              link={card.link}
+            />
+          ))}
+         </div>
+
+
       </section>
           
         
