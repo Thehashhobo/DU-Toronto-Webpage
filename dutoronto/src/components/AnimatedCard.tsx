@@ -17,10 +17,23 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 }) => {
   const [hovered, setHovered] = useState(false);
   const [inView, setInView] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  // Detect desktop screens
+  useEffect(() => {
+    const checkScreen = () => setIsDesktop(window.innerWidth >= 768);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   // IntersectionObserver to detect when the card is in view
   useEffect(() => {
+    if (!isDesktop) {
+      setInView(true); // Always show on mobile
+      return;
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -39,7 +52,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
         observer.unobserve(cardRef.current);
       }
     };
-  }, []);
+  }, [isDesktop]);
 
   // Overlay animation (background darkens on hover)
   const overlayStyle = useSpring({
@@ -64,7 +77,11 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     <div
       ref={cardRef}
       className={`relative min-w-[18rem] w-72 md:w-80 h-110 overflow-hidden shadow-xl cursor-pointer bg-white transition items-center mx-auto mt-6 border-1 border-secondary flex-shrink-0 ${
-        inView ? "animate-fade-in-scale" : "opacity-0"
+        inView
+          ? isDesktop
+            ? "animate-fade-in-scale"
+            : ""
+          : "opacity-0"
       }`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

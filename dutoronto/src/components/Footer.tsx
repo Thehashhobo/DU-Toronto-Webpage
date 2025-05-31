@@ -1,6 +1,6 @@
 import { FacebookFilled, TwitterCircleFilled, InstagramFilled, YoutubeFilled } from '@ant-design/icons';
 import Link from "next/link";
-import F1 from "../../public/images/F2.jpg";
+import F1 from "../../public/images/F2.webp";
 export default function Footer() {
     return (
       <footer>
@@ -22,9 +22,9 @@ export default function Footer() {
             <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-Cabin)] text-secondary font-bold uppercase mb-4">
                 Delta Upsilon Toronto</h3>
             <img
-            src="/images/L3.png"
+            src="/images/L3.webp"
             alt="Delta Upsilon Coat of Arms"
-            className="md:flex-1 h-42 md:h-42 my-2 md:mt-5 mx-auto"
+            className="md:flex-1 h-42 md:h-48 my-2 md:mt-5 mx-auto contrast-125"
             style={{ objectFit: "contain" }}
           />
             </div>

@@ -1,7 +1,5 @@
 "use client";
-
-import ContactForm from "@/components/ContactForm";
-import H1 from "../../../public/images/H1.jpg"
+import H1 from "../../../public/images/H1.webp"
 import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 import { useEffect, useRef, useState } from "react";
@@ -324,7 +322,7 @@ export default function Membership() {
         </div>
         
         <img
-          src="/images/Coat of Arms.png"
+          src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
           className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
           style={{ objectFit: "contain" }}

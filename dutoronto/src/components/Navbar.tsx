@@ -12,11 +12,8 @@ export default function Navbar() {
   // List of routes that should always use the "scrolled" style by default
   const alwaysScrolledRoutes = ["/contact"]; 
 
-  const [isScrolled, setScrolled] = useState(
-    typeof window !== "undefined"
-      ? window.scrollY > 60 || alwaysScrolledRoutes.includes(pathname)
-      : alwaysScrolledRoutes.includes(pathname)
-  );
+  // Always start as scrolled on page refresh
+  const [isScrolled, setScrolled] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {

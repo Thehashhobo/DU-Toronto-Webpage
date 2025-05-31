@@ -27,16 +27,6 @@ const WhyDu: React.FC = () => {
       title: "Justice",
       text: "Advancement of",
     },
-    // {
-    //   image: "https://via.placeholder.com/80",
-    //   title: "Over 200 Trailers",
-    //   text: "We own over 200 trailers to transport your perishable and non-perishable goods.",
-    // },
-    // {
-    //   image: "https://via.placeholder.com/80",
-    //   title: "98% On-Time Delivery",
-    //   text: "We’re proud of our industry-leading 98% on-time delivery track record.",
-    // },
   ];
 
   return (

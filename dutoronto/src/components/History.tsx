@@ -43,10 +43,10 @@ export default function History() {
   }, [isDesktop]);
 
   return (
-    <main className="flex flex-col justify-start items-center">
+    <section className="flex flex-col justify-start items-center border-1 p-2 mt-4">
       {/* History Section */}
-      <section
-        ref={isDesktop ? scrollContainerRef : null} // Apply ref only on desktop screens
+      <div
+        ref={isDesktop ? scrollContainerRef : null} // Apply ref for horizontal scroll only on desktop screens
         className="flex overflow-x-auto w-[95%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap items-center p-4"
       >
         <ol className="items-start sm:flex">
@@ -240,7 +240,7 @@ export default function History() {
             </div>
           </li>
         </ol>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }

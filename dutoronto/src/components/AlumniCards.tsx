@@ -59,7 +59,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`relative flex min-w-[18rem] w-72 md:w-80 h-110 items-end overflow-hidden shadow-xl cursor-pointer bg-white transition mx-auto mt-6 border-1 border-secondary flex-shrink-0 ${
+      className={`relative flex min-w-[18rem] w-72 md:w-80 h-110 items-end overflow-hidden shadow-2xl cursor-pointer bg-white transition mx-auto mt-6 border-1 border-secondary flex-shrink-0 ${
         inView ? "animate-fade-in-scale" : "opacity-0"
       }`}
       onMouseEnter={() => setHovered(true)}

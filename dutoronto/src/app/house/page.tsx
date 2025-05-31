@@ -1,11 +1,9 @@
-import ContactForm from "@/components/ContactForm";
 import H1 from "../../../public/images/Ho1.webp"
-import H2 from "../../../public/images/snow.jpg"
-import H3 from "../../../public/images/Pool.jpg"
-import H4 from "../../../public/images/Chapter.jpg"
+import H2 from "../../../public/images/snow.webp"
+import H3 from "../../../public/images/Pool.webp"
+import H4 from "../../../public/images/Chapter.webp"
 import HouseInfo from "@/components/HouseInfo";
 import Lion from "../../../public/images/Lion.webp";
-import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 export default function House() {
 

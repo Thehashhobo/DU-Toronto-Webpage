@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ContactForm";
-import H1 from "../../../public/images/H1.jpg";
-import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import H1 from "../../../public/images/H1.webp";
+import {InstagramFilled} from '@ant-design/icons';
 
 export default function Contact() {
 
@@ -20,17 +20,17 @@ export default function Contact() {
     }   
 
   return (
-    <main className="flex flex-col mt-24 md:mt-26">
-      <h1 className=" font-[family-name:var(--font-Roboto)] text-5xl font-bold mb-4 text-center bg-primary border-t-[12] border-b-[12] border-secondary py-4">Contact Us</h1>
-      <section className="flex flex-col md:w-[90vw] mx-auto md:flex-row gap-4 min-h-screen justify-start  items-start">
-          <div className="flex flex-col flex-1 md:max-w-[50vw] mx-auto px-4 md:pl-16">
+    <main className="flex flex-col mt-24 md:mt-26 mb-12">
+      <h1 className=" font-[family-name:var(--font-Roboto)] text-5xl xl:text-6xl font-bold mb-4 text-center bg-primary border-t-[12] border-b-[12] border-secondary py-4">Contact Us</h1>
+      <section className="flex flex-col w-[95vw] md:w-[90vw] mx-auto md:flex-row gap-4 justify-start  items-start">
+          <div className="flex flex-col flex-1 md:max-w-[50vw] mx-auto px-4 md:pl-16 mt-6">
               {/* Recruitment */ }
-              <div className="ml-4">
-                  <h1 className="text-3xl font-bold mb-2">Membership Inquires</h1>
+              <div className="md:ml-4 ml-0">
+                  <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Membership Inquires</h1>
                   <p className="mb-6">
                       For Question related to membership, please contact our Minister of Recruitment.
                   </p>
-                  <div className="flex flex-row gap-12 mb-6">
+                  <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                       <img
                         src={H1.src}
@@ -60,12 +60,12 @@ export default function Contact() {
               </div>
 
               {/* Alumni */ }
-              <div className="ml-6">
-                  <h1 className="text-3xl font-bold mb-2">Alumni Inquires</h1>
+              <div className="md:ml-4 ml-0">
+                  <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h1>
                   <p className="mb-4">
                       For Question related to status and events, please contact us our Minister of External Relations.
                   </p>
-                  <div className="flex flex-row gap-12 mb-6">
+                  <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                       <img
                         src={H1.src}
@@ -94,8 +94,8 @@ export default function Contact() {
          
               </div>
               
-              <p className="ml-6">
-              For all other inquires! Please fill out the Contact form and we
+              <p className="md:ml-4 ml-0">
+              For all other inquires, fill the Contact form and we
               will get back to you as soon as possible.
               </p>
               
