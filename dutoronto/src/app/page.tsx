@@ -55,8 +55,8 @@ const membersCards = [
     description:
       "Learn more about our fraternity, our values, and our commitment",
     image: dev.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/devyanshsharma/",
+    instagram: "https://www.instagram.com/devsharma_7/",
   },
   {
     position: "Vice President", 
@@ -64,8 +64,8 @@ const membersCards = [
     description:
       "Live in a house that is more than just a place to stay.",
     image: aaron.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/aaron-feigenbaum-5388a8345/",
+    instagram: "https://www.instagram.com/aaron.feigs/",
   },
   {
     position: "Minister of Recruitment",
@@ -73,8 +73,8 @@ const membersCards = [
     description:
       "We are always looking for new members who share our values and commitment to excellence.",
     image: H1.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/azaryah-mendes-61417a300/",
+    instagram: "https://www.instagram.com/azaryah_mendes/",
   },
   {
     position: "Minister of Finance",
@@ -82,8 +82,8 @@ const membersCards = [
     description:
       "Build friendships and connections that will last a lifetime.",
     image: alex.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/alexander-mansourov-170283248/",
+    instagram: "https://www.instagram.com/alexboneless/",
   },
   {
     position: "Minister of Brotherhood Excellence",
@@ -91,8 +91,8 @@ const membersCards = [
     description:
       "Live in a house that is more than just a place to stay.",
     image: arav.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/aravkekane/",
+    instagram: "https://www.instagram.com/aravkekane/",
   },
     {
     position: "Minister of Risk Management",
@@ -100,8 +100,8 @@ const membersCards = [
     description:
       "Live in a house that is more than just a place to stay.",
     image: tony.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/ariaman-yousefi-976092257/",
+    instagram: "https://www.instagram.com/ariaman.y/",
   },
   {
     position: "Minister of Administration",
@@ -109,8 +109,8 @@ const membersCards = [
     description:
       "Live in a house that is more than just a place to stay.",
     image: david.src,
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/dvang_4/",
   },
     {
     position: "Minister of External Relations",
@@ -119,8 +119,8 @@ const membersCards = [
       "Live in a house that is more than just a place to stay.",
     image: adrian.src,
     // facebook: "https://facebook.com/",
-    linkedin: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/adrian_cachia/",
   },
 ];
   return (
@@ -140,7 +140,7 @@ const membersCards = [
           Your browser does not support the video tag.
         </video>
         {/* Overlay and Content */}
-        <div className="font-[family-name:var(--font-Old)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
+        <div className="font-[family-name:var(--font-Germ)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
           <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3">
             Delta Upsilon 
           </p>
@@ -154,7 +154,7 @@ const membersCards = [
             <a href="/services" className="btn">
               Learn More
             </a>
-            <a href="/contacts" className="btn">
+            <a href="/contact" className="btn">
               Contact Us
             </a>
           </div>

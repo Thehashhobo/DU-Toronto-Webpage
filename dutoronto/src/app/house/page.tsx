@@ -7,21 +7,6 @@ import Lion from "../../../public/images/Lion.webp";
 
 export default function House() {
 
-
-  const recruitment = {
-    name: "Recruitment Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-  }
-
-  const alumni = {
-    name: "ER Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-    }   
-
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
@@ -74,7 +59,7 @@ export default function House() {
       {/* Background Circle */}
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="hidden md:block w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] lg:w-[50vw] lg:h-[50vw] xl:w-[40vw] xl:h-[40vw] 2xl:w-[38vw] 2xl:h-[38vw] bg-transparent md:bg-[#c2a92b] rounded-full absolute">
+          <div className="hidden md:block w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] lg:w-[50vw] lg:h-[50vw] xl:w-[40vw] xl:h-[40vw] 2xl:w-[38vw] 2xl:h-[38vw] bg-transparent md:bg-primary rounded-full absolute">
           {/* Floating Images */}
           <div className="z-15 absolute md:top-[-35] md:left-[15] xl:top-[-45] xl:left-[15] 2xl:top-[-75] 2xl:left-[15] top-2 left-15 md:w-46 md:h-46 w-22 h-22 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
             <img src={H3.src} alt="Sample 1" className="w-full h-full object-cover" />

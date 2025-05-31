@@ -6,18 +6,19 @@ export default function Contact() {
 
 
   const recruitment = {
-    name: "Recruitment Name",
-    phone: "111 111 1111",
+    name: "Azaryah Mendes",
+    phone: "647-274-0504",
     email: "test@gmail.com",
-    instagram: "https://instagram.com/",
+    instagram: "https://www.instagram.com/azaryah_mendes/",
   }
 
   const alumni = {
-    name: "ER Name",
+    name: "Adrian Cachia",
     phone: "111 111 1111",
     email: "test@gmail.com",
-    instagram: "https://instagram.com/",
+    instagram: "https://www.instagram.com/adrian_cachia/",
     }   
+ 
 
   return (
     <main className="flex flex-col mt-24 md:mt-26 mb-12">
