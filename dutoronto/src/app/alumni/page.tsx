@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import Lester from "../../../public/images/Yousuf-Karsh-Lester-Pearson-1965-789x980.jpg"
-import H2 from "../../../public/images/snow.jpg"
+import Collage from "../../../public/images/Delta Upsilon Fall 24 Newsletter.png"
 import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 export default function Alumni() {
@@ -43,35 +43,83 @@ export default function Alumni() {
             </a>
           </div>
         </div>
+        <span
+          className="absolute right-4 bottom-4 z-20 text-xs md:text-sm font-[family-name:var(--font-Cabin)] italic text-white drop-shadow-md text-right"
+          style={{ letterSpacing: "0.02em" }}
+        >
+          Lester B. Pearson, 14th Prime Minister of Canada, Delta Upsilon Toronto Chapter
+        </span>
+      </section>
 
-
-      </section >
-        <hr className="w-[75vw] mx-auto z-15 mt-6 h-[0.75px] bg-textColor"/> 
-      {/* overview */}
-      <section id="sign_up" className="flex flex-col md:flex-row w-[90%] h-[75vh] md:h-[75vh] mx-auto text-[color:var(--textColor)]">
-        <img
-          src={H2.src}
-          alt="Delta Upsilon Coat of Arms"
-          className="md:flex-1 h-[50vw] md:h-[25vw] my-2 md:mt-5 border-2 border-secondary shadow-lg"
-          style={{ objectFit: "contain" }}
-        />
-        <div className="flex flex-col md:self-center md:flex-3 mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
-          <h2 className="text-xl md:text-4xl font-[family-name:var(--font-Roboto)] font-bold text-textColor">
-            Delta Upsilon is not your typical fraternity. Our non-secret heritage and our dedication to creating a modern fraternity experience help us in{' '}
-            <span className="font-[family-name:var(--font-Cabin)] border-b-4 text-[color:var(--color-primary)]">
-              Building Better Men
-            </span>
+      {/* Collage Section */}
+      <section className="flex flex-col md:flex-row w-[90%] mx-auto my-12 items-center">
+        <div className="w-full md:w-[520px] h-[420px] flex items-center justify-center bg-white rounded-lg shadow-lg mb-6 md:mb-0 md:mr-8 overflow-hidden">
+          <img
+            src={Collage.src}
+            alt="Delta Upsilon Prominent Alumni Collage"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-Roboto)] font-bold mb-4 text-secondary">
+            Prominent Delta Upsilon Alumni
           </h2>
-          <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] font-bold text-[#012d69] mt-2">
-            Fraternity membership is one of the most valuable extra-curricular experiences
+          <p className="text-base md:text-lg font-[family-name:var(--font-Cabin)] text-[color:var(--textColor)]">
+            Delta Upsilon has a proud tradition of producing leaders and changemakers across many fields. Our alumni include Nobel laureates, prime ministers, astronauts, business pioneers, and advocates for social progress. 
+            <br /><br />
+            Among our most distinguished members is Lester B. Pearson, Nobel Peace Prize recipient and former Prime Minister of Canada. Other notable alumni include Charles Evans Hughes (Chief Justice of the U.S. Supreme Court), Kurt Vonnegut (acclaimed author), and Alan Bean (Apollo 12 astronaut). 
+            <br /><br />
+            The achievements of our alumni inspire current and future brothers to strive for excellence, leadership, and service in all their endeavors.
           </p>
         </div>
       </section>
-
-          
         
       <hr className="w-full h-[1.5px] bg-secondary"/> 
-      {/* <Reviews/> */}
+
+      {/* Mailing List Section */}
+      <section className="flex flex-col items-center w-full py-14 bg-gray-900">
+        <h2 className="mt-4 text-xl md:text-2xl font-[family-name:var(--font-Roboto)] font-bold mb-2 text-primary">
+          Stay Connected: Alumni Mailing List
+        </h2>
+        <p className="text-base md:text-lg font-[family-name:var(--font-Cabin)] mb-6 text-center max-w-full whitespace-nowrap text-gray-100 overflow-x-auto">
+          Sign up to receive updates, event invitations, and news from the Delta Upsilon Toronto Alumni community.
+        </p>
+        {/* Mailchimp Signup Form */}
+        <form
+          action="https://YOUR_MAILCHIMP_PREFIX.usX.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID"
+          method="post"
+          target="_blank"
+          className="flex flex-col gap-4 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg"
+        >
+          <input
+            type="text"
+            name="FNAME"
+            required
+            placeholder="Your Name"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <input
+            type="email"
+            name="EMAIL"
+            required
+            placeholder="Enter your email"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <input
+            type="tel"
+            name="PHONE"
+            placeholder="Phone Number (optional)"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <button
+            type="submit"
+            className="px-6 py-2 bg-primary text-white rounded-md font-bold hover:bg-primary/90 transition"
+          >
+            Sign Up
+          </button>
+        </form>
+        <div className="mb-10" />
+      </section>
 
     </main>
   );
