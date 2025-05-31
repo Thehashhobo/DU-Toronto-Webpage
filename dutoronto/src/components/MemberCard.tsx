@@ -1,8 +1,9 @@
-import React, { use } from "react";
+import React from "react";
 import { FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 interface MemberCardProps {
   image: string;
+  position: string;
   name: string;
   description: string;
   facebook?: string;
@@ -15,6 +16,7 @@ interface MemberCardProps {
 
 const MemberCard: React.FC<MemberCardProps> = ({
   image,
+  position,
   name,
   description,
   facebook,
@@ -30,10 +32,11 @@ const MemberCard: React.FC<MemberCardProps> = ({
         <img
           src={image}
           alt={name}
-          className="w-28 h-28 object-cover rounded bg-gray-200 mb-4"
+          className="w-32 h-36 lg:w-36 lg:h-40 object-cover object-top bg-gray-200 mb-2 brightness-120"
         />
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{name}</h3>
-        <p className="text-gray-600 mb-6">{description}</p>
+        <h3 className="text-2xl font-bold text-gray-800 mb-2">{position}</h3>
+        <h2 className="text-1xl font-semibold text-primary mb-12 md:mb-6">{name}</h2>
+        {/* <p className="text-gray-600 mb-6">{description}</p> */}
       </div>
       <div className="flex gap-4 items-end mt-auto h-12">
         {facebook && (

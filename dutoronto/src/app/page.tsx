@@ -1,13 +1,20 @@
-import H1 from "../../public/images/H1.jpg";
-import F1 from "../../public/images/F2.jpg";
-// import H2 from "../../public/images/H2.jpg";
-// import H3 from "../../public/images/H3.jpg";
-// import ServiceCard from "./components/ServiceCard";
+import H1 from "../../public/images/H1.webp";
+import F1 from "../../public/images/F2.webp";
 import WhyDu from "@/components/WhyDu";
 import AnimatedCard from "@/components/AnimatedCard";
-import MemberCard from "@/components/MemberCard";
-import MemberGridWithModal from "@/components/MemberGridWithModal ";
-// import Reviews from "./components/Reviews";
+import dev from "../../public/exec/dev2.webp"
+import aaron from "../../public/exec/aaron.webp"
+// import azaryah from "../../public/exec/azaryah.webp"
+import alex from "../../public/exec/alex.webp"
+import arav from "../../public/exec/arav.webp"
+import tony from "../../public/exec/tony.webp"
+import david from "../../public/exec/david.webp"
+import adrian from "../../public/exec/adrian.webp"
+
+
+import React, { Suspense } from "react";
+
+const MemberGridWithModal = React.lazy(() => import("../components/MemberGridWithModal"));
 
 export default function Home() {
   const animatedCards = [
@@ -43,76 +50,77 @@ export default function Home() {
 
 const membersCards = [
   {
-    name: "President",
+    position: "President",
+    name: "Devyansh Sharma",
     description:
       "Learn more about our fraternity, our values, and our commitment",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: dev.src,
+    linkedin: "https://www.linkedin.com/in/devyanshsharma/",
+    instagram: "https://www.instagram.com/devsharma_7/",
   },
   {
-    name: "Vice President",
+    position: "Vice President", 
+    name: "Aaron Feigenbaum",
     description:
       "Live in a house that is more than just a place to stay.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: aaron.src,
+    linkedin: "https://www.linkedin.com/in/aaron-feigenbaum-5388a8345/",
+    instagram: "https://www.instagram.com/aaron.feigs/",
   },
   {
-    name: "Minister of Recruitment",
+    position: "Minister of Recruitment",
+    name: "Azaryah Mendes",
     description:
       "We are always looking for new members who share our values and commitment to excellence.",
     image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    linkedin: "https://www.linkedin.com/in/azaryah-mendes-61417a300/",
+    instagram: "https://www.instagram.com/azaryah_mendes/",
   },
   {
-    name: "Minister of Finance",
+    position: "Minister of Finance",
+    name: "Alexander Mansourov",
     description:
       "Build friendships and connections that will last a lifetime.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: alex.src,
+    linkedin: "https://www.linkedin.com/in/alexander-mansourov-170283248/",
+    instagram: "https://www.instagram.com/alexboneless/",
   },
   {
-    name: "Minister of Brotherhood Excellence",
+    position: "Minister of Brotherhood Excellence",
+    name: "Arav Kekane",
     description:
       "Live in a house that is more than just a place to stay.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: arav.src,
+    linkedin: "https://www.linkedin.com/in/aravkekane/",
+    instagram: "https://www.instagram.com/aravkekane/",
   },
     {
-    name: "Minister of Risk Management",
+    position: "Minister of Risk Management",
+    name: "Tony Yousefi",
     description:
       "Live in a house that is more than just a place to stay.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: tony.src,
+    linkedin: "https://www.linkedin.com/in/ariaman-yousefi-976092257/",
+    instagram: "https://www.instagram.com/ariaman.y/",
   },
   {
-    name: "Minister of Administration",
+    position: "Minister of Administration",
+    name: "David van Geilswyk",
     description:
       "Live in a house that is more than just a place to stay.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: david.src,
+    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/dvang_4/",
   },
     {
-    name: "Minister of External Relations",
+    position: "Minister of External Relations",
+    name: "Adrian Cachia",
     description:
       "Live in a house that is more than just a place to stay.",
-    image: H1.src,
-    facebook: "https://facebook.com/",
-    twitter: "https://twitter.com/",
-    instagram: "https://instagram.com/",
+    image: adrian.src,
+    // facebook: "https://facebook.com/",
+    linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/adrian_cachia/",
   },
 ];
   return (
@@ -132,7 +140,7 @@ const membersCards = [
           Your browser does not support the video tag.
         </video>
         {/* Overlay and Content */}
-        <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
+        <div className="font-[family-name:var(--font-Germ)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
           <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3">
             Delta Upsilon 
           </p>
@@ -146,7 +154,7 @@ const membersCards = [
             <a href="/services" className="btn">
               Learn More
             </a>
-            <a href="/contacts" className="btn">
+            <a href="/contact" className="btn">
               Contact Us
             </a>
           </div>
@@ -170,7 +178,7 @@ const membersCards = [
         </div>
         
         <img
-          src="/images/Coat of Arms.png"
+          src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
           className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
           style={{ objectFit: "contain" }}
@@ -193,7 +201,7 @@ const membersCards = [
 
       {/* Info Section */}
       {/* <hr className="w-full h-[1.5px] bg-[#59890c]"/>  */}
-      <div className="relative w-[90%] mx-auto text-[color:var(--textColor)] border-2 shadow-xl drop-shadow-textColor border-secondary p-3 mt-3 mb-3 "
+      <div className="relative w-[90%] mx-auto text-[color:var(--textColor)] border-2 shadow-xl drop-shadow-textColor border-secondary p-3 mt-3 mb-8 xl:mb-16"
             style={{
             backgroundImage: `url(${F1.src})`,
             backgroundSize: "cover",
@@ -205,15 +213,17 @@ const membersCards = [
         <WhyDu/>
       </div>
       
-      <section className="flex flex-col items-center justify-center align-middle w-[90vw] h-[370vh] md:h-[115vh] mx-auto bg-[--background] text-[color:var(--textColor)]">
-          <h2 className="text-2xl text-center md:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-textColor mb-12">
+      <section className="flex flex-col items-center justify-center align-middle w-[90vw] mx-auto bg-[--background] text-[color:var(--textColor)] mb-8 xl:mb-16">
+          <h2 className="text-2xl text-center md:text-5xl font-[family-name:var(--font-Roboto)] font-bold text-textColor mb-14">
             <span className="font-[family-name:var(--font-Cabin)] text-primary">
               Own Your Journey {" "}
             </span>
              with those who push you
           </h2>
       {/* Member Section */}    
-      <MemberGridWithModal members={membersCards} />
+        <Suspense fallback={<div>Loading members...</div>}>
+          <MemberGridWithModal members={membersCards} />
+        </Suspense>
         
       </section>
       <hr className="w-full h-[1.5px] bg-secondary"/> 

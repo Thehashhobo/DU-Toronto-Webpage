@@ -1,6 +1,6 @@
 import { FacebookFilled, TwitterCircleFilled, InstagramFilled, YoutubeFilled } from '@ant-design/icons';
 import Link from "next/link";
-import F1 from "../../public/images/F2.jpg";
+import F1 from "../../public/images/F2.webp";
 export default function Footer() {
     return (
       <footer className="w-full bg-gray-900 text-gray-100 pt-8">

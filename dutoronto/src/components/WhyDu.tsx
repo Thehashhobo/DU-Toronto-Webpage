@@ -27,21 +27,11 @@ const WhyDu: React.FC = () => {
       title: "Justice",
       text: "Advancement of",
     },
-    // {
-    //   image: "https://via.placeholder.com/80",
-    //   title: "Over 200 Trailers",
-    //   text: "We own over 200 trailers to transport your perishable and non-perishable goods.",
-    // },
-    // {
-    //   image: "https://via.placeholder.com/80",
-    //   title: "98% On-Time Delivery",
-    //   text: "We’re proud of our industry-leading 98% on-time delivery track record.",
-    // },
   ];
 
   return (
     <section className="w-full py-10 px-6">
-      <h2 className="text-4xl [family-name:var(--font-Cabin)] font-bold text-center text-textColor mb-8">
+      <h2 className="text-4xl xl:text-5xl font-[family-name:var(--font-Germ)] font-bold text-center text-textColor mb-8">
         Delta Upsilon's Four Founding Principles
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-lg mx-auto">
@@ -52,8 +42,8 @@ const WhyDu: React.FC = () => {
             alt={item.title}
             className="w-34 h-34 mb-4 rounded-full border-4 border-yellow-400 p-2 bg-secondary shadow"
           />
-            <h3 className="font-[family-name:var(--font-Roboto)] text-2xl font-semibold text-gray-700 mx-5">{item.text}</h3>
-            <h1 className="font-[family-name:var(--font-Roboto)] text-3xl font-bold text-black mb-2">{item.title}</h1>
+            <h3 className="font-[family-name:var(--font-Cabin)] text-2xl font-semibold text-gray-700 mx-5">{item.text}</h3>
+            <h1 className="font-[family-name:var(--font-Cabin)] text-3xl font-bold text-black mb-2">{item.title}</h1>
             
           </div>
         ))}
