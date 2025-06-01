@@ -1,24 +1,8 @@
 import ContactForm from "@/components/ContactForm";
 import Lester from "../../../public/images/Yousuf-Karsh-Lester-Pearson-1965-789x980.jpg"
 import Collage from "../../../public/images/Delta Upsilon Fall 24 Newsletter.png"
-import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 export default function Alumni() {
-
-
-  const recruitment = {
-    name: "Recruitment Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-  }
-
-  const alumni = {
-    name: "ER Name",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
-    instagram: "https://instagram.com/",
-    }   
 
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
@@ -47,7 +31,7 @@ export default function Alumni() {
           className="absolute right-4 bottom-4 z-20 text-xs md:text-sm font-[family-name:var(--font-Cabin)] italic text-white drop-shadow-md text-right"
           style={{ letterSpacing: "0.02em" }}
         >
-          Lester B. Pearson, 14th Prime Minister of Canada, Delta Upsilon Toronto Chapter
+          Lester B. Pearson, 14th Prime Minister of Canada, Delta Upsilon Toronto 1919
         </span>
       </section>
 
@@ -74,14 +58,14 @@ export default function Alumni() {
         </div>
       </section>
         
-      <hr className="w-full h-[1.5px] bg-secondary"/> 
+      <hr className="w-full h-[1.5px] bg-secondary" id="sign_up"/> 
 
       {/* Mailing List Section */}
-      <section className="flex flex-col items-center w-full py-14 bg-gray-900">
-        <h2 className="mt-4 text-xl md:text-2xl font-[family-name:var(--font-Roboto)] font-bold mb-2 text-primary">
+      <section className="flex flex-col items-center w-full py-14 bg-gray-900" >
+        <h2 className="mt-4 text-2xl md:text-3xl xl:text-4xl font-[family-name:var(--font-Roboto)] font-bold mb-2 text-primary mx-4 text-center" >
           Stay Connected: Alumni Mailing List
         </h2>
-        <p className="text-base md:text-lg font-[family-name:var(--font-Cabin)] mb-6 text-center max-w-full whitespace-nowrap text-gray-100 overflow-x-auto">
+        <p className="text-base md:text-lg font-[family-name:var(--font-Cabin)] mb-6 text-center max-w-full text-gray-100 overflow-x-auto mx-4">
           Sign up to receive updates, event invitations, and news from the Delta Upsilon Toronto Alumni community.
         </p>
         {/* Mailchimp Signup Form */}
@@ -89,7 +73,7 @@ export default function Alumni() {
           action="https://YOUR_MAILCHIMP_PREFIX.usX.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID"
           method="post"
           target="_blank"
-          className="flex flex-col gap-4 w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-lg"
+          className="flex flex-col gap-4 max-w-[90%] w-lg bg-gray-800 p-6 rounded-lg shadow-lg mx-4"
         >
           <input
             type="text"
