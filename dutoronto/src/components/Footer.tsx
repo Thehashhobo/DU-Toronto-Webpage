@@ -3,34 +3,31 @@ import Link from "next/link";
 import F1 from "../../public/images/F2.webp";
 export default function Footer() {
     return (
-      <footer>
+      <footer className="w-full bg-gray-900 text-gray-100 pt-8">
+        {/* Very light line above footer */}
+        <div className="w-full h-[2px] bg-white/10 mb-8" />
         <div
-          className="relative flex flex-col md:flex-row justify-between items-start p-8 text-white"
-          style={{
-            backgroundImage: `url(${F1.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          className="relative flex flex-col md:flex-row justify-between items-start p-8 text-white gap-8"
         >
-          {/* Blur and opacity overlay */}
-          <div className="absolute inset-0 bg-black/35 backdrop-blur-xs z-0" />
-          
           {/* Footer content */}
-          <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-start">
+          <div className="relative z-10 w-full flex flex-col md:flex-row justify-between items-start gap-8">
             {/* Footer Links */}
-            <div className="mb-6 md:mb-0 w-full text-center md:w-auto">
-            <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-Cabin)] text-secondary font-bold uppercase mb-4">
-                Delta Upsilon Toronto</h3>
-            <img
-            src="/images/L3.webp"
-            alt="Delta Upsilon Coat of Arms"
-            className="md:flex-1 h-42 md:h-48 my-2 md:mt-5 mx-auto contrast-125"
-            style={{ objectFit: "contain" }}
-          />
+            <div className="mb-6 md:mb-0 w-full md:w-auto bg-gray-900 rounded-2xl p-6 flex flex-col items-center">
+              <h3 className="text-2xl md:text-4xl font-[family-name:var(--font-Cabin)] text-white font-bold uppercase mb-4 text-center">
+                Delta Upsilon Toronto
+              </h3>
+              <img
+                src="/images/L3.png"
+                alt="Delta Upsilon Coat of Arms"
+                className="h-50 w-auto my-2 md:mt-5 mx-auto"
+                style={{ objectFit: "contain" }}
+              />
             </div>
 
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">Links</h3>
+            <div className="mb-6 md:mb-0 bg-gray-900 rounded-2xl p-6 flex flex-col items-center md:ml-[-32px]">
+              <h3 className="text-2xl text-white md:text-3xl font-bold uppercase mb-4 text-center w-full md:-ml-6">
+                Links
+              </h3>
               <ul className="list-disc ml-1 space-y-1">
                 <li>
                   <Link href="/" className="text-primary hover:underline">
@@ -66,37 +63,38 @@ export default function Footer() {
             </div>
 
             {/* Footer Social */}
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">Contacts</h3>
+            <div className="mb-6 md:mb-0 bg-gray-900 rounded-2xl p-6 flex flex-col items-center md:ml-[-32px]">
+              <h3 className="text-2xl text-white md:text-3xl font-bold uppercase mb-4 text-center w-full md:-ml-6">
+                Contacts
+              </h3>
               <div className="flex flex-col gap-3 space-x-4">
-              <a
-              href="/contacts"
-              className="btn"
-              >
-              Contact Us
-              </a>
+                <a
+                  href="/contacts"
+                  className="btn"
+                >
+                  Contact Us
+                </a>
 
-              <div className="flex space-x-4">
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
-                  <FacebookFilled />
-                </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
-                  <TwitterCircleFilled />
-                </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
-                  <InstagramFilled />
-                </a>
-                <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
-                  <YoutubeFilled />
-                </a>
-              </div>
-
+                <div className="flex space-x-4">
+                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                    <FacebookFilled />
+                  </a>
+                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                    <TwitterCircleFilled />
+                  </a>
+                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                    <InstagramFilled />
+                  </a>
+                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                    <YoutubeFilled />
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Footer Info */}
-            <div>
-              <h3 className="text-2xl text-secondary md:text-3xl font-bold uppercase mb-4">General Inquiries</h3>
+            <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center">
+              <h3 className="text-2xl text-white md:text-3xl font-bold uppercase mb-4 text-center">General Inquiries</h3>
               <p className="text-primary mb-2">
                 <strong>Location:</strong> 182 St George St, Toronto, ON
               </p>
@@ -109,7 +107,7 @@ export default function Footer() {
               <p>
                 <strong className='text-primary'>Email:</strong>{" "}
                 <a href="mailto:oceanwave.vip@gmail.com" className="text-primary hover:underline">
-                Email Delta Upsilon 
+                  Email Delta Upsilon 
                 </a>
               </p>
             </div>
@@ -123,10 +121,11 @@ export default function Footer() {
   
           {/* Designer/Builder Credit */}
           <p className="text-sm mt-2 md:mt-0 text-black">
-            Designed and built by <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jerry W</a> and {" "}
-            <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">micheal</a>
+            Designed and built by <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jerry W</a>, {" "}
+            <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Michael</a> and {" "}
+            <a href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Varun Pillai</a>
           </p>
         </div>
       </footer>
     );
-  }
+}
