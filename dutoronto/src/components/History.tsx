@@ -43,7 +43,7 @@ export default function History() {
   }, [isDesktop]);
 
   return (
-    <section className="flex flex-col justify-start items-center border-1 p-2 mt-4">
+    <section className="flex flex-col justify-start items-center border-1 p-6 mt-4">
       {/* History Section */}
       <div
         ref={isDesktop ? scrollContainerRef : null} // Apply ref for horizontal scroll only on desktop screens

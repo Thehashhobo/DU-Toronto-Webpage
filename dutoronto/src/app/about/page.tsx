@@ -1,4 +1,4 @@
-import H1 from "../../../public/images/About1.jpg"
+import H1 from "../../../public/images/about1.webp"
 import A1 from "../../../public/images/A1.webp"
 import A2 from "../../../public/images/A2.webp"
 import A3 from "../../../public/images/A3.webp"
@@ -45,8 +45,13 @@ const animatedCards = [
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[50vh] md:h-[40vh] mt-24 md:mt-20 bg-cover  justify-start overflow-hidden"
-        style={{backgroundImage: `url(${H1.src})`}}
+        className="relative w-full h-[60vh] md:h-[50vh] mt-24 md:mt-20 bg-cover brightness-125 justify-start overflow-hidden"
+          style={{
+          backgroundImage: `url(${H1.src})`,
+          backgroundPosition: "center 30%",
+           // shifts background image up
+  }
+      }
       >
         {/* Overlay and Content */}
         <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">

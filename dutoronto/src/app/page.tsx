@@ -11,6 +11,11 @@ import tony from "../../public/exec/tony.webp"
 import david from "../../public/exec/david.webp"
 import adrian from "../../public/exec/adrian.webp"
 
+import a1 from "../../public/images/about.webp";
+import a2 from "../../public/images/pin.webp";
+import a3 from "../../public/images/alumni.webp";
+
+
 
 import React, { Suspense } from "react";
 
@@ -22,21 +27,21 @@ export default function Home() {
     title: "About Us",
     description:
       "Learn more about our fraternity, our values, and our commitment",
-    image: H1.src,
+    image: a1.src,
     link: "/about",
   },
   {
     title: "Become a Member",
     description:
       "We are always looking for new members who share our values strive for excellence.",
-    image: H1.src,
+    image: a2.src,
     link: "/membership",
   },
   {
     title: "Alumni",
     description:
       "Build relatinoship and brotherly connections that will last a lifetime.",
-    image: H1.src,
+    image: a3.src,
     link: "/alumni",
   },
   {
@@ -141,7 +146,7 @@ const membersCards = [
         </video>
         {/* Overlay and Content */}
         <div className="font-[family-name:var(--font-Germ)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
-          <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3">
+          <p className="text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3 tracking-wide">
             Delta Upsilon 
           </p>
           <h1 className="font-[family-name:var(--font-Roboto)] text-4xl uppercase text-center font-bold md:text-7xl ml-0.5 mr-0.5 relative -translate-y-3">
@@ -180,7 +185,7 @@ const membersCards = [
         <img
           src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
-          className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
+          className="md:flex-1 h-42 md:h-58 my-2 "
           style={{ objectFit: "contain" }}
         />
       </section>

@@ -23,12 +23,13 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
           <MemberCard
             key={member.name + idx}
             {...member}
-            onClick={() => setSelected(member)}
+            // onClick={() => setSelected(member)}
           />
         ))}
       </div>
 
-      {selected && (
+      {/* member details not used rigth now */}
+      {/* {selected && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45">
           <div className="bg-white p-6 rounded-lg max-w-md w-full relative">
             <button
@@ -41,7 +42,7 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
             <p>{selected.description}</p>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }

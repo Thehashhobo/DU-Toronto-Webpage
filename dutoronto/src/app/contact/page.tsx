@@ -1,6 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import H1 from "../../../public/images/H1.webp";
 import {InstagramFilled} from '@ant-design/icons';
+import adrian from "../../../public/exec/adrian.webp"
 
 export default function Contact() {
 
@@ -8,7 +9,7 @@ export default function Contact() {
   const recruitment = {
     name: "Azaryah Mendes",
     phone: "647-274-0504",
-    email: "test@gmail.com",
+    email: "Mendesazaryah@gmail.com",
     instagram: "https://www.instagram.com/azaryah_mendes/",
   }
 
@@ -69,13 +70,13 @@ export default function Contact() {
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                       <img
-                        src={H1.src}
+                        src={adrian.src}
                         alt="Recruitment"
-                        className="w-full h-full object-cover bg-gray-200"
+                        className="w-full h-full object-cover bg-gray-200 object-top"
                       />
                       {recruitment.instagram && (
                         <a
-                          href={recruitment.instagram}
+                          href={alumni.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="absolute bottom-[-25] right-[-25] bg-yellow-300 rounded-full w-12 h-12 flex items-center justify-center text-gray-800 text-2xl hover:bg-yellow-400 transition"

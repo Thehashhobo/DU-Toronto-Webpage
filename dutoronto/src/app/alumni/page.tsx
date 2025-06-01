@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ContactForm";
-import Lester from "../../../public/images/Yousuf-Karsh-Lester-Pearson-1965-789x980.jpg"
-import Collage from "../../../public/images/Delta Upsilon Fall 24 Newsletter.png"
+import Lester from "../../../public/images/ap1.webp"
+import Collage from "../../../public/images/ap2.webp"
 
 export default function Alumni() {
 

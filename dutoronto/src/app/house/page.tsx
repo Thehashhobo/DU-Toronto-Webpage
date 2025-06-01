@@ -1,6 +1,7 @@
 import H1 from "../../../public/images/Ho1.webp"
 import H2 from "../../../public/images/snow.webp"
 import H3 from "../../../public/images/Pool.webp"
+import H5 from "../../../public/images/H1.webp";
 import H4 from "../../../public/images/Chapter.webp"
 import HouseInfo from "@/components/HouseInfo";
 import Lion from "../../../public/images/Lion.webp";
@@ -68,7 +69,7 @@ export default function House() {
             <img src={H4.src} alt="Sample 2" className="w-full h-full object-cover" />
           </div>
           <div className="z-15 absolute md:bottom-[5] md:left-[500] md:w-46 md:h-46 bottom-28 left-26 w-24 h-24 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
-            <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
+            <img src={H5.src} alt="Sample 3" className="w-full h-full object-cover" />
           </div>
           {/* <div className="absolute bottom-10 right-10 w-24 h-24 rounded-lg overflow-hidden shadow-lg">
             <img src={H4.src} alt="Sample 4" className="w-full h-full object-cover" />

@@ -17,7 +17,7 @@ export default function Footer() {
                 Delta Upsilon Toronto
               </h3>
               <img
-                src="/images/L3.png"
+                src="/images/L2.webp"
                 alt="Delta Upsilon Coat of Arms"
                 className="h-50 w-auto my-2 md:mt-5 mx-auto"
                 style={{ objectFit: "contain" }}
