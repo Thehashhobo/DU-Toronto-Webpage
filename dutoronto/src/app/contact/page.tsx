@@ -8,15 +8,15 @@ export default function Contact() {
 
   const recruitment = {
     name: "Azaryah Mendes",
-    phone: "647-274-0504",
+    phone: "+1 (647)-274-0504",
     email: "Mendesazaryah@gmail.com",
     instagram: "https://www.instagram.com/azaryah_mendes/",
   }
 
   const alumni = {
     name: "Adrian Cachia",
-    phone: "111 111 1111",
-    email: "test@gmail.com",
+    phone: "+1 (647) 545-7141",
+    email: "adriancachia7@gmail.com",
     instagram: "https://www.instagram.com/adrian_cachia/",
     }   
  
@@ -65,7 +65,7 @@ export default function Contact() {
               <div className="md:ml-4 ml-0">
                   <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h1>
                   <p className="mb-4">
-                      For Question related to status and events, please contact us our Minister of External Relations.
+                      For Question related to alumni and events, please contact us our Minister of External Relations.
                   </p>
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">

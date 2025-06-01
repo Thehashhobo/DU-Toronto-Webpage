@@ -96,69 +96,62 @@ const animatedCards = [
         
 
       </section>
-      <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
-      {/* history Section */}
-      <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-4 mb-4">
-        <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
-            Our History
-        </h2>
-        <History/>
-      </section>
-      <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
-      {/* PHILANTROPHY Section */}
-      <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-6">
-        <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
-            PHILANTROPHY
-        </h2>
-        <h2 className="text-xl md:text-2xl xl:text-3xl text-center font-[family-name:var(--font-Cabin)] font-bold text-textColor mb-4 text-wrap">
-            Philanthropy is a core part of what it means to be a Delta Upsilon. Guided by our founding principle of the Advancement of Justice, we believe in using our time, resources, and talents to uplift others. 
-        </h2>
-        <div className="flex flex-col md:flex-row w-[100%] mx-auto gap-4">
-          <div className="flex flex-col md:w-[45%] w-[100%] mx-auto gap-4">
-            <h2 className="text-xl md:text-3xl xl:text-4xl text-center font-[family-name:var(--font-Cabin)] font-bold text-secondary mb-4">
+          <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
+          {/* history Section */}
+          <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-4 mb-4">
+            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
+                Our History
+            </h2>
+            <History/>
+          </section>
+          <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
+          {/* PHILANTROPHY Section */}
+          <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-6">
+            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
+              PHILANTROPHY
+            </h2>
+            <h2 className="text-xl md:text-2xl xl:text-3xl text-center font-[family-name:var(--font-Cabin)] font-bold text-textColor mb-4 text-wrap">
+              Philanthropy is a core part of what it means to be a Delta Upsilon. Guided by our founding principle of the Advancement of Justice, we believe in using our time, resources, and talents to uplift others. 
+            </h2>
+      <div className="flex flex-col md:flex-row w-[100%] mx-auto gap-4 items-stretch">
+        <div className="flex flex-col md:w-[45%] w-[100%] mx-auto gap-4">
+          <h2 className="text-xl md:text-3xl xl:text-4xl text-center font-[family-name:var(--font-Cabin)] font-bold text-secondary mb-4">
             Global Service Initiative
-            </h2>
-            <div className="bg-gray-50 border border-secondary p-6 mb-6 max-w-2xl mx-auto text-base text-textColor shadow">
-              <p className="mb-4 text-wrap">
-                Delta Upsilon’s Global Service Initiative (GSI) offers brothers a unique opportunity to make a real impact while exploring the world. As DU’s flagship international service program, GSI sends undergraduate and alumni members to communities in need to help build schools and essential infrastructure.
-              </p>
-              <p className="mb-2 text-wrap">
-                In 2025, DU hosted two GSI trips to Negril, Jamaica:
-              </p>
-              <ul className="list-disc list-inside mb-4 text-wrap">
-                <li>January 4–11, 2025</li>
-                <li>May 17–24, 2025</li>
-              </ul>
-              <p className="mb-2 text-wrap">
-                During the trip, brothers will engage in hands-on construction at a local school, connect with students and community members, reflect together in evening discussions, and immerse themselves in Jamaican culture.
-              </p>
-          </div>
-          </div>
-          <div className="flex flex-col md:w-[45%] w-[100%] mx-auto gap-4">
-            <h2 className="text-xl md:text-3xl xl:text-4xl text-center font-[family-name:var(--font-Cabin)] font-bold text-secondary mb-4">
-            In House Philanthropy
-            </h2>
-            <div className="bg-gray-50 border border-secondary p-6 mb-6 max-w-2xl mx-auto text-base text-textColor shadow">
-              <p className="mb-4 text-wrap">
-                Delta Upsilon’s Global Service Initiative (GSI) offers brothers a unique opportunity to make a real impact while exploring the world. As DU’s flagship international service program, GSI sends undergraduate and alumni members to communities in need to help build schools and essential infrastructure.
-              </p>
-              <p className="mb-2 text-wrap">
-                In 2025, DU hosted two GSI trips to Negril, Jamaica:
-              </p>
-              <ul className="list-disc list-inside mb-4 text-wrap">
-                <li>January 4–11, 2025</li>
-                <li>May 17–24, 2025</li>
-              </ul>
-              <p className="mb-2 text-wrap">
-                During the trip, brothers will engage in hands-on construction at a local school, connect with students and community members, reflect together in evening discussions, and immerse themselves in Jamaican culture.
-              </p>
-          </div>
+          </h2>
+          <div className="bg-gray-50 border border-secondary rounded-lg p-6 mb-6 max-w-2xl mx-auto text-base text-textColor shadow h-full flex flex-col">
+            <p className="mb-4 text-wrap">
+              Delta Upsilon’s Global Service Initiative (GSI) offers brothers a unique opportunity to make a real impact while exploring the world. As DU’s flagship international service program, GSI sends undergraduate and alumni members to communities in need to help build schools and essential infrastructure.
+            </p>
+            <p className="mb-2 text-wrap">
+              In 2025, DU hosted two GSI trips to Negril, Jamaica:
+            </p>
+            <ul className="list-disc list-inside mb-4 text-wrap">
+              <li>January 4–11, 2025</li>
+              <li>May 17–24, 2025</li>
+            </ul>
+            <p className="mb-2 text-wrap">
+              During the trip, brothers will engage in hands-on construction at a local school, connect with students and community members, reflect together in evening discussions, and immerse themselves in Jamaican culture.
+            </p>
           </div>
         </div>
-
-
-        
-      </section>
+        <div className="flex flex-col md:w-[45%] w-[100%] mx-auto gap-4">
+          <h2 className="text-xl md:text-3xl xl:text-4xl text-center font-[family-name:var(--font-Cabin)] font-bold text-secondary mb-4">
+            In House Philanthropy
+          </h2>
+          <div className="bg-gray-50 border border-secondary rounded-lg p-6 mb-6 max-w-2xl mx-auto text-base text-textColor shadow h-full flex flex-col">
+            <p className="mb-4 text-wrap">
+              Du Toronto is committed to making a difference not just globally, but right here at home. In line with our values of justice and compassion, our chapter recently organized an in-house philanthropic initiative in support of mental health awareness.
+            </p>
+            <p className="mb-2 text-wrap">
+              Through our collective efforts, we proudly raised and donated over $1,000 to Bell Let’s Talk, helping to fund mental health programs and spark important conversations across Canada.
+            </p>
+            <p className="mb-2 text-wrap">
+              It’s one of many ways our brotherhood stands for more than just tradition—we stand for impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* PROMINENT ALUMNI  */}
       <section className="flex flex-col w-[100%] mx-auto my-5 mt-16">

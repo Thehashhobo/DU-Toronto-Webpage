@@ -1,4 +1,3 @@
-import ContactForm from "@/components/ContactForm";
 import Lester from "../../../public/images/ap1.webp"
 import Collage from "../../../public/images/ap2.webp"
 

@@ -102,11 +102,11 @@ export default function Footer() {
                 <strong>Hours:</strong> Mon - Fri: 10 AM - 6 PM
               </p> */}
               <p className="text-primary mb-2">
-                <strong>Phone:</strong> +1 778-989-8588
+                <strong>Phone:</strong> +1 (647) 545-7141
               </p>
               <p>
                 <strong className='text-primary'>Email:</strong>{" "}
-                <a href="mailto:oceanwave.vip@gmail.com" className="text-primary hover:underline">
+                <a href="mailto:dutorontochapter@gmail.com" className="text-primary hover:underline">
                   Email Delta Upsilon 
                 </a>
               </p>
