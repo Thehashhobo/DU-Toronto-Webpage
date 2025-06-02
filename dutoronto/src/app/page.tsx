@@ -14,6 +14,7 @@ import adrian from "../../public/exec/adrian.webp"
 import a1 from "../../public/images/about.webp";
 import a2 from "../../public/images/pin.webp";
 import a3 from "../../public/images/alumni.webp";
+import Image from "next/image";
 
 
 
@@ -28,6 +29,8 @@ export default function Home() {
     description:
       "Learn more about our fraternity, our values, and our commitment",
     image: a1.src,
+    width: 4016,
+    height: 3016,
     link: "/about",
   },
   {
@@ -35,6 +38,8 @@ export default function Home() {
     description:
       "We are always looking for new members who share our values strive for excellence.",
     image: a2.src,
+    width: 3000,
+    height: 2250,
     link: "/membership",
   },
   {
@@ -42,6 +47,8 @@ export default function Home() {
     description:
       "Build relatinoship and brotherly connections that will last a lifetime.",
     image: a3.src,
+    width: 2290,
+    height: 2994,
     link: "/alumni",
   },
   {
@@ -49,6 +56,8 @@ export default function Home() {
     description:
       "Live in a home that is more than just a place to stay.",
     image: H1.src,
+    width: 1024,
+    height: 768,
     link: "/house",
   },
 ];
@@ -75,6 +84,8 @@ const membersCards = [
   {
     position: "Minister of Recruitment",
     name: "Azaryah Mendes",
+    width: 1024,
+    height: 768,
     description:
       "We are always looking for new members who share our values and commitment to excellence.",
     image: H1.src,
@@ -182,7 +193,9 @@ const membersCards = [
           </p>
         </div>
         
-        <img
+        <Image
+          width={300}
+          height={351}
           src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
           className="md:flex-1 h-42 md:h-58 my-2 "
@@ -198,12 +211,13 @@ const membersCards = [
             title={card.title}
             description={card.description}
             image={card.image}
+            width={card.width}
+            height={card.height}
             link={card.link}
           />
         ))}
       </div>
     </section>
-
       {/* Info Section */}
       {/* <hr className="w-full h-[1.5px] bg-[#59890c]"/>  */}
       <div className="relative w-[90%] mx-auto text-[color:var(--textColor)] border-2 shadow-xl drop-shadow-textColor border-secondary p-3 mt-3 mb-8 xl:mb-16"

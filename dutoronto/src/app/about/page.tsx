@@ -2,20 +2,24 @@ import H1 from "../../../public/images/about1.webp"
 import A1 from "../../../public/images/A1.webp"
 import A2 from "../../../public/images/A2.webp"
 import A3 from "../../../public/images/A3.webp"
-import A4 from "../../../public/images/JA-Clark.jpg"
+import A4 from "../../../public/images/A4.webp"
 import B1 from "../../../public/images/B1.webp"
 import AlumniCard from "@/components/AlumniCards";
 import History from "@/components/History";
+import Image from 'next/image'
+
 
 export default function About() {
 
 
-const animatedCards = [
+const alumniCards = [
   {
     name: "Lester B. Pearson",
     description:
       "14th Prime Minister of Canada",
     image: A1.src,
+    width: 810,
+    height: 1080,
     link: "",
   },
   {
@@ -23,6 +27,8 @@ const animatedCards = [
     description:
       "President of United States",
     image: A2.src,
+    width: 1024,
+    height: 1298,
     link: "",
   },
   {
@@ -30,6 +36,8 @@ const animatedCards = [
     description:
       "17th Premier of Ontario",
     image: A3.src,
+    width: 550,
+    height: 804,
     link: "/alumni",
   },
   {
@@ -37,6 +45,8 @@ const animatedCards = [
     description:
       "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
     image: A4.src,
+    width: 620,
+    height: 842,
     link: "/house",
   },
 ];
@@ -78,11 +88,13 @@ const animatedCards = [
 
       {/* Brother Section */}
         <section className="flex flex-col md:flex-row w-[90%]  mx-auto text-[color:var(--textColor)] mb-6">
-        <img
-          src={B1.src}
+        <Image
+          src={B1}
           alt="Brothers of Delta Upsilon Toronto"
-          className=" h-75  md:h-[50vh] md:w-[46vw] my-2 md:mt-5"
-          style={{ objectFit: "contain" }}
+          width={1920}
+          height={1440}
+          className="h-75 md:h-[50vh] md:w-[46vw] my-2 md:mt-5 object-contain"
+          priority={true}
         />
 
         <div className="flex flex-col md:self-center mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
@@ -160,10 +172,12 @@ const animatedCards = [
           We shape men who shape the world. Delta Upsilon proudly celebrates the achievements of our brothers who have made meaningful impacts in their careers and communities.
         </h1>
          <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
-          {animatedCards.map((card, idx) => (
+          {alumniCards.map((card, idx) => (
             <AlumniCard
               key={card.name + idx}
               name={card.name}
+              width={card.width || 300}
+              height={card.height || 400}
               description={card.description}
               image={card.image}
               link={card.link}

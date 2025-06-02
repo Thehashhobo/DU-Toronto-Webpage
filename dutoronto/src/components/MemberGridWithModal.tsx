@@ -8,6 +8,8 @@ interface Member {
   name: string;
   description: string;
   image: string;
+  width?: number;
+  height?: number;
   facebook?: string;
   twitter?: string;
   instagram?: string;

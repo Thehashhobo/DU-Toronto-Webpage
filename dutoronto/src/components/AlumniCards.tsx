@@ -1,12 +1,15 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { useSpring, animated } from "@react-spring/web";
+import Image from "next/image";
 
 interface AlumniCardProps {
   name: string;
   description: string;
   image: string;
   link: string;
+  width: number;
+  height: number;
 }
 
 const AlumniCard: React.FC<AlumniCardProps> = ({
@@ -14,6 +17,8 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
   description,
   image,
   link,
+  width,
+  height,
 }) => {
   const [hovered, setHovered] = useState(false);
   const [inView, setInView] = useState(false);
@@ -66,7 +71,9 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
       onMouseLeave={() => setHovered(false)}
     >
       {/* Card background image */}
-      <img
+       <Image
+        width={width}
+        height={height}
         src={image}
         alt={name}
         className="absolute inset-0 w-full h-full object-cover"

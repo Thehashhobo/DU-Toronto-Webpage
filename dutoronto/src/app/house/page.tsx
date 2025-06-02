@@ -5,6 +5,7 @@ import H5 from "../../../public/images/H1.webp";
 import H4 from "../../../public/images/Chapter.webp"
 import HouseInfo from "@/components/HouseInfo";
 import Lion from "../../../public/images/Lion.webp";
+import Image from "next/image";
 
 export default function House() {
 
@@ -40,8 +41,10 @@ export default function House() {
         <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 h-[0.8px] bg-primary"/> 
       {/* overview */}
       <section className="flex flex-col mt-2 md:flex-row w-[90%] md:h-[70vh] lg:h-[55vh] mx-auto text-[color:var(--textColor)] 2xl:mb-2 items-center">
-        <img
+        <Image
           src={H2.src}
+          width={3000}
+          height={2250}
           alt="Delta Upsilon hosue in snow"
           className="md:flex-1 h-[50vw] md:h-[25vw] my-2 md:mt-5 border-2 border-secondary shadow-lg"
           style={{ objectFit: "contain" }}
@@ -55,7 +58,7 @@ export default function House() {
       {/* details */}
       <section className="relative w-full md:h-[60vw] lg:h-[50vw] xl:h-[40vw] 2xl:h-[38vw] flex flex-col items-center justify-center text-center px-2  mb-3">
         <div className="hidden md:block z-15 absolute md:top-[-35] md:left-[45] w-[20vw] h-[70vh]">
-              <img src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
+            <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       {/* Background Circle */}
 
@@ -63,13 +66,16 @@ export default function House() {
           <div className="hidden md:block w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] lg:w-[50vw] lg:h-[50vw] xl:w-[40vw] xl:h-[40vw] 2xl:w-[38vw] 2xl:h-[38vw] bg-transparent md:bg-primary rounded-full absolute">
           {/* Floating Images */}
           <div className="z-15 absolute md:top-[-35] md:left-[15] xl:top-[-45] xl:left-[15] 2xl:top-[-75] 2xl:left-[15] top-2 left-15 md:w-46 md:h-46 w-22 h-22 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
-            <img src={H3.src} alt="Sample 1" className="w-full h-full object-cover" />
+            {/* Pool */}
+            <Image width={3000} height={2250} src={H3.src} alt="Sample 1" className="w-full h-full object-cover" />
           </div>
           <div className="z-15 absolute md:top-[-45] xl:top-[-55] xl:right-[15] 2xl:top-[-80] 2xl:right-[15] right-13 top-[-7] w-26 h-26 md:w-42 md:h-42 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
-            <img src={H4.src} alt="Sample 2" className="w-full h-full object-cover" />
+            {/* Chapter */}
+            <Image width={3000} height={2250} src={H4.src} alt="Sample 2" className="w-full h-full object-cover" />
           </div>
           <div className="z-15 absolute md:bottom-[5] md:left-[500] md:w-46 md:h-46 bottom-28 left-26 w-24 h-24 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
-            <img src={H5.src} alt="Sample 3" className="w-full h-full object-cover" />
+            {/* H1 */}
+            <Image width={1024} height={768} src={H5.src} alt="Sample 3" className="w-full h-full object-cover" />
           </div>
           {/* <div className="absolute bottom-10 right-10 w-24 h-24 rounded-lg overflow-hidden shadow-lg">
             <img src={H4.src} alt="Sample 4" className="w-full h-full object-cover" />
@@ -93,12 +99,12 @@ export default function House() {
         </button> */}
       </div>
       <div className="z-15 md:hidden flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
-        <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
-        <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
-        <img src={H4.src} alt="Sample 3" className="w-full h-full object-cover" />
+        <Image width={3000} height={2250} src={H3.src} alt="Sample 1" className="w-full h-full object-cover" />
+        <Image width={3000} height={2250} src={H4.src} alt="Sample 2" className="w-full h-full object-cover" />
+        <Image width={1024} height={768} src={H5.src} alt="Sample 3" className="w-full h-full object-cover" />
       </div>
         <div className="z-15 absolute hidden md:block md:top-[-35] md:right-[45] w-[20vw] h-[70vh]">
-            <img src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
+          <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       </section>
           <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-6 h-[0.8px] bg-primary"/> 

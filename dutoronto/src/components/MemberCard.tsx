@@ -1,8 +1,11 @@
 import React from "react";
 import { FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import Image from "next/image";
 
 interface MemberCardProps {
   image: string;
+  width?: number;
+  height?: number;
   position: string;
   name: string;
   description: string;
@@ -16,6 +19,8 @@ interface MemberCardProps {
 
 const MemberCard: React.FC<MemberCardProps> = ({
   image,
+  width,
+  height,
   position,
   name,
   description,
@@ -29,8 +34,10 @@ const MemberCard: React.FC<MemberCardProps> = ({
       className="cursor-pointer max-w-xs w-full bg-[#fafafa] border-2 border-secondary px-8 py-4 rounded-none mx-auto flex flex-col justify-between items-start shadow-lg h-full
       transform transition-transform duration-300 scale-100 hover:scale-105 hover:shadow-none">
       <div>
-        <img
+        <Image
           src={image}
+          width={width || 2832}
+          height={height || 4240}
           alt={name}
           className="w-32 h-36 lg:w-36 lg:h-40 object-cover object-top bg-gray-200 mb-2 brightness-120"
         />

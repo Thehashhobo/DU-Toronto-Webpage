@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Logo from "../../public/images/Logo.webp"
-import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 
@@ -101,10 +101,12 @@ export default function Navbar() {
         {/* Logo + Hamburger */}
         <div className="flex justify-between items-center md:pl-4 md:justify-center order-1 md:order-2 flex-shrink-0">
           <a href="/" className="flex items-center justify-center space-x-3">
-            <img
-              src={Logo.src}
-              className="h-18"
-              alt="Flowbite Logo"
+            <Image
+              src={Logo}
+              width={1536}
+              height={678}
+              className="h-18 w-46"
+              alt="Du Logo"
             />
           </a>
           {/* Hamburger menu (mobile only) */}

@@ -2,11 +2,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSpring, animated } from "@react-spring/web";
+import Image from "next/image";
 
 interface AnimatedCardProps {
   title: string;
   description: string;
   image: string;
+  width?: number;
+  height?: number;
   link: string;
 }
 
@@ -14,6 +17,8 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   title,
   description,
   image,
+  width,
+  height,
   link,
 }) => {
   const [hovered, setHovered] = useState(false);
@@ -91,8 +96,10 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
         onMouseLeave={() => setHovered(false)}
       >
         {/* Card background image */}
-        <img
+        <Image
           src={image}
+          width={width}
+          height={height}
           alt={title}
           className="absolute inset-0 w-full h-full object-cover"
         />

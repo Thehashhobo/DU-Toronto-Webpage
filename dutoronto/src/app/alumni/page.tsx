@@ -1,5 +1,7 @@
 import Lester from "../../../public/images/ap1.webp"
 import Collage from "../../../public/images/ap2.webp"
+import Image from 'next/image'
+
 
 export default function Alumni() {
 
@@ -37,8 +39,10 @@ export default function Alumni() {
       {/* Collage Section */}
       <section className="flex flex-col md:flex-row w-[90%] mx-auto my-12 items-center">
         <div className="w-full md:w-[520px] h-[420px] flex items-center justify-center bg-white rounded-lg shadow-lg mb-6 md:mb-0 md:mr-8 overflow-hidden">
-          <img
-            src={Collage.src}
+          <Image
+            src={Collage}
+            width={898}
+            height={1056}
             alt="Delta Upsilon Prominent Alumni Collage"
             className="w-full h-full object-cover"
           />

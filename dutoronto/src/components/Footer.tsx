@@ -1,6 +1,6 @@
 import { FacebookFilled, TwitterCircleFilled, InstagramFilled, YoutubeFilled } from '@ant-design/icons';
 import Link from "next/link";
-import F1 from "../../public/images/F2.webp";
+import Image from 'next/image';
 export default function Footer() {
     return (
       <footer className="w-full bg-gray-900 text-gray-100">
@@ -16,8 +16,10 @@ export default function Footer() {
               <h3 className="text-3xl md:text-4xl font-[family-name:var(--font-Cabin)] text-white font-bold uppercase mb-4 text-center">
                 Delta Upsilon Toronto
               </h3>
-              <img
+              <Image
                 src="/images/L2.webp"
+                width={225}
+                height={225}
                 alt="Delta Upsilon Coat of Arms"
                 className="h-50 w-auto my-2 md:mt-5 mx-auto"
                 style={{ objectFit: "contain" }}
@@ -76,18 +78,18 @@ export default function Footer() {
                 </a>
 
                 <div className="flex space-x-4">
-                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                  <a href="https://www.facebook.com/DUToronto/" target="_blank" className="text-white text-2xl hover:text-primary">
                     <FacebookFilled />
                   </a>
-                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                  {/* <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                     <TwitterCircleFilled />
-                  </a>
-                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                  </a> */}
+                  <a href="https://www.instagram.com/dutoronto/" target="_blank" className="text-white text-2xl hover:text-primary">
                     <InstagramFilled />
                   </a>
-                  <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
+                  {/* <a href="#" target="_blank" className="text-white text-2xl hover:text-primary">
                     <YoutubeFilled />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

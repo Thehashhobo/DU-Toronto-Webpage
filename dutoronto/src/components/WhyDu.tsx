@@ -3,6 +3,7 @@ import W1 from "../../public/svgs/W1.svg";
 import W2 from "../../public/svgs/W2.svg";
 import W3 from "../../public/svgs/W3.svg";
 import W4 from "../../public/svgs/W4.svg";
+import Image from "next/image";
 
 
 const WhyDu: React.FC = () => {
@@ -37,8 +38,10 @@ const WhyDu: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-lg mx-auto">
         {items.map((item, index) => (
           <div key={index} className="flex flex-col items-center text-center">
-          <img
+          <Image
             src={item.image.src}
+            width={120} // or any size you want
+            height={120}
             alt={item.title}
             className="w-34 h-34 mb-4 rounded-full border-4 border-yellow-400 p-2 bg-secondary shadow"
           />
