@@ -181,7 +181,7 @@ export default function History() {
                 1899
               </time>
               <p className="text-base font-normal text-textColor  text-balance">
-                The Delta Upsilon Toronto Chapter was officially installed in Dec. 5, 1899. Located at the University of Toronto, it played a key role in expanding DU’s presence beyond the United States and reinforcing its commitment to non-secret, merit-based brotherhood across borders.
+                The Delta Upsilon Toronto Chapter was officially installed in Dec. 15, 1899. Located at the University of Toronto, it played a key role in expanding DU’s presence beyond the United States and reinforcing its commitment to non-secret, merit-based brotherhood across borders.
               </p>
             </div>
           </li>

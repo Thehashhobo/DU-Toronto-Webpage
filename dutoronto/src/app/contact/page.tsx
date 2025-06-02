@@ -65,7 +65,7 @@ export default function Contact() {
               <div className="md:ml-4 ml-0">
                   <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h1>
                   <p className="mb-4">
-                      For Question related to alumni and events, please contact us our Minister of External Relations.
+                      For Question related to alumni and events, please contact our Minister of External Relations.
                   </p>
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">

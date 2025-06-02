@@ -1,5 +1,5 @@
 "use client";
-import H1 from "../../../public/images/H1.webp"
+import MembershipHeader from "../../../public/images/MembershipHeader.webp";
 import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 import { useEffect, useRef, useState } from "react";
@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 const quickFacts = [
   { label: "Chartered", value: "December 4, 1899" },
   { label: "Motto", value: 'Δικαια Υποθηκη - "Justice Our Foundation"' },
-  { label: "Nickname", value: "GOAT, Delta Upsilon members are Goats baaaah" },
+  { label: "Location", value: "182 St. George St" },
   { label: "Colors", value: "Old Gold & Sapphire Blue" },
   { label: "Mascot", value: "Mallard Duck" },
   { label: "Headquarters", value: "8705 Founders Road, Indianapolis, IN, USA" },
@@ -15,74 +15,106 @@ const quickFacts = [
   { label: "Prime Minister's of Canada", value: "1" },
 ];
 
-const faqs = [
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export const faqs: FAQ[] = [
   {
     question: "What is Delta Upsilon?",
-    answer: "Delta Upsilon is a non-secret, non-hazing international fraternity focused on building better men through shared values and brotherhood.",
+    answer:
+      "Founded in 1834, Delta Upsilon is the sixth oldest fraternity and first non-secret fraternity. Being a Social Fraternity, DU is an international men's organization focused on its four founding principles. The Toronto chapter upholds these values.",
   },
   {
-    question: "Is membership open to all students?",
-    answer: "Yes! We value diversity and welcome all students who align with our mission and values.",
+    question: "Who can join Delta Upsilon?",
+    answer:
+      "We welcome all undergraduate men from all Toronto universities who are looking for community, leadership development, and a better university experience.",
   },
   {
-    question: "What makes DU different from other fraternities?",
-    answer: "We are the only international fraternity to be non-secret since our founding in 1834. Our mission and Four Founding Principles guide all our decisions.",
+    question: "What is Rush?",
+    answer:
+      '"Rush", or our main recruitment period, occurs during August/September and December/January and it is when you receive an invitation, but we recruit all year round for prospective members. Follow us on social media to check for dates and events!',
   },
   {
-    question: "How do I join?",
-    answer: "You can reach out during our recruitment period, attend events, and connect with current brothers to learn more.",
+    question: "Do I have to live in the fraternity house to join?",
+    answer:
+      "No. Living in the house is completely optional and subject to availability. Many of our members live off-campus or in residence, but many do choose to live in the House because of its cheaper price.",
+  },
+  {
+    question: "Is there a financial cost to join?",
+    answer:
+      "Yes. Like all other organizations, DU does have 'Dues' which cover Chapter activities, national fees, and house maintenance. We have the lowest dues on campus as we strive to prevent finances from being a boundary to membership.",
+  },
+  {
+    question: "What kind of events do you host?",
+    answer:
+      "We host a wide variety of events, including social mixers, formals, philanthropy fundraisers, professional development talks, professor speeches, workshops/seminars, and brotherhood retreats.",
+  },
+  {
+    question: "What sort of time commitment is required?",
+    answer:
+      "Brothers typically attend weekly meetings and participate in 1-2 events per week. Generally, the more time you put in the more you'll find the experience rewarding.",
+  },
+  {
+    question: "What are the benefits of joining?",
+    answer:
+      "Lifelong brotherhood, leadership opportunities, academic support, alumni networking, community involvement, and memories that last a lifetime.",
+  },
+  {
+    question: "Does the fraternity support academics?",
+    answer:
+      "Most definitely. We offer mentorship for Junior Brothers who share a program with a Senior Brother alongside tutoring and weekly study sessions. We also recognize academic achievement with awards and scholarships.",
+  },
+  {
+    question: "How will the fraternity affect my GPA?",
+    answer:
+      "Minimally. Our Chapter requires member to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
+  },
+  {
+    question: "Is hazing allowed?",
+    answer:
+      "No. We are a Non-Hazing fraternity and hazing is strictly prohibited. We promote a safe and respectful environment.",
+  },
+  {
+    question: "How can I learn more or get involved?",
+    answer:
+      "Fill out our interest form, come to a recruitment event, or reach out to our recruitment chair!",
   },
 ];
 
-const FAQSection = () => {
-  const [featuredIndex, setFeaturedIndex] = useState<number | null>(null);
-
-  const featuredFaq = featuredIndex !== null ? faqs[featuredIndex] : null;
+const FaqItem = ({ question, answer }: FAQ) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="w-full px-4 py-20 bg-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[color:var(--color-primary)] uppercase">
-        Frequently Asked Questions
-      </h2>
-
-      {/* Featured FAQ (spans full width above grid) */}
-      {featuredFaq && (
-  <div
-    className="mb-10 bg-blue-50 border border-blue-200 shadow-md rounded-xl px-6 py-6 transition-all duration-500 ease-out animate-fade-in-up"
-    key={featuredIndex} // ensures re-animation on change
-  >
-    <div className="flex justify-between items-start mb-2">
-      <h3 className="text-2xl md:text-3xl font-bold text-blue-800 max-w-4xl">
-        {featuredFaq.question}
-      </h3>
+    <div
+      className={`mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
+        isOpen ? "bg-blue-50" : "hover:bg-blue-50"
+      }`}
+    >
+      {/* QUESTION BUTTON ─ no text limit, but a baseline height */}
       <button
-        className="text-sm text-blue-600 hover:underline"
-        onClick={() => setFeaturedIndex(null)}
-      >
-        Close
-      </button>
-    </div>
-    <p className="text-base md:text-lg text-gray-700 max-w-4xl">
-      {featuredFaq.answer}
-    </p>
-  </div>
-)}
+        onClick={() => setIsOpen(o => !o)}
+        aria-expanded={isOpen}
+        className="w-full p-4 items-center cursor-pointer focus:outline-none min-h-22 text-center">
+        <span className="text-lg text-gray-900 text-center">
+          {question}
+        </span>
 
-      {/* Grid of FAQs */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            onClick={() => setFeaturedIndex(index)}
-            className="cursor-pointer border border-gray-200 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 px-4 py-5 transition-all duration-300"
-          >
-            <h3 className="text-lg font-medium text-gray-800">{faq.question}</h3>
-          </div>
-        ))}
+      </button>
+
+      {/* ANSWER PANEL */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-60 opacity-100 rounded-b-xl" : "max-h-0 opacity-0"
+        }`}
+      >
+        <p className="p-4 pt-0 text-sm text-gray-700">{answer}</p>
       </div>
-    </section>
+    </div>
   );
 };
+
 
 const QuickFactsSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -145,11 +177,21 @@ const ImpactSection = () => {
     const buttons = document.querySelectorAll<HTMLButtonElement>(".tab-btn");
     const contents = document.querySelectorAll<HTMLElement>(".tab-content");
     const underline = underlineRef.current;
-
+  
+    let selectedButton: HTMLElement | null = null;
+  
     const updateUnderline = (button: HTMLElement) => {
+      selectedButton = button;
       if (underline) {
         underline.style.width = `${button.offsetWidth}px`;
         underline.style.left = `${button.offsetLeft}px`;
+      }
+    };
+  
+    const handleResize = () => {
+      if (selectedButton && underline) {
+        underline.style.width = `${selectedButton.offsetWidth}px`;
+        underline.style.left = `${selectedButton.offsetLeft}px`;
       }
     };
   
@@ -171,11 +213,16 @@ const ImpactSection = () => {
       });
     });
   
-    // Ensure all event listeners are attached first
+    window.addEventListener("resize", handleResize);
+  
     setTimeout(() => {
       const defaultTab = document.querySelector<HTMLButtonElement>(".tab-btn[data-tab='lead']");
       if (defaultTab) defaultTab.click();
     }, 0);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -205,33 +252,34 @@ const ImpactSection = () => {
 
       <div className="w-full">
         <div className="tab-content" id="lead">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-4xl font-bold mb-2">20+</h3>
-              <p className="text-lg">CEOs/Presidents of Major Businesses</p>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-3 w-full max-w-4xl mx-auto">
+
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
+              <h3 className="text-3xl font-bold mb-2">20+</h3>
+              <p className="text-lg">Presidents of Major Businesses</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-4xl font-bold mb-2">6</h3>
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
+              <h3 className="text-3xl font-bold mb-2">7</h3>
               <p className="text-lg">
-                Nobel Laureates
+              Nobel Prizes
               </p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-3">
+                      <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-2">
               <p className="text-lg">At DU, leadership is not about titles — it's about action. Whether it's planning an event, mentoring a new member, or being President, we challenge each Brother to make a difference in any way they can. At our Chapter, leadership is a habit, not a hierarchy.</p>
             </div>
           </div>
         </div>
 
         <div className="tab-content hidden" id="edge">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto">
-          <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-3">
+          <div className="grid grid-cols-2 gap-3 w-full max-w-4xl mx-auto">
+          <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-2">
               <p className="text-lg">College is your launchpad, and we help build momentum. Dedicated study hours and alumni networking to workshops on academic or financial literacy, we give the tools for you to grow in and out of the classroom. Brotherhood at DU means pushing each other to do better together.</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-4xl font-bold mb-2">3.79</h3>
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
+              <h3 className="text-4xl font-bold mb-2">3.62</h3>
               <p className="text-lg">Chapter cGPA (24-25)</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-2">
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
               <h3 className="text-4xl font-bold mb-2">20+</h3>
               <p className="text-lg">
                 Different specialists, majors, or minors represented
@@ -242,34 +290,34 @@ const ImpactSection = () => {
         </div>
 
         <div className="tab-content hidden" id="bonds">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto">
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full max-w-4xl mx-auto">
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-2">
               <h3 className="text-4xl font-bold mb-2">1100+</h3>
               <p className="text-lg">Total initiated Brothers at Delta Upsilon Toronto Chapter</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
               <h3 className="text-4xl font-bold mb-2">40+</h3>
               <p className="text-lg">
                 Active Brothers
               </p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-3">
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-3">
               <p className="text-lg">Brotherhood at Delta Upsilon isn't when you get initiated — it begins the moment you walk in the door. From late-night conversations to international trips, the relationships built here are real, rooted, and enduring. We’re not just a fraternity, we’re a family for life.</p>
             </div>
           </div>
         </div>
 
         <div className="tab-content hidden" id="good">
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
-          <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md col-span-2">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-3 w-full max-w-4xl mx-auto">
+          <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-2">
               <p className="text-lg">Every Brother is expected to serve. Not out of obligation, but out of conviction. Turoting local students, organizing fundraisers, or cleaning up the neighbourhood, our impact is felt far beyond campus. At DU, doing good is who we are.</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-4xl font-bold mb-2">$100,000+</h3>
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
+              <h3 className="text-3xl font-bold mb-2">$100,000+</h3>
               <p className="text-lg">Donated every year across all Chapters to Delta Upsilon's own Philanthropy (GSI)</p>
             </div>
-            <div className="bg-gray-900 text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-4xl font-bold mb-2">15+</h3>
+            <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
+              <h3 className="text-3xl font-bold mb-2">10+</h3>
               <p className="text-lg">
               Average annual service hours per Brother at the Toronto Chapter
               </p>
@@ -288,8 +336,9 @@ export default function Membership() {
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-center justify-start overflow-hidden"
-        style={{backgroundImage: `url(${H1.src})`}}
+        className="relative w-full h-[50vh] md:h-[40vh] mt-24 md:mt-20 bg-cover justify-start overflow-hidden"
+        style={{ backgroundImage: `url(${MembershipHeader.src})`,
+                backgroundPosition: "center 10%",}}
       >
         {/* Overlay and Content */}
         <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
@@ -305,29 +354,21 @@ export default function Membership() {
         </div>
       </section>
 
-      <FAQSection/>
+      <section className="mx-auto max-w-6xl px-4 py-12">
+      <h2 className="mb-8 text-center text-3xl font-extrabold uppercase tracking-wide text-gray-900">
+        Frequently Asked Questions
+      </h2>
 
-      {/* Coat of Arms */}
-      <section className="flex flex-col md:flex-row w-[90%] h-[56vh] md:h-[36vh] mx-auto text-[color:var(--textColor)]">
-        <div className="flex flex-col md:self-center md:flex-4 mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
-          <h2 className="text-xl md:text-4xl font-[family-name:var(--font-Roboto)] font-bold text-textColor">
-            Delta Upsilon is not your typical fraternity. Our non-secret heritage and our dedication to creating a modern fraternity experience help us in{' '}
-            <span className="font-[family-name:var(--font-Cabin)] border-b-4 text-[color:var(--color-primary)]">
-              Building Better Men
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] font-bold text-[#012d69] mt-2">
-            Fraternity membership is one of the most valuable extra-curricular experiences
-          </p>
-        </div>
-        
-        <img
-          src="/images/Coat of Arms.webp"
-          alt="Delta Upsilon Coat of Arms"
-          className="md:flex-1 h-42 md:h-58 my-2 md:mt-5"
-          style={{ objectFit: "contain" }}
-        />
-      </section>
+      {/*
+        We use `columns-*` utilities to create independent vertical flows.
+        `break-inside-avoid` on each item stops them splitting across columns.
+      */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-start">
+        {faqs.map((faq) => (
+          <FaqItem key={faq.question} {...faq} />
+        ))}
+      </div>
+    </section>
 
       <QuickFactsSection/>
 

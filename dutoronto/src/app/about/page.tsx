@@ -2,7 +2,7 @@ import H1 from "../../../public/images/about1.webp"
 import A1 from "../../../public/images/A1.webp"
 import A2 from "../../../public/images/A2.webp"
 import A3 from "../../../public/images/A3.webp"
-import A4 from "../../../public/images/A4.webp"
+import A4 from "../../../public/images/JA-Clark.jpg"
 import B1 from "../../../public/images/B1.webp"
 import AlumniCard from "@/components/AlumniCards";
 import History from "@/components/History";
@@ -14,28 +14,28 @@ const animatedCards = [
   {
     name: "Lester B. Pearson",
     description:
-      "14th prime minister of Canada",
+      "14th Prime Minister of Canada",
     image: A1.src,
     link: "",
   },
   {
     name: "James A. Garfield",
     description:
-      "Second fraternity man to become President of the U.S",
+      "President of United States",
     image: A2.src,
     link: "",
   },
   {
     name: "John P. Robarts",
     description:
-      "17th premier of Ontario",
+      "17th Premier of Ontario",
     image: A3.src,
     link: "/alumni",
   },
   {
-    name: "Lloyd Axworthy",
+    name: "John Arthur Clark",
     description:
-      "Minister of Foreign Affairs",
+      "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
     image: A4.src,
     link: "/house",
   },
@@ -89,7 +89,7 @@ const animatedCards = [
           <h2 className="text-xl md:text-4xl xl:text-5xl font-[family-name:var(--font-Cabin)] font-bold text-primary">
             Our Brothers
           </h2>
-          <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] font-bold text-textColor mt-2">
+          <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] text-black mt-2">
             At DU Toronto, more than 30 brothers come together not just as members of a fraternity, but as a close-knit community grounded in shared values—justice, character, friendship, and a commitment to learning. What brings us together goes beyond tradition; it's the day-to-day experiences, support, and growth we share that turn brotherhood into something truly meaningful—like family.
           </p>
         </div>
@@ -104,11 +104,11 @@ const animatedCards = [
             </h2>
             <History/>
           </section>
-          <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
+          {/* <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/>  */}
           {/* PHILANTROPHY Section */}
           <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-6">
-            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
-              PHILANTROPHY
+            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-6">
+              Philantrophy
             </h2>
             <h2 className="text-xl md:text-2xl xl:text-3xl text-center font-[family-name:var(--font-Cabin)] font-bold text-textColor mb-4 text-wrap">
               Philanthropy is a core part of what it means to be a Delta Upsilon. Guided by our founding principle of the Advancement of Justice, we believe in using our time, resources, and talents to uplift others. 
@@ -156,7 +156,7 @@ const animatedCards = [
       {/* PROMINENT ALUMNI  */}
       <section className="flex flex-col w-[100%] mx-auto my-5 mt-16">
         <h1 className=" font-[family-name:var(--font-Cabin)] text-5xl font-bold mb-4 text-center bg-primary border-t-[12] border-b-[12] border-secondary py-4">Prominent Alumni</h1>
-        <h1 className="font-[family-name:var(--font-Cabin)] text-primary opacity-90 mx-auto w-[90%] md:w-[80%] text-xl md:text-2xl text-center font-bold">
+        <h1 className="font-[family-name:var(--font-Cabin)] text-secondary opacity-90 mx-auto w-[90%] md:w-[80%] text-xl md:text-2xl text-center font-bold">
           We shape men who shape the world. Delta Upsilon proudly celebrates the achievements of our brothers who have made meaningful impacts in their careers and communities.
         </h1>
          <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
