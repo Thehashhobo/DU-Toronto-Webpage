@@ -128,9 +128,9 @@ const alumniCards = [
       buttonText="Uncover the Rich History of Our Chapter"
       hideButtonText="Hide"
       />
-    {/* <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/>  */}
+    <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
     {/* PHILANTROPHY Section */}
-    <section className="flex flex-col w-[90%] mx-auto whitespace-nowrap mt-6">
+    <section className="flex flex-col w-[90%] mx-auto mt-6">
       <h2 className="text-2xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-6">
         Philantrophy
       </h2>

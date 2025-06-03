@@ -32,32 +32,32 @@ export default function Footer() {
               </h3>
               <ul className="list-disc md:ml-1 ml-8 space-y-1">
                 <li>
-                  <Link href="/" className="text-primary hover:underline">
+                  <Link href="/" className="text-xl text-primary hover:underline">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-primary hover:underline">
+                  <Link href="/about" className="text-xl text-primary hover:underline">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/membership" className="text-primary hover:underline">
+                  <Link href="/membership" className="text-xl text-primary hover:underline">
                     Membership
                   </Link>
                 </li>
                 <li>
-                  <Link href="/alumni" className="text-primary hover:underline">
+                  <Link href="/alumni" className="text-xl text-primary hover:underline">
                     Alumni
                   </Link>
                 </li>
                 <li>
-                  <Link href="/house" className="text-primary hover:underline">
+                  <Link href="/house" className="text-xl text-primary hover:underline">
                     House
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-primary hover:underline">
+                  <Link href="/contact" className="text-xl text-primary hover:underline">
                     Contact
                   </Link>
                 </li>
@@ -97,17 +97,17 @@ export default function Footer() {
             {/* Footer Info */}
             <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center">
               <h3 className="text-3xl text-white md:text-4xl font-bold uppercase mb-4 text-center ">General Inquiries</h3>
-              <p className="text-primary mb-2 text-nowrap">
+              <p className="text-primary text-xl mb-2 text-nowrap">
                 <strong>Location:</strong> 182 St George St, Toronto, ON
               </p>
               {/* <p className="mb-2">
                 <strong>Hours:</strong> Mon - Fri: 10 AM - 6 PM
               </p> */}
-              <p className="text-primary mb-2">
+              <p className="text-primary text-xl mb-2">
                 <strong>Phone:</strong> +1 (647) 545-7141
               </p>
               <p>
-                <strong className='text-primary'>Email:</strong>{" "}
+                <strong className='text-primary text-xl'>Email:</strong>{" "}
                 <a href="mailto:dutorontochapter@gmail.com" className="text-primary hover:underline">
                   Email Delta Upsilon 
                 </a>
@@ -123,9 +123,9 @@ export default function Footer() {
   
           {/* Designer/Builder Credit */}
           <p className="text-sm mt-2 md:mt-0 text-black">
-            Designed and built by <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jerry W</a>, {" "}
-            <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Michael</a> and {" "}
-            <a href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Varun Pillai</a>
+            Designed and built by <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Jerry W</a>, {" "}
+            <a href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Michael</a> and {" "}
+            <a href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Varun Pillai</a>
           </p>
         </div>
       </footer>
