@@ -142,7 +142,7 @@ const membersCards = [
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-center justify-start overflow-hidden"
+        className="relative w-full h-[70vh] md:h-[100vh] bg-cover bg-center justify-start overflow-hidden"
       >
         {/* Video Background */}
         <video
@@ -180,8 +180,8 @@ const membersCards = [
       </section>
 
       {/* Coat of Arms */}
-      <section className="flex flex-col md:flex-row w-[90%] h-[56vh] md:h-[36vh] mx-auto text-[color:var(--textColor)]">
-        <div className="flex flex-col md:self-center md:flex-4 mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
+      <section className="flex flex-col md:flex-row w-[90%]  mx-auto text-[color:var(--textColor)] items-center">
+        <div className="flex flex-col md:flex-4 mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
           <h2 className="text-xl md:text-4xl font-[family-name:var(--font-Roboto)] font-bold text-textColor">
             Delta Upsilon is not your typical fraternity. Our non-secret heritage and our dedication to creating a modern fraternity experience help us in{' '}
             <span className="font-[family-name:var(--font-Cabin)] border-b-4 text-[color:var(--color-primary)]">
@@ -198,7 +198,7 @@ const membersCards = [
           height={351}
           src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
-          className="md:flex-1 h-42 md:h-58 my-2 "
+          className="md:flex-1 h-64 md:h-58 my-2 "
           style={{ objectFit: "contain" }}
         />
       </section>

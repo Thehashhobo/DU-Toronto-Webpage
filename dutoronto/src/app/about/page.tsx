@@ -84,7 +84,7 @@ const alumniCards = [
             <a href="/services" className="btn">
               Learn More
             </a>
-            <a href="/contacts" className="btn">
+            <a href="/contact" className="btn">
               Contact Us
             </a>
           </div> */}
@@ -104,7 +104,7 @@ const alumniCards = [
         />
 
         <div className="flex flex-col md:self-center mt-5 md:mr-0 md:mb-5 md:ml-5 border-1 p-3 md:p-10 border-secondary">
-          <h2 className="text-xl md:text-4xl xl:text-5xl font-[family-name:var(--font-Cabin)] font-bold text-primary">
+          <h2 className="text-2xl md:text-4xl xl:text-5xl font-[family-name:var(--font-Cabin)] font-bold text-primary">
             Our Brothers
           </h2>
           <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] text-black mt-2">
@@ -117,7 +117,7 @@ const alumniCards = [
           <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/> 
           {/* history Section */}
           <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-4 mb-4">
-            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
+            <h2 className="text-2xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-4">
                 Our History
             </h2>
             <History/>
@@ -128,15 +128,15 @@ const alumniCards = [
       buttonText="Uncover the Rich History of Our Chapter"
       hideButtonText="Hide"
       />
-          {/* <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/>  */}
-          {/* PHILANTROPHY Section */}
-          <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-6">
-            <h2 className="text-xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-6">
-              Philantrophy
-            </h2>
-            <h2 className="text-xl md:text-2xl xl:text-3xl text-center font-[family-name:var(--font-Cabin)] font-bold text-textColor mb-4 text-wrap">
-              Philanthropy is a core part of what it means to be a Delta Upsilon. Guided by our founding principle of the Advancement of Justice, we believe in using our time, resources, and talents to uplift others. 
-            </h2>
+    {/* <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/>  */}
+    {/* PHILANTROPHY Section */}
+    <section className="flex flex-col w-[90%] mx-auto whitespace-nowrap mt-6">
+      <h2 className="text-2xl md:text-4xl xl:text-5xl text-center font-[family-name:var(--font-Cabin)] font-bold text-primary mb-6">
+        Philantrophy
+      </h2>
+      <h2 className="text-lg md:text-2xl xl:text-3xl text-center font-[family-name:var(--font-Cabin)] font-bold text-textColor mb-4 text-wrap">
+        Philanthropy is a core part of what it means to be a Delta Upsilon. Guided by our founding principle of the Advancement of Justice, we believe in using our time, resources, and talents to uplift others. 
+      </h2>
       <div className="flex flex-col md:flex-row w-[100%] mx-auto gap-4 items-stretch">
         <div className="flex flex-col md:w-[45%] w-[100%] mx-auto gap-4">
           <h2 className="text-xl md:text-3xl xl:text-4xl text-center font-[family-name:var(--font-Cabin)] font-bold text-secondary mb-4">

@@ -38,7 +38,7 @@ export default function House() {
             {/* <a href="/services" className="btn">
               Learn More
             </a> */}
-            <a href="/contacts" className="btn">
+            <a href="/contact" className="btn">
               Contact Us
             </a>
           </div>

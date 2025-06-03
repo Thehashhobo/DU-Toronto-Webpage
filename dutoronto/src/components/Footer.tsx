@@ -71,7 +71,7 @@ export default function Footer() {
               </h3>
               <div className="flex flex-col gap-3 md:space-x-4">
                 <a
-                  href="/contacts"
+                  href="/contact"
                   className="btn"
                 >
                   Contact Us
