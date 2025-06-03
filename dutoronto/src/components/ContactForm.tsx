@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
     if (!validateForm()) return;
 
     if (form.current) {
-      emailjs.sendForm("service_cvwwc8c", "template_jnu6jkn", form.current, "jWOxeHqPjgs3G2q-l")
+      emailjs.sendForm("service_mzsekqe", "template_wl8h6od", form.current, "aPixscVBLWvZUQf-6")
         .then(() => {
           setStatus({ message: "Message sent successfully!", type: "success" });
           setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" }); // Reset form

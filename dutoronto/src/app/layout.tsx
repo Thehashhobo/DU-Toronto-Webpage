@@ -48,8 +48,8 @@ const germ = Germania_One({
 
 export const metadata: Metadata = {
 
-  // metadataBase: new URL('https://www.dutoronto.org'),
-  metadataBase: new URL('https://du-toronto-webpage.vercel.app/'),
+  metadataBase: new URL('https://dutoronto.org/'),
+  // metadataBase: new URL('https://du-toronto-webpage.vercel.app/'),
   title: {
     default: 'Delta Upsilon – University of Toronto Chapter',
     template: '%s | Delta Upsilon Toronto',   // page.tsx files can export `generateMetadata`

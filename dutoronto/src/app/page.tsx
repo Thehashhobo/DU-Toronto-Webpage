@@ -1,10 +1,10 @@
 import H1 from "../../public/images/H1.webp";
-import F1 from "../../public/images/F2.webp";
+import F1 from "../../public/images/private/F2.webp";
 import WhyDu from "@/components/WhyDu";
 import AnimatedCard from "@/components/AnimatedCard";
 import dev from "../../public/exec/dev2.webp"
 import aaron from "../../public/exec/aaron.webp"
-// import azaryah from "../../public/exec/azaryah.webp"
+import az from "../../public/exec/az.jpg";
 import alex from "../../public/exec/alex.webp"
 import arav from "../../public/exec/arav.webp"
 import tony from "../../public/exec/tony.webp"
@@ -88,7 +88,7 @@ const membersCards = [
     height: 768,
     description:
       "We are always looking for new members who share our values and commitment to excellence.",
-    image: H1.src,
+    image: az.src,
     linkedin: "https://www.linkedin.com/in/azaryah-mendes-61417a300/",
     instagram: "https://www.instagram.com/azaryah_mendes/",
   },

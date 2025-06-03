@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
-import H1 from "../../../public/images/H1.webp";
 import {InstagramFilled} from '@ant-design/icons';
 import adrian from "../../../public/exec/adrian.webp"
+import az from "../../../public/exec/az.jpg";
 import Image from "next/image";
 
 export default function Contact() {
@@ -36,9 +36,9 @@ export default function Contact() {
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                       <Image
-                        src={H1}
-                        width={1024}
-                        height={768}
+                        src={az}
+                        width={423}
+                        height={536}
                         alt="Recruitment"
                         className="w-full h-full object-cover bg-gray-200"
                       />

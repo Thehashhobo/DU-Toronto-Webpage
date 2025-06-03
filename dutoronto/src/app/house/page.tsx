@@ -1,10 +1,10 @@
-import H1 from "../../../public/images/Ho1.webp"
+import H1 from "../../../public/images/private/Ho1.webp"
 import H2 from "../../../public/images/snow.webp"
 import H3 from "../../../public/images/Pool.webp"
 import H5 from "../../../public/images/H1.webp";
 import H4 from "../../../public/images/Chapter.webp"
 import HouseInfo from "@/components/HouseInfo";
-import Lion from "../../../public/images/Lion.webp";
+import Lion from "../../../public/images/private/Lion.webp";
 import TextHistory from "@/components/TextHistory";
 import Image from "next/image";
 

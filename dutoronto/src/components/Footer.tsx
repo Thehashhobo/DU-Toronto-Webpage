@@ -17,7 +17,7 @@ export default function Footer() {
                 Delta Upsilon Toronto
               </h3>
               <Image
-                src="/images/L2.webp"
+                src="/images/private/L2.webp"
                 width={225}
                 height={225}
                 alt="Delta Upsilon Coat of Arms"

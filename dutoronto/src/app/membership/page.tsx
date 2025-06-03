@@ -68,7 +68,7 @@ const faqs: FAQ[] = [
   {
     question: "How will the fraternity affect my GPA?",
     answer:
-      "Minimally. Our Chapter requires member to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
+      "Minimally. Our Chapter requires members to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
   },
   {
     question: "Is hazing allowed?",
@@ -78,7 +78,7 @@ const faqs: FAQ[] = [
   {
     question: "How can I learn more or get involved?",
     answer:
-      "Fill out our interest form, come to a recruitment event, or reach out to our recruitment chair!",
+      "Come to a recruitment event, or reach out to our recruitment chair!",
   },
 ];
 

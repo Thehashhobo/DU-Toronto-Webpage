@@ -1,0 +1,6 @@
+# robots.txt for du-toronto-webpage.vercel.app
+
+User-agent: *
+Disallow: /images/private/
+
+Sitemap: https://dutoronto.org/sitemap.xml
