@@ -33,7 +33,7 @@ const WhyDu: React.FC = () => {
   return (
     <section className="w-full py-10 px-6">
       <h2 className="text-4xl xl:text-5xl font-[family-name:var(--font-Germ)] font-bold text-center text-textColor mb-8">
-        Delta Upsilon's Four Founding Principles
+        Delta Upsilon&apos;s Four Founding Principles
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-lg mx-auto">
         {items.map((item, index) => (

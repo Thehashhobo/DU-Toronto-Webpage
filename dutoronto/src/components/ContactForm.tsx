@@ -28,7 +28,8 @@ const ContactForm: React.FC = () => {
   };
 
   const validateForm = () => {
-    let newErrors = { firstName: "", lastName: "", email: "" };
+    const newErrors = { firstName: "", lastName: "", email: "" };
+    // use let if error messages are required
     if (!formData.firstName) newErrors.firstName = "Enter a first name.";
     if (!formData.lastName) newErrors.lastName = "Enter a last name.";
     if (!formData.email.match(/^\S+@\S+\.\S+$/)) newErrors.email = "Enter a valid email address.";

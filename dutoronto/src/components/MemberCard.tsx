@@ -23,7 +23,7 @@ const MemberCard: React.FC<MemberCardProps> = ({
   height,
   position,
   name,
-  description,
+  // description,
   facebook,
   instagram,
   linkedin,

@@ -108,7 +108,7 @@ const alumniCards = [
             Our Brothers
           </h2>
           <p className="text-lg md:text-xl font-[family-name:var(--font-Roboto)] text-black mt-2">
-            At DU Toronto, more than 30 brothers come together not just as members of a fraternity, but as a close-knit community grounded in shared values—justice, character, friendship, and a commitment to learning. What brings us together goes beyond tradition; it's the day-to-day experiences, support, and growth we share that turn brotherhood into something truly meaningful—like family.
+            At DU Toronto, more than 30 brothers come together not just as members of a fraternity, but as a close-knit community grounded in shared values—justice, character, friendship, and a commitment to learning. What brings us together goes beyond tradition; it&apos;s the day-to-day experiences, support, and growth we share that turn brotherhood into something truly meaningful—like family.
           </p>
         </div>
         

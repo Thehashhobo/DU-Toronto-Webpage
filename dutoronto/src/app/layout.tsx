@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto, Cabin, Quicksand, Germania_One } from "next/font/google";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import Navbar from "@/components/Navbar";

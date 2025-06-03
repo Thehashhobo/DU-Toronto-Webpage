@@ -16,7 +16,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
   name,
   description,
   image,
-  link,
+  // link,
   width,
   height,
 }) => {
@@ -26,6 +26,9 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 
   // IntersectionObserver to detect when the card is in view
   useEffect(() => {
+    const node = cardRef.current;
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -35,25 +38,13 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
       { threshold: 0.2 } // Trigger when 20% of the card is visible
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
+    observer.observe(node);
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
+      observer.unobserve(node);
     };
   }, []);
 
-  // Overlay animation (background darkens on hover)
-
-  // Description animation (fade in and slide up)
-  const descStyle = useSpring({
-    opacity: hovered ? 1 : 0,
-    transform: hovered ? "translateY(0px)" : "translateY(20px)",
-    config: { tension: 120, friction: 18 },
-  });
 
   // Title animation (move to top on hover)
   const titleStyle = useSpring({

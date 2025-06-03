@@ -8,8 +8,8 @@ export default function Alumni() {
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[100vh] bg-cover bg-position-[center_top_-4rem] justify-center overflow-hidden"
-        style={{backgroundImage: `url(${Lester.src})`}}
+        className="relative w-full h-[60vh] md:h-[100vh] bg-cover md:bg-position-[center_top_-4rem] justify-center overflow-hidden"
+        style={{backgroundImage: `url(${Lester.src})`} }
       >
         {/* Overlay and Content */}
         <div className="font-[family-name:var(--font-Roboto)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
@@ -29,7 +29,7 @@ export default function Alumni() {
           </div>
         </div>
         <span
-          className="absolute right-4 bottom-4 z-20 text-xs md:text-sm font-[family-name:var(--font-Cabin)] italic text-white drop-shadow-md text-right"
+          className="absolute right-4 bottom-4 z-15 text-xs md:text-sm font-[family-name:var(--font-Cabin)] italic text-white drop-shadow-md text-right"
           style={{ letterSpacing: "0.02em" }}
         >
           Lester B. Pearson, 14th Prime Minister of Canada, Delta Upsilon Toronto 1919

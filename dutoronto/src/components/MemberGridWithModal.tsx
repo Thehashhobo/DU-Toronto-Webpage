@@ -1,6 +1,4 @@
 'use client';
-
-import { useState } from 'react';
 import MemberCard from './MemberCard';
 
 interface Member {
@@ -16,8 +14,8 @@ interface Member {
 }
 
 export default function MemberGridWithModal({ members }: { members: Member[] }) {
-  const [selected, setSelected] = useState<Member | null>(null);
-
+  // const [selected, setSelected] = useState<Member | null>(null);
+  // uncomment to use modal functionality
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto">
@@ -31,6 +29,7 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
       </div>
 
       {/* member details not used rigth now */}
+      {/* Uncomment to use modal functionality */}
       {/* {selected && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45">
           <div className="bg-white p-6 rounded-lg max-w-md w-full relative">

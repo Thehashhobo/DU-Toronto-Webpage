@@ -40,6 +40,9 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       setInView(true); // Always show on mobile
       return;
     }
+    const node = cardRef.current;
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -49,14 +52,10 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       { threshold: 0.2 } // Trigger when 20% of the card is visible
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
+    observer.observe(node);
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
+      observer.unobserve(node);
     };
   }, [isDesktop]);
 

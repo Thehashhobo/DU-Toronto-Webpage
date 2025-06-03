@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../public/images/Logo.webp"
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
+// Move this outside the component
+const alwaysScrolledRoutes = [""];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // List of routes that should always use the "scrolled" style by default
-  const alwaysScrolledRoutes = ["/contact"]; 
 
   // Always start as scrolled on page refresh
   const [isScrolled, setScrolled] = useState(true);
@@ -31,11 +31,16 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  // Helper to close menu on navigation
+  function handleNavClick() {
+    setIsMenuOpen(false);
+  }
+
   // helper to reduce code duplication
   function getNavLinkClass(isScrolled: boolean) {
     return `
       font-[family-name:var(--font-Cabin)] font-bold text-xl transition-all duration-300
-      ${isScrolled ? "text-gray-900" : "text-primary"}
+      ${isScrolled ? "text-gray-900" : "md:text-primary"}
     `;
   }
 
@@ -53,7 +58,7 @@ export default function Navbar() {
   return (
     <nav className={`
         fixed w-full z-20 top-0 left-0 transition-all duration-300 overflow-x-auto
-        ${isScrolled ? "bg-[var(--background)] shadow-md" : "bg-transparent"}
+        ${(isScrolled || isMenuOpen) ? "bg-[var(--background)] shadow-md" : "md:bg-transparent"}
       `}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-4 mx-auto p-3 md:py-1 px-4 min-w-0">
@@ -67,48 +72,51 @@ export default function Navbar() {
         >
           <ul className="flex flex-col md:flex-row md:space-x-2">
             <li>
-              <a
+              <Link
                 href="/"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   HOME
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/about"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   ABOUT
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/membership"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   MEMBERSHIP
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         {/* Logo + Hamburger */}
         <div className="flex justify-between items-center md:pl-4 md:justify-center order-1 md:order-2 flex-shrink-0">
-          <a href="/" className="flex items-center justify-center space-x-3">
+          <Link href="/" className="flex items-center justify-center space-x-3" onClick={handleNavClick}>
             <Image
               src={Logo}
               width={1536}
               height={678}
-              className="h-18 w-46"
+              className="h-18 w-44"
               alt="Du Logo"
             />
-          </a>
+          </Link>
           {/* Hamburger menu (mobile only) */}
           <button
             onClick={() => { handleToggleMenu(); setScrolled(true); }}
@@ -143,34 +151,37 @@ export default function Navbar() {
         >
           <ul className="flex flex-col md:flex-row md:space-x-2">
             <li>
-              <a
+              <Link
                 href="/alumni"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   ALUMNI
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/house"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   HOUSE
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/contact"
                 className={getNavLinkClass(isScrolled)}
+                onClick={handleNavClick}
               >
                 <span className={getBubbleClass(isScrolled)}>
                   CONTACT
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

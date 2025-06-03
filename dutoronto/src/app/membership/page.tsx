@@ -1,6 +1,5 @@
 "use client";
 import MembershipHeader from "../../../public/images/MembershipHeader.webp";
-import {InstagramFilled, LinkedinFilled } from '@ant-design/icons';
 
 import { useEffect, useRef, useState } from "react";
 
@@ -229,7 +228,7 @@ const ImpactSection = () => {
     <div className="flex flex-col items-center px-6 py-12 bg-gray text-center w-full">
       <h2 className="text-3xl font-bold mb-2 text-[color:var(--color-secondary)]">The DU Difference.</h2>
       <p className="text-gray-600 max-w-2xl mb-8">
-        Delta Upsilon's principles have shaped thoughtful leaders, prominent scholars, and driven students. Our impact is built on real actions that leave a lasting mark on campus and beyond.
+        Delta Upsilon&apos;s principles have shaped thoughtful leaders, prominent scholars, and driven students. Our impact is built on real actions that leave a lasting mark on campus and beyond.
       </p>
 
       <div className="relative w-full border-b border-gray-300 mb-8">
@@ -265,7 +264,7 @@ const ImpactSection = () => {
               </p>
             </div>
                       <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-2">
-              <p className="text-lg">At DU, leadership is not about titles — it's about action. Whether it's planning an event, mentoring a new member, or being President, we challenge each Brother to make a difference in any way they can. At our Chapter, leadership is a habit, not a hierarchy.</p>
+              <p className="text-lg">At DU, leadership is not about titles — it&apos;s about action. Whether it&apos;s planning an event, mentoring a new member, or being President, we challenge each Brother to make a difference in any way they can. At our Chapter, leadership is a habit, not a hierarchy.</p>
             </div>
           </div>
         </div>
@@ -302,7 +301,7 @@ const ImpactSection = () => {
               </p>
             </div>
             <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md col-span-3">
-              <p className="text-lg">Brotherhood at Delta Upsilon isn't when you get initiated — it begins the moment you walk in the door. From late-night conversations to international trips, the relationships built here are real, rooted, and enduring. We’re not just a fraternity, we’re a family for life.</p>
+              <p className="text-lg">Brotherhood at Delta Upsilon isn&apos;t when you get initiated — it begins the moment you walk in the door. From late-night conversations to international trips, the relationships built here are real, rooted, and enduring. We’re not just a fraternity, we’re a family for life.</p>
             </div>
           </div>
         </div>
@@ -314,7 +313,7 @@ const ImpactSection = () => {
             </div>
             <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
               <h3 className="text-3xl font-bold mb-2">$100,000+</h3>
-              <p className="text-lg">Donated every year across all Chapters to Delta Upsilon's own Philanthropy (GSI)</p>
+              <p className="text-lg">Donated every year across all Chapters to Delta Upsilon&apos;s own Philanthropy (GSI)</p>
             </div>
             <div className="bg-gray-900 text-white p-3 rounded-lg shadow-md">
               <h3 className="text-3xl font-bold mb-2">10+</h3>
@@ -330,8 +329,6 @@ const ImpactSection = () => {
 };
 
 export default function Membership() { 
-
-  const [featured, setFeatured] = useState<null | number>(null);
 
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">

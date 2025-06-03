@@ -1,4 +1,4 @@
-import { FacebookFilled, TwitterCircleFilled, InstagramFilled, YoutubeFilled } from '@ant-design/icons';
+import { FacebookFilled, InstagramFilled } from '@ant-design/icons';
 import Link from "next/link";
 import Image from 'next/image';
 export default function Footer() {
