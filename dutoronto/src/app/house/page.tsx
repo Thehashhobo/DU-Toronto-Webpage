@@ -5,9 +5,17 @@ import H5 from "../../../public/images/H1.webp";
 import H4 from "../../../public/images/Chapter.webp"
 import HouseInfo from "@/components/HouseInfo";
 import Lion from "../../../public/images/Lion.webp";
+import TextHistory from "@/components/TextHistory";
 import Image from "next/image";
 
 export default function House() {
+  const houseHistoryText = `
+  The house was built on top of the basin of the buried Taddle Creek, the river which once ran through Philosopher’s Walk, carving its relief. 182 St. George was a custom order for Harris L. Hees, whose son George Harris Hees would become a prolific Cabinet Minister in the Governments of John Diefenbaker and Brian Mulroney, earning the moniker of the second most powerful man in the conservative party. The architect of the house, Eden Smith, was a star of the early 20 th Century, whose craftsmanship also graces such iconic and institutional buildings as Upper Canada College, the Munk School of Global Affairs, and the present Italian Consulate.
+
+  To this day, many of the original pre-war components from the crown-molding to the wainscotting have been preserved by the diligent care of the Fraternity. For its unique historical and architectural significance, 182 St. George is protected by the Ontario Heritage Act, and is listed on the Architectural Conservancy of Ontario.
+
+  Delta Upsilon moved into 182 St. George in July of 1958, its fifth house in Toronto. Since that time, it has offered its brothers much in terms of repose, development, entertainment, and study. Our house provides not only proximity to the campus, but immersion in the culture and heritage of the university and Canada at large.
+  `;
 
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
@@ -46,8 +54,8 @@ export default function House() {
           width={3000}
           height={2250}
           alt="Delta Upsilon hosue in snow"
-          className="md:flex-1 h-[50vw] md:h-[25vw] my-2 md:mt-5 border-2 border-secondary shadow-lg"
-          style={{ objectFit: "contain" }}
+          className="md:flex-1 h-[30vh] w-[80vw] md:h-[25vw] my-2 md:mt-5 border-2 border-secondary shadow-lg"
+          style={{ objectFit: "cover" }}
         />
         <HouseInfo/>
         
@@ -107,11 +115,14 @@ export default function House() {
           <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       </section>
-          <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-6 h-[0.8px] bg-primary"/> 
+      <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-6 h-[0.8px] bg-primary"/> 
         
-      <hr className="w-full h-[1.5px] bg-secondary"/> 
-      {/* <Reviews/> */}
-
+      {/* <House History/> */}
+      <TextHistory
+      text={houseHistoryText}
+      buttonText="Uncover the Legacy of Our Chapter House"
+      hideButtonText="Hide"
+      />
     </main>
   );
 }

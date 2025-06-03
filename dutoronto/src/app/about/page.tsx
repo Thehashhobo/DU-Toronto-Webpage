@@ -7,10 +7,16 @@ import B1 from "../../../public/images/B1.webp"
 import AlumniCard from "@/components/AlumniCards";
 import History from "@/components/History";
 import Image from 'next/image'
+import TextHistory from "@/components/TextHistory";
 
 
 export default function About() {
 
+    const HistoryText = `
+  Delta Upsilon was the fourth fraternity to establish itself at the University of Toronto, though its origins in the city are even more antique. The earliest records indicate the existence of a local fraternity named Phi Alpha dating back to 1892. In its ranks were the most accomplished members of the student body and faculty, spanning from academic prize winners to captains of varsity teams. In 1888, the 72 brothers who composed the group contemplated the benefits of joining an international fraternity. It was thus on December 15 th , 1899, at 14 Grenville Street that Phi Alpha reorganized itself, now with a charter from the International Fraternity in hand, becoming the Toronto Chapter of Delta Upsilon. As the university commemorated the armistice of the First World War with the construction of Soldier’s Tower, the Delta Upsilon Alumni association would donate several of the bells in the tower’s carillon which to this day can be heard by students as they cross the campus.
+
+  Afterwards, the Fraternity would move to 3 Queen’s Park, current site of Emmanuel College, and later 142 Bloor Street West, where a young Lester B Pearson once lived in room 10, now the location of a Burberry Store in Toronto’s High Fashion district. Subsequently was 112 St. George Street, at the present site of Robarts Library. The university was undergoing an extensive phase of expansion in response to the post-war boom, and so many of the 42 fraternity houses that once lined the environs of St. George, Huron, Sussex, and Harbord were expropriated by the Plateau Committee. A debate ensued amongst leaders of the Greek Houses as to whether to relocate north of campus into the Annex, or south of College Street. Delta Upsilon was the first house to make the move north, and so the purchase of 182 St. George would be subsequently evoked in Supreme Court hearings as the other Greek Houses disputed the acquisition of their new properties.
+  `;
 
 const alumniCards = [
   {
@@ -116,6 +122,12 @@ const alumniCards = [
             </h2>
             <History/>
           </section>
+                      {/* <House History/> */}
+      <TextHistory
+      text={HistoryText}
+      buttonText="Uncover the Rich History of Our Chapter"
+      hideButtonText="Hide"
+      />
           {/* <hr className="w-[75vw] mx-auto border-0 z-14 mt-5 h-[0.8px] bg-primary"/>  */}
           {/* PHILANTROPHY Section */}
           <section className="overflow-x-aut flex flex-col w-[90%] mx-auto scrollbar-thin scrollbar-thumb-gray-400 whitespace-nowrap mt-6">
@@ -186,10 +198,9 @@ const alumniCards = [
          </div>
 
       </section>
-          
         
       <hr className="w-full h-[1.5px] bg-secondary"/> 
-      {/* <Reviews/> */}
+
 
     </main>
   );

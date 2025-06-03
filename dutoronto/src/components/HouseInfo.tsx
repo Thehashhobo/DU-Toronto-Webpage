@@ -5,7 +5,7 @@ const houseInfo = [
   {
     title: "The House",
     content:
-      "The Delta Upsilon house at blends historic charm with modern amenities. Designed by Eden Smith in 1911, the 4 story house features timeless architecture while supporting a vibrant student lifestyle.",
+      "Secluded in the Annex just north of the university campus, lies 182 St. George, home of the Toronto Chapter of Delta Upsilon. Built in the Worker Cottage style, the house stands out from the Richardsonian-Victorian style that pervades the Annex with its symmetrical stone façade and Greek pillars. The house was completed in 1911, just as construction on the nearby Casa Loma was underway, at a time when the Annex housed Toronto’s antique Anglophone aristocracy.",
   },
   {
     title: "Location",

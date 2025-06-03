@@ -20,7 +20,7 @@ interface FAQ {
   answer: string;
 }
 
-export const faqs: FAQ[] = [
+const faqs: FAQ[] = [
   {
     question: "What is Delta Upsilon?",
     answer:
