@@ -51,6 +51,7 @@ export default function House() {
       <section className="flex flex-col mt-2 md:flex-row w-[90%] md:h-[70vh] lg:h-[55vh] mx-auto text-[color:var(--textColor)] 2xl:mb-2 items-center">
         <Image
           src={H2.src}
+          priority={true}
           width={3000}
           height={2250}
           alt="Delta Upsilon hosue in snow"

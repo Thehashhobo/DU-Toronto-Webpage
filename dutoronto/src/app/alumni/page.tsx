@@ -41,6 +41,7 @@ export default function Alumni() {
         <div className="w-full md:w-[520px] h-[420px] flex items-center justify-center bg-white rounded-lg shadow-lg mb-6 md:mb-0 md:mr-8 overflow-hidden">
           <Image
             src={Collage}
+            priority={true}
             width={898}
             height={1056}
             alt="Delta Upsilon Prominent Alumni Collage"
