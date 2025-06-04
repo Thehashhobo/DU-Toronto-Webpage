@@ -7,6 +7,29 @@ import HouseInfo from "@/components/HouseInfo";
 import Lion from "../../../public/images/private/Lion.webp";
 import TextHistory from "@/components/TextHistory";
 import Image from "next/image";
+import type { Metadata } from 'next';
+
+export const generateMetadata = (): Metadata => ({
+  title: "Our Chapter House | Delta Upsilon Toronto",
+  description: "Explore the historic Delta Upsilon chapter house at 182 St. George Street. Learn more about our home and its legacy at U of T.",
+  alternates: {
+    canonical: "https://dutoronto.org/house",
+  },
+  openGraph: {
+    title: "Visit Our DU Toronto Chapter House",
+    description: "Take a look inside our historic home in the heart of downtown Toronto and see where brotherhood lives.",
+    url: "https://dutoronto.org/house",
+    images: [
+      {
+        url: "/images/H1.webp",
+        width: 1024,
+        height: 768,
+        alt: "Delta Upsilon chapter house exterior",
+      },
+    ],
+  },
+});
+
 
 export default function House() {
   const houseHistoryText = `

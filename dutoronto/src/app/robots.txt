@@ -1,4 +1,4 @@
-# robots.txt for du-toronto-webpage.vercel.app
+# robots.txt for dutoronto.org
 
 User-agent: *
 Disallow: /images/private/

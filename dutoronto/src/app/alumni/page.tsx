@@ -1,7 +1,27 @@
 import Lester from "../../../public/images/ap1.webp"
 import Collage from "../../../public/images/ap2.webp"
 import Image from 'next/image'
-
+import type { Metadata } from 'next';
+export const generateMetadata = (): Metadata => ({
+  title: "Alumni | Delta Upsilon Toronto",
+  description: "Stay connected with the Delta Upsilon Toronto alumni community. Learn how to get involved, support the chapter, and attend future events.",
+  alternates: {
+    canonical: "https://dutoronto.org/alumni",
+  },
+  openGraph: {
+    title: "DU Toronto Alumni Network",
+    description: "Reconnect and support the next generation of brothers through our growing alumni community.",
+    url: "https://dutoronto.org/alumni",
+    images: [
+      {
+        url: "/images/ap2.webp",
+        width: 898,
+        height: 1056,
+        alt: "Compilation of DU toronto alumnis",
+      },
+    ],
+  },
+});
 
 export default function Alumni() {
 

@@ -3,10 +3,31 @@ import {InstagramFilled} from '@ant-design/icons';
 import adrian from "../../../public/exec/adrian.webp"
 import az from "../../../public/exec/az.jpg";
 import Image from "next/image";
+import type { Metadata } from 'next';
+
+export const generateMetadata = (): Metadata => ({
+  title: "Contact Us | Delta Upsilon Toronto",
+  description: "Have questions or want to get in touch with Delta Upsilon Toronto? Reach out to our chapter leadership today.",
+  alternates: {
+    canonical: "https://dutoronto.org/contact",
+  },
+  openGraph: {
+    title: "Contact Delta Upsilon Toronto",
+    description: "Get in touch with our executive team and learn more about our chapter at the University of Toronto.",
+    url: "https://dutoronto.org/contact",
+    images: [
+      {
+        url: '/images/Coat of Arms.webp', // 1200×630 JPEG <150 kB
+        width: 300,
+        height: 351,
+        alt: 'Snow-covered Delta Upsilon house at 182 St. George St, Toronto',
+      },
+    ],
+  },
+});
+
 
 export default function Contact() {
-
-
   const recruitment = {
     name: "Azaryah Mendes",
     phone: "+1 (647)-274-0504",

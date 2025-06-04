@@ -8,6 +8,28 @@ import AlumniCard from "@/components/AlumniCards";
 import History from "@/components/History";
 import Image from 'next/image'
 import TextHistory from "@/components/TextHistory";
+import type { Metadata } from 'next';
+
+export const generateMetadata = (): Metadata => ({
+  title: "About Us | Delta Upsilon Toronto",
+  description: "Learn more about the mission, history, and values at Delta Upsilon Toronto Chapter.",
+  alternates: {
+    canonical: "https://dutoronto.org/about",
+  },
+  openGraph: {
+    title: "About Delta Upsilon Toronto",
+    description: "Explore our story, values, and commitment to building better men since 1899.",
+    url: "https://dutoronto.org/about",
+    images: [
+      {
+        url: "/images/H1.webp",
+        width: 1024,
+        height: 768,
+        alt: "Delta Upsilon chapter house exterior",
+      },
+    ],
+  },
+});
 
 
 export default function About() {

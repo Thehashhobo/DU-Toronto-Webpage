@@ -56,10 +56,18 @@ export const metadata: Metadata = {
   },
 
   description: "Building Better Men Since 1899",
+  
   appleWebApp: {
     title: "DU Toronto",
   },
 
+  twitter: {
+  card: 'summary_large_image',
+  site: '@DU_Toronto',
+  title: 'Delta Upsilon Toronto — Building Better Men Since 1899',
+  description: 'Join Canada’s oldest non-secret fraternity...',
+  images: ['/images/Coat of Arms.webp'],
+  },
     /* 4. Canonical + language alternates (good for duplicate-content signals) */
   alternates: {
     canonical: '/',
@@ -76,7 +84,7 @@ export const metadata: Metadata = {
   },
     openGraph: {
     type: 'website',
-    url: '/',
+    url: 'https://dutoronto.org/',
     title: 'Delta Upsilon Toronto — Building Better Men Since 1899',
     description:
       'Join Canada’s oldest non-secret fraternity. Discover our brotherhood, philanthropy and historic chapter house at 182 St George St.',
