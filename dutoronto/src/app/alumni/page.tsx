@@ -2,6 +2,7 @@ import Lester from "../../../public/images/ap1.webp"
 import Collage from "../../../public/images/ap2.webp"
 import Image from 'next/image'
 import type { Metadata } from 'next';
+
 export const generateMetadata = (): Metadata => ({
   title: "Alumni | Delta Upsilon Toronto",
   description: "Stay connected with the Delta Upsilon Toronto alumni community. Learn how to get involved, support the chapter, and attend future events.",
