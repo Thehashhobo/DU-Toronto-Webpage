@@ -108,7 +108,7 @@ export default function Footer() {
               </p>
               <p>
                 <strong className='text-primary text-xl'>Email:</strong>{" "}
-                <a href="mailto:dutorontochapter@gmail.com" className="text-primary hover:underline">
+                <a href="mailto:dutorontochapter@gmail.com" className="text-xl text-primary hover:underline">
                   Email Delta Upsilon 
                 </a>
               </p>
