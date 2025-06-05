@@ -191,7 +191,7 @@ const alumniCards = [
               Du Toronto is committed to making a difference not just globally, but right here at home. In line with our values of justice and compassion, our chapter recently organized an in-house philanthropic initiative in support of mental health awareness.
             </p>
             <p className="mb-2 text-wrap">
-              Through our collective efforts, we proudly raised and donated over $1,000 to Bell Let’s Talk, helping to fund men's mental health programs and spark important conversations across Canada.
+              Through our collective efforts, we proudly raised and donated over $1,000 to Bell Let’s Talk, helping to fund men’s mental health programs and spark important conversations across Canada.
             </p>
             <p className="mb-2 text-wrap">
               It’s one of many ways our brotherhood stands for more than just tradition—we stand for impact.
