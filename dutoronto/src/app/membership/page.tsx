@@ -2,28 +2,28 @@ import MembershipHeader from "../../../public/images/MembershipHeader.webp";
 import QuickFactsSection from "./QuickFactsSection";
 import ImpactSection from "./ImpactSection";
 import FAQSection from "./FAQSection";
-// import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 
-// export const generateMetadata = (): Metadata => ({
-//   title: "Membership | Delta Upsilon Toronto",
-//   description: "Learn what it means to become a member of Delta Upsilon at U of T. Explore our values, recruitment process, and lifelong brotherhood.",
-//   alternates: {
-//     canonical: "https://dutoronto.org/membership",
-//   },
-//   openGraph: {
-//     title: "Join DU Toronto",
-//     description: "Discover the benefits of membership in Canada’s oldest non-secret fraternity. Get involved today.",
-//     url: "https://dutoronto.org/membership",
-//     images: [
-//       {
-//         url: "/images/MembershipHeader.webp",
-//         width: 4061,
-//         height: 2098,
-//         alt: "New member class at Delta Upsilon Toronto",
-//       },
-//     ],
-//   },
-// });
+export const generateMetadata = (): Metadata => ({
+  title: "Membership | Delta Upsilon Toronto",
+  description: "Learn what it means to become a member of Delta Upsilon at U of T. Explore our values, recruitment process, and lifelong brotherhood.",
+  alternates: {
+    canonical: "https://dutoronto.org/membership",
+  },
+  openGraph: {
+    title: "Join DU Toronto",
+    description: "Discover the benefits of membership in Canada’s oldest non-secret fraternity. Get involved today.",
+    url: "https://dutoronto.org/membership",
+    images: [
+      {
+        url: "/images/MembershipHeader.webp",
+        width: 4061,
+        height: 2098,
+        alt: "New member class at Delta Upsilon Toronto",
+      },
+    ],
+  },
+});
 
 
 export default function Membership() { 

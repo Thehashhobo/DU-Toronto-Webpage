@@ -32,13 +32,15 @@ export const generateMetadata = (): Metadata => ({
 
 
 export default function House() {
-  const houseHistoryText = `
-  The house was built on top of the basin of the buried Taddle Creek, the river which once ran through Philosopher’s Walk, carving its relief. 182 St. George was a custom order for Harris L. Hees, whose son George Harris Hees would become a prolific Cabinet Minister in the Governments of John Diefenbaker and Brian Mulroney, earning the moniker of the second most powerful man in the conservative party. The architect of the house, Eden Smith, was a star of the early 20 th Century, whose craftsmanship also graces such iconic and institutional buildings as Upper Canada College, the Munk School of Global Affairs, and the present Italian Consulate.
-
-  To this day, many of the original pre-war components from the crown-molding to the wainscotting have been preserved by the diligent care of the Fraternity. For its unique historical and architectural significance, 182 St. George is protected by the Ontario Heritage Act, and is listed on the Architectural Conservancy of Ontario.
-
-  Delta Upsilon moved into 182 St. George in July of 1958, its fifth house in Toronto. Since that time, it has offered its brothers much in terms of repose, development, entertainment, and study. Our house provides not only proximity to the campus, but immersion in the culture and heritage of the university and Canada at large.
-  `;
+const houseHistoryText = (
+  <>
+    The house was built on top of the basin of the buried <b>Taddle Creek</b>, the river which once ran through Philosopher’s Walk, carving its relief. <b>182 St. George</b> was a custom order for <b>Harris L. Hees</b>, whose son <b>George Harris Hees</b> would become a prolific Cabinet Minister in the Governments of <b>John Diefenbaker</b> and <b>Brian Mulroney</b>, earning the moniker of the second most powerful man in the conservative party. The architect of the house, <b>Eden Smith</b>, was a star of the early 20th Century, whose craftsmanship also graces such iconic and institutional buildings as <b>Upper Canada College</b>, the <b>Munk School of Global Affairs</b>, and the present <b>Italian Consulate</b>.
+    <br /><br />
+    To this day, many of the original pre-war components from the crown-molding to the wainscotting have been preserved by the diligent care of the Fraternity. For its unique historical and architectural significance, 182 St. George is protected by the <b>Ontario Heritage Act</b>, and is listed on the <b>Architectural Conservancy of Ontario</b>.
+    <br /><br />
+    Delta Upsilon moved into 182 St. George in <b>July of 1958</b>, its <b>fifth</b> house in Toronto. Since that time, it has offered its brothers much in terms of repose, development, entertainment, and study. Our house provides not only proximity to the campus, but immersion in the culture and heritage of the university and Canada at large.
+  </>
+);
 
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
@@ -89,12 +91,12 @@ export default function House() {
           <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-24 h-[0.8px] bg-primary"/> 
       {/* details */}
       <section className="relative w-full md:h-[60vw] lg:h-[50vw] xl:h-[40vw] 2xl:h-[38vw] flex flex-col items-center justify-center text-center px-2  mb-3">
-        <div className="hidden md:block z-15 absolute md:top-[-35] md:left-[45] w-[20vw] h-[70vh]">
+        <div className="hidden md:block z-8 absolute md:top-[-35] md:left-[45] w-[20vw] h-[70vh]">
             <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
         </div>
       {/* Background Circle */}
 
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute z-10 inset-0 flex items-center justify-center">
           <div className="hidden md:block w-[90vw] h-[90vw] md:w-[60vw] md:h-[60vw] lg:w-[50vw] lg:h-[50vw] xl:w-[40vw] xl:h-[40vw] 2xl:w-[38vw] 2xl:h-[38vw] bg-transparent md:bg-primary rounded-full absolute">
           {/* Floating Images */}
           <div className="z-15 absolute md:top-[-35] md:left-[15] xl:top-[-45] xl:left-[15] 2xl:top-[-75] 2xl:left-[15] top-2 left-15 md:w-46 md:h-46 w-22 h-22 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 scale-100 hover:scale-165 hover:shadow-none">
@@ -135,8 +137,8 @@ export default function House() {
         <Image width={3000} height={2250} src={H4.src} alt="Sample 2" className="w-full h-full object-cover" />
         <Image width={1024} height={768} src={H5.src} alt="Sample 3" className="w-full h-full object-cover" />
       </div>
-        <div className="z-15 absolute hidden md:block md:top-[-35] md:right-[45] w-[20vw] h-[70vh]">
-          <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="w-full h-full object-cover opacity-35" />
+        <div className="z-8 absolute hidden md:block md:top-[-35] md:right-[45] w-[20vw] h-[70vh]">
+          <Image width={1536} height={1024} src={Lion.src} alt="Sample 1" className="z-1 w-full h-full object-cover opacity-35" />
         </div>
       </section>
       <hr className="w-[75vw] mx-auto border-0 z-14 mt-6 mb-6 h-[0.8px] bg-primary"/> 

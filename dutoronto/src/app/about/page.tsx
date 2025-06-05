@@ -34,11 +34,13 @@ export const generateMetadata = (): Metadata => ({
 
 export default function About() {
 
-    const HistoryText = `
-  Delta Upsilon was the fourth fraternity to establish itself at the University of Toronto, though its origins in the city are even more antique. The earliest records indicate the existence of a local fraternity named Phi Alpha dating back to 1892. In its ranks were the most accomplished members of the student body and faculty, spanning from academic prize winners to captains of varsity teams. In 1888, the 72 brothers who composed the group contemplated the benefits of joining an international fraternity. It was thus on December 15 th , 1899, at 14 Grenville Street that Phi Alpha reorganized itself, now with a charter from the International Fraternity in hand, becoming the Toronto Chapter of Delta Upsilon. As the university commemorated the armistice of the First World War with the construction of Soldier’s Tower, the Delta Upsilon Alumni association would donate several of the bells in the tower’s carillon which to this day can be heard by students as they cross the campus.
-
-  Afterwards, the Fraternity would move to 3 Queen’s Park, current site of Emmanuel College, and later 142 Bloor Street West, where a young Lester B Pearson once lived in room 10, now the location of a Burberry Store in Toronto’s High Fashion district. Subsequently was 112 St. George Street, at the present site of Robarts Library. The university was undergoing an extensive phase of expansion in response to the post-war boom, and so many of the 42 fraternity houses that once lined the environs of St. George, Huron, Sussex, and Harbord were expropriated by the Plateau Committee. A debate ensued amongst leaders of the Greek Houses as to whether to relocate north of campus into the Annex, or south of College Street. Delta Upsilon was the first house to make the move north, and so the purchase of 182 St. George would be subsequently evoked in Supreme Court hearings as the other Greek Houses disputed the acquisition of their new properties.
-  `;
+const HistoryText = (
+  <>
+    Delta Upsilon was the fourth fraternity to establish itself at the <b>University of Toronto</b>, though its origins in the city are even more antique. The earliest records indicate the existence of a local fraternity named <b>Phi Alpha</b> dating back to <b>1892</b>. In its ranks were the most accomplished members of the student body and faculty, spanning from academic prize winners to captains of varsity teams. In <b>1888</b>, the <b>72 brothers</b> who composed the group contemplated the benefits of joining an international fraternity. It was thus on <b>December 15th, 1899</b>, at <b>14 Grenville Street</b> that Phi Alpha reorganized itself, now with a charter from the International Fraternity in hand, becoming the <b>Toronto Chapter of Delta Upsilon</b>. As the university commemorated the armistice of the <b>First World War</b> with the construction of <b>Soldier’s Tower</b>, the <b>Delta Upsilon Alumni association</b> would donate several of the bells in the tower’s carillon which to this day can be heard by students as they cross the campus.
+    <br /><br />
+    Afterwards, the Fraternity would move to <b>3 Queen’s Park</b>, current site of <b>Emmanuel College</b>, and later <b>142 Bloor Street West</b>, where a young <b>Lester B. Pearson</b> once lived in room 10, now the location of a <b>Burberry Store</b> in Toronto’s High Fashion district. Subsequently was <b>112 St. George Street</b>, at the present site of <b>Robarts Library</b>. The university was undergoing an extensive phase of expansion in response to the post-war boom, and so many of the <b>42 fraternity houses</b> that once lined the environs of <b>St. George, Huron, Sussex, and Harbord</b> were expropriated by the <b>Plateau Committee</b>. A debate ensued amongst leaders of the Greek Houses as to whether to relocate north of campus into the <b>Annex</b>, or south of <b>College Street</b>. Delta Upsilon was the first house to make the move north, and so the purchase of <b>182 St. George</b> would be subsequently evoked in <b>Supreme Court hearings</b> as the other Greek Houses disputed the acquisition of their new properties.
+  </>
+);
 
 const alumniCards = [
   {
@@ -189,7 +191,7 @@ const alumniCards = [
               Du Toronto is committed to making a difference not just globally, but right here at home. In line with our values of justice and compassion, our chapter recently organized an in-house philanthropic initiative in support of mental health awareness.
             </p>
             <p className="mb-2 text-wrap">
-              Through our collective efforts, we proudly raised and donated over $1,000 to Bell Let’s Talk, helping to fund mental health programs and spark important conversations across Canada.
+              Through our collective efforts, we proudly raised and donated over $1,000 to Bell Let’s Talk, helping to fund men's mental health programs and spark important conversations across Canada.
             </p>
             <p className="mb-2 text-wrap">
               It’s one of many ways our brotherhood stands for more than just tradition—we stand for impact.
@@ -205,7 +207,7 @@ const alumniCards = [
         <h1 className="font-[family-name:var(--font-Cabin)] text-secondary opacity-90 mx-auto w-[90%] md:w-[80%] text-xl md:text-2xl text-center font-bold">
           We shape men who shape the world. Delta Upsilon proudly celebrates the achievements of our brothers who have made meaningful impacts in their careers and communities.
         </h1>
-         <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto md:overflow-x-visible pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+         <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
           {alumniCards.map((card, idx) => (
             <AlumniCard
               key={card.name + idx}

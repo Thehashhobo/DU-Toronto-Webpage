@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto, Cabin, Quicksand, Germania_One } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Cabin, Quicksand, Grenze } from "next/font/google";
 // import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
@@ -33,7 +33,7 @@ const cabin = Cabin({
   weight: ["400", "500", "700"],
 });
 
-const germ = Germania_One({
+const grenze = Grenze({
   variable: "--font-Germ",
   subsets: ["latin"],
   weight: ["400"],
@@ -108,7 +108,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${qs.variable} ${cabin.variable} ${germ.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${qs.variable} ${cabin.variable} ${grenze.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

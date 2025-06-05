@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 // Move this outside the component
-const alwaysScrolledRoutes = [""];
+const alwaysScrolledRoutes = ["contact, /membership"];
 
 export default function Navbar() {
   const pathname = usePathname();

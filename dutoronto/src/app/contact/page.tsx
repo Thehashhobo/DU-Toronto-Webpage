@@ -31,7 +31,7 @@ export default function Contact() {
   const recruitment = {
     name: "Azaryah Mendes",
     phone: "+1 (647)-274-0504",
-    email: "Mendesazaryah@gmail.com",
+    email: "mendesazaryah@gmail.com",
     instagram: "https://www.instagram.com/azaryah_mendes/",
   }
 
@@ -51,8 +51,9 @@ export default function Contact() {
               {/* Recruitment */ }
               <div className="md:ml-4 ml-0">
                   <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Membership Inquires</h1>
-                  <p className="mb-6">
-                      For Question related to membership, please contact our Minister of Recruitment.
+                  <p className="mb-4">
+                    For questions related to membership,{" "}
+                    <span className="whitespace-nowrap">please contact our Minister of Recruitment.</span>
                   </p>
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
@@ -89,7 +90,8 @@ export default function Contact() {
               <div className="md:ml-4 ml-0">
                   <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h1>
                   <p className="mb-4">
-                      For Question related to alumni and events, please contact our Minister of External Relations.
+                    For questions related to alumni and events,{" "}
+                    <span className="whitespace-nowrap">please contact our Minister of External Relations.</span>
                   </p>
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">

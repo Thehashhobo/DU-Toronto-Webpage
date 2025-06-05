@@ -104,7 +104,7 @@ export default function Footer() {
                 <strong>Hours:</strong> Mon - Fri: 10 AM - 6 PM
               </p> */}
               <p className="text-primary text-xl mb-2">
-                <strong>Phone:</strong> +1 (647) 545-7141
+                <strong>Phone:</strong> +1 (431) 998-3452
               </p>
               <p>
                 <strong className='text-primary text-xl'>Email:</strong>{" "}

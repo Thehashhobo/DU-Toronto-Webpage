@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 interface TextHistoryProps {
-  text: string;
+  text: React.ReactNode;
   buttonText?: string;
   hideButtonText?: string;
 }
@@ -53,13 +53,7 @@ const TextHistory: React.FC<TextHistoryProps> = ({
               has brought these histories to light.
             </div>
           </div>
-          {text.split("\n").map((para, idx) =>
-            para.trim() ? (
-              <p key={idx} className="mb-4">
-                {para.trim()}
-              </p>
-            ) : null
-          )}
+          <div>{text}</div>
         </div>
       )}
     </div>
