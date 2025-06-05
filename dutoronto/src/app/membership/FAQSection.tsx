@@ -1,0 +1,125 @@
+"use client";
+import { useState } from "react";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
+  {
+    question: "What is Delta Upsilon?",
+    answer:
+      "Founded in 1834, Delta Upsilon is the sixth oldest fraternity and first non-secret fraternity. Being a Social Fraternity, DU is an international men's organization focused on its four founding principles. The Toronto chapter upholds these values.",
+  },
+  {
+    question: "Who can join Delta Upsilon?",
+    answer:
+      "We welcome all undergraduate men from all Toronto universities who are looking for community, leadership development, and a better university experience.",
+  },
+  {
+    question: "What is Rush?",
+    answer:
+      '"Rush", or our main recruitment period, occurs during August/September and December/January and it is when you receive an invitation, but we recruit all year round for prospective members. Follow us on social media to check for dates and events!',
+  },
+  {
+    question: "Do I have to live in the fraternity house to join?",
+    answer:
+      "No. Living in the house is completely optional and subject to availability. Many of our members live off-campus or in residence, but many do choose to live in the House because of its cheaper price.",
+  },
+  {
+    question: "Is there a financial cost to join?",
+    answer:
+      "Yes. Like all other organizations, DU does have 'Dues' which cover Chapter activities, national fees, and house maintenance.",
+  },
+  {
+    question: "What kind of events do you host?",
+    answer:
+      "We host a wide variety of events, including social mixers, formals, philanthropy fundraisers, professional development talks, professor speeches, workshops/seminars, and brotherhood retreats.",
+  },
+  {
+    question: "What sort of time commitment is required?",
+    answer:
+      "Brothers typically attend weekly meetings and participate in 1-2 events per week. Generally, the more time you put in the more you'll find the experience rewarding.",
+  },
+  {
+    question: "What are the benefits of joining?",
+    answer:
+      "Lifelong brotherhood, leadership opportunities, academic support, alumni networking, community involvement, and memories that last a lifetime.",
+  },
+  {
+    question: "Does the fraternity support academics?",
+    answer:
+      "Most definitely. We offer mentorship for Junior Brothers who share a program with a Senior Brother alongside tutoring and weekly study sessions. We also recognize academic achievement with awards and scholarships.",
+  },
+  {
+    question: "How will the fraternity affect my GPA?",
+    answer:
+      "Minimally. Our Chapter requires members to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
+  },
+  {
+    question: "Is hazing allowed?",
+    answer:
+      "No. We are a Non-Hazing fraternity and hazing is strictly prohibited. We promote a safe and respectful environment.",
+  },
+  {
+    question: "How can I learn more or get involved?",
+    answer:
+      "Come to a recruitment event, or reach out to our recruitment chair!",
+  },
+];
+
+const FaqItem = ({ question, answer }: FAQ) => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    return (
+      <div
+        className={`mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
+          isOpen ? "bg-blue-50" : "hover:bg-blue-50"
+        }`}
+      >
+        {/* QUESTION BUTTON ─ no text limit, but a baseline height */}
+        <button
+          onClick={() => setIsOpen(o => !o)}
+          aria-expanded={isOpen}
+          className="w-full p-4 items-center cursor-pointer focus:outline-none min-h-22 text-center">
+          <span className="text-lg text-gray-900 text-center">
+            {question}
+          </span>
+  
+        </button>
+  
+        {/* ANSWER PANEL */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-60 opacity-100 rounded-b-xl" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p className="p-4 pt-0 text-sm text-gray-700">{answer}</p>
+        </div>
+      </div>
+    );
+  };
+
+const FAQSection = () => {
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-12">
+      <h2 className="mb-8 text-center text-3xl font-extrabold uppercase tracking-wide text-gray-900">
+        Frequently Asked Questions
+      </h2>
+
+      {/*
+        We use `columns-*` utilities to create independent vertical flows.
+        `break-inside-avoid` on each item stops them splitting across columns.
+      */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-start">
+        {faqs.map((faq) => (
+          <FaqItem key={faq.question} {...faq} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+
+export default FAQSection;
