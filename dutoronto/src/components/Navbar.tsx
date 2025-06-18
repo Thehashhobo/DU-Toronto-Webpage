@@ -5,8 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-// Move this outside the component
-const alwaysScrolledRoutes = ["contact, /membership"];
+// Fix alwaysScrolledRoutes (should be array of strings, not a single string)
+const alwaysScrolledRoutes = ["/contact", "/membership"];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -39,7 +39,7 @@ export default function Navbar() {
   // helper to reduce code duplication
   function getNavLinkClass(isScrolled: boolean) {
     return `
-      font-[family-name:var(--font-Cabin)] font-bold text-xl transition-all duration-300
+      font-[family-name:var(--font-Cabin)] font-bold text-xl xl:text-2xl transition-all duration-300
       ${isScrolled ? "text-gray-900" : "md:text-primary"}
     `;
   }
@@ -58,19 +58,19 @@ export default function Navbar() {
   return (
     <nav className={`
         fixed w-full z-20 top-0 left-0 transition-all duration-300 overflow-x-auto
-        ${(isScrolled || isMenuOpen) ? "bg-[var(--background)] shadow-md" : "md:bg-transparent"}
+        ${(isScrolled || isMenuOpen) ? "bg-[var(--background)] shadow-md" : "lg:bg-transparent"}
       `}
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-4 mx-auto p-3 md:py-1 px-4 min-w-0">
+      <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center lg:gap-4 mx-auto p-3 lg:py-1 xl:py-2 2xl:py-4 px-4 min-w-0">
         {/* Nav links 1 */}
         <div
           className={`
-            order-2 md:order-1
-            ${isMenuOpen ? "block" : "hidden"}
-            md:flex flex-col md:flex-row mt-4 md:mt-0 font-medium md:p-0
+            order-2 lg:order-1 
+            ${isMenuOpen ? " block" : " hidden"}
+            lg:flex flex-col lg:flex-row mt-4 lg:mt-0 font-medium lg:p-0
           `}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-2">
+          <ul className="flex flex-col lg:flex-row lg:space-x-2">
             <li>
               <Link
                 href="/"
@@ -107,7 +107,7 @@ export default function Navbar() {
           </ul>
         </div>
         {/* Logo + Hamburger */}
-        <div className="flex justify-between items-center md:pl-4 md:justify-center order-1 md:order-2 flex-shrink-0">
+        <div className="flex justify-between items-center lg:pl-4 lg:justify-center order-1 lg:order-2 flex-shrink-0">
           <Link href="/" className="flex items-center justify-center space-x-3" onClick={handleNavClick}>
             <Image
               src={Logo}
@@ -117,11 +117,11 @@ export default function Navbar() {
               alt="Du Logo"
             />
           </Link>
-          {/* Hamburger menu (mobile only) */}
+          {/* Hamburger menu (mobile and medium only) */}
           <button
-            onClick={() => { handleToggleMenu(); setScrolled(true); }}
+            onClick={() => { handleToggleMenu(); setIsMenuOpen(true); setScrolled(true); }}
             type="button"
-            className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="lg:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -144,12 +144,12 @@ export default function Navbar() {
         {/* Nav links 2 */}
         <div
           className={`
-            order-3 md:order-3
+            order-3 lg:order-3
             ${isMenuOpen ? "block" : "hidden"}
-            md:flex flex-col md:justify-end md:flex-row mt-0 font-medium md:p-0
+            lg:flex flex-col lg:justify-end lg:flex-row mt-0 font-medium lg:p-0
           `}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-2">
+          <ul className="flex flex-col lg:flex-row lg:space-x-2">
             <li>
               <Link
                 href="/alumni"

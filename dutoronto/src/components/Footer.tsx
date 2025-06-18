@@ -5,16 +5,16 @@ export default function Footer() {
     return (
       <footer className="w-full bg-gray-900 text-gray-100">
         {/* Very light line above footer */}
-        <div className="w-full h-[2px] bg-white/10 mb-8" />
+        <div className="w-full h-[2px] bg-white/10 mb-4" />
         <div
-          className="relative flex flex-col md:flex-row justify-between  p-8 xl:p-4 text-white gap-8"
+          className="relative flex flex-col lg:flex-row justify-between p-6 xl:p-4 text-white gap-2 lg:gap-8"
         >
           {/* Footer content */}
-          <div className="relative z-10 w-full flex flex-col md:flex-row justify-between item-center md:items-start md:gap-8 gap-2">
+          <div className="relative z-10 w-full flex flex-col md:flex-row justify-between item-center md:items-start md:gap-8 gap-2 lg:px-4">
             {/* Footer Links */}
-            <div className="mb-6 md:mb-0 w-full md:w-auto bg-gray-900 rounded-2xl p-6 flex flex-col items-center">
+            <div className="mb-6 md:mb-0 w-full md:w-auto bg-gray-900 md:hidden rounded-2xl p-6 flex flex-col items-center">
               <h3 className="text-3xl md:text-4xl font-[family-name:var(--font-Cabin)] text-white font-bold uppercase mb-4 text-center">
-                Delta Upsilon Toronto
+                DU Toronto
               </h3>
               <Image
                 src="/images/private/L2.webp"
@@ -26,7 +26,7 @@ export default function Footer() {
               />
             </div>
 
-            <div className="mb-6 md:mb-0 bg-gray-900 rounded-2xl p-6 flex flex-col items-center md:ml-[-32px] ">
+            <div className="mb-6 md:mb-0 bg-gray-900 rounded-2xl p-6 flex flex-col items-center md:ml-[-12px] ">
               <h3 className="text-3xl text-white md:text-4xl font-bold uppercase mb-4 text-center w-full md:-ml-6">
                 Links
               </h3>

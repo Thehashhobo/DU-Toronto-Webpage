@@ -4,7 +4,7 @@ import A2 from "../../../public/images/private/A2.webp"
 import A3 from "../../../public/images/A3.webp"
 import A4 from "../../../public/images/private/A4.webp"
 import B1 from "../../../public/images/B1.webp"
-import AlumniCard from "@/components/AlumniCards";
+import ProminentAlumniSection from "@/components/ProminentAlumniSection"
 import History from "@/components/History";
 import Image from 'next/image'
 import TextHistory from "@/components/TextHistory";
@@ -68,7 +68,7 @@ const alumniCards = [
     image: A3.src,
     width: 550,
     height: 804,
-    link: "/alumni",
+    link: "",
   },
   {
     name: "John Arthur Clark",
@@ -77,7 +77,25 @@ const alumniCards = [
     image: A4.src,
     width: 620,
     height: 842,
-    link: "/house",
+    link: "",
+  },
+    {
+    name: "John Arthur Clark",
+    description:
+      "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
+    image: A4.src,
+    width: 620,
+    height: 842,
+    link: "",
+  },
+    {
+    name: "John Arthur Clark",
+    description:
+      "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
+    image: A4.src,
+    width: 620,
+    height: 842,
+    link: "",
   },
 ];
 
@@ -85,7 +103,7 @@ const alumniCards = [
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[60vh] md:h-[50vh] mt-24 md:mt-20 bg-cover brightness-125 justify-start overflow-hidden"
+        className="relative w-full h-[60vh] md:h-[50vh] mt-24 md:mt-20 xl:mt-22 2xl:mt-26 bg-cover brightness-125 justify-start overflow-hidden"
           style={{
           backgroundImage: `url(${H1.src})`,
           backgroundPosition: "center 30%",
@@ -202,26 +220,7 @@ const alumniCards = [
     </section>
 
       {/* PROMINENT ALUMNI  */}
-      <section className="flex flex-col w-[100%] mx-auto my-5 mt-16">
-        <h1 className=" font-[family-name:var(--font-Cabin)] text-5xl font-bold mb-4 text-center bg-primary border-t-[12] border-b-[12] border-secondary py-4">Prominent Alumni</h1>
-        <h1 className="font-[family-name:var(--font-Cabin)] text-secondary opacity-90 mx-auto w-[90%] md:w-[80%] text-xl md:text-2xl text-center font-bold">
-          We shape men who shape the world. Delta Upsilon proudly celebrates the achievements of our brothers who have made meaningful impacts in their careers and communities.
-        </h1>
-         <div className="flex flex-row w-[90%] mx-auto text-[color:var(--textColor)] gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-400">
-          {alumniCards.map((card, idx) => (
-            <AlumniCard
-              key={card.name + idx}
-              name={card.name}
-              width={card.width || 300}
-              height={card.height || 400}
-              description={card.description}
-              image={card.image}
-              link={card.link}
-            />
-          ))}
-         </div>
-
-      </section>
+      <ProminentAlumniSection alumniCards={alumniCards} />   
         
       <hr className="w-full h-[1.5px] bg-secondary"/> 
 

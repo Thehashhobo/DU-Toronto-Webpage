@@ -71,7 +71,6 @@ export const metadata: Metadata = {
     /* 4. Canonical + language alternates (good for duplicate-content signals) */
   alternates: {
     canonical: '/',
-    languages: { 'en-CA': '/' },
   },
 
   robots: {

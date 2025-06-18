@@ -31,7 +31,7 @@ export default function Membership() {
   return (
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
-        className="relative w-full h-[50vh] md:h-[40vh] mt-24 md:mt-20 bg-cover justify-start overflow-hidden"
+        className="relative w-full h-[50vh] md:h-[40vh] mt-24 md:mt-20 xl:mt-22 2xl:mt-26 bg-cover justify-start overflow-hidden"
         style={{ backgroundImage: `url(${MembershipHeader.src})`,
                 backgroundPosition: "center 10%",}}
       >
