@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, use } from "react";
+import React, { useRef, useEffect } from "react";
 import AlumniCard from "./AlumniCards";
 
 interface AlumniCardData {
@@ -7,7 +7,7 @@ interface AlumniCardData {
   width?: number;
   height?: number;
   description: string;
-  image: any;
+  image: string;
   link: string;
 }
 
