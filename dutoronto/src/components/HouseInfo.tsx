@@ -46,7 +46,7 @@ export default function FratHouseSection() {
         <div key={index} className="pb-4">
           <button
             onClick={() => toggle(index)}
-            className="w-full md:ml-8 text-left text-lg md:text-xl xl:text-3xl font-bold text-textColor hover:text-secondary transition"
+            className="w-full underline md:ml-8 text-left text-lg md:text-xl xl:text-3xl font-bold text-textColor hover:text-secondary transition"
           >
             {section.title}
           </button>

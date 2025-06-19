@@ -31,7 +31,7 @@ const MemberCard: React.FC<MemberCardProps> = ({
 }) => {
   return (
     <div onClick={onClick ? onClick : undefined}
-      className="cursor-pointer max-w-xs w-full bg-[#fafafa] border-2 border-secondary px-8 py-4 rounded-none mx-auto flex flex-col justify-between items-start shadow-lg h-full
+      className="max-w-xs w-full bg-[#fafafa] border-2 border-secondary px-8 py-4 rounded-none mx-auto flex flex-col justify-between items-start shadow-lg h-full
       transform transition-transform duration-300 scale-100 hover:scale-105 hover:shadow-none">
       <div>
         <Image
@@ -39,7 +39,8 @@ const MemberCard: React.FC<MemberCardProps> = ({
           width={width || 2832}
           height={height || 4240}
           alt={name}
-          className="w-32 h-36 lg:w-36 lg:h-40 object-cover object-top bg-gray-200 mb-2 brightness-120"
+          sizes="220px"
+          className="w-32 h-36 lg:h-40 object-cover object-top bg-gray-200 mb-2 brightness-120"
         />
         <h3 className="text-2xl font-bold text-gray-800 mb-2">{position}</h3>
         <h2 className="text-1xl font-semibold text-primary mb-12 md:mb-6">{name}</h2>

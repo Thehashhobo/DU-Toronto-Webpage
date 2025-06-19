@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import {InstagramFilled} from '@ant-design/icons';
 import adrian from "../../../public/exec/adrian.webp"
-import az from "../../../public/exec/az.jpg";
+import az from "../../../public/exec/az.webp";
 import Image from "next/image";
 import type { Metadata } from 'next';
 
@@ -57,13 +57,15 @@ export default function Contact() {
                   </p>
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
-                      <Image
-                        src={az}
-                        width={423}
-                        height={536}
-                        alt="Recruitment"
-                        className="w-full h-full object-cover bg-gray-200"
-                      />
+                    <Image
+                      src={az}
+                      quality={100}
+                      width={1024}
+                      height={1536}
+                      alt="Recruitment"
+                      className="w-full h-full object-cover bg-gray-200 object-top"
+                      sizes="250px"
+                    />
                       {recruitment.instagram && (
                         <a
                           href={recruitment.instagram}

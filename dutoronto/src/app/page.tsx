@@ -4,7 +4,7 @@ import WhyDu from "@/components/WhyDu";
 import AnimatedCard from "@/components/AnimatedCard";
 import dev from "../../public/exec/dev2.webp"
 import aaron from "../../public/exec/aaron.webp"
-import az from "../../public/exec/az.jpg";
+import az from "../../public/exec/az.webp";
 import alex from "../../public/exec/alex.webp"
 import arav from "../../public/exec/arav.webp"
 import tony from "../../public/exec/tony.webp"
@@ -79,7 +79,7 @@ export default function Home() {
     image: a2.src,
     width: 3000,
     height: 2250,
-    link: "/membership",
+    link: "/membership#faq",
   },
   {
     title: "Alumni",
@@ -124,7 +124,7 @@ const membersCards = [
     position: "Minister of Recruitment",
     name: "Azaryah Mendes",
     width: 1024,
-    height: 768,
+    height: 1536,
     description:
       "We are always looking for new members who share our values and commitment to excellence.",
     image: az.src,
@@ -244,7 +244,7 @@ const membersCards = [
           height={351}
           src="/images/Coat of Arms.webp"
           alt="Delta Upsilon Coat of Arms"
-          className="md:flex-1 h-64 md:h-58 my-2 "
+          className="md:flex-1 h-64 w-auto md:h-58 my-2 "
           style={{ objectFit: "contain" }}
         />
       </section>

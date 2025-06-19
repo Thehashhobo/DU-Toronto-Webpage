@@ -23,7 +23,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 }) => {
   const [hovered, setHovered] = useState(false);
   const [inView, setInView] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true); // Default to true for desktop
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Detect desktop screens

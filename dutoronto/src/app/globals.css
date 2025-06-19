@@ -16,6 +16,21 @@
 }
 */
 
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  body::before {
+    content: "Please rotate your device to portrait mode for a better experience.";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 9999;
+    pointer-events: all;
+  }
+}
 
 
 @theme inline {

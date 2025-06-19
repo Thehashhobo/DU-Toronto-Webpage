@@ -3,6 +3,9 @@ import A1 from "../../../public/images/A1.webp"
 import A2 from "../../../public/images/private/A2.webp"
 import A3 from "../../../public/images/A3.webp"
 import A4 from "../../../public/images/private/A4.webp"
+import A5 from "../../../public/images/private/A5.webp"
+import A6 from "../../../public/images/private/A6.webp"
+
 import B1 from "../../../public/images/B1.webp"
 import ProminentAlumniSection from "@/components/ProminentAlumniSection"
 import History from "@/components/History";
@@ -80,19 +83,19 @@ const alumniCards = [
     link: "",
   },
     {
-    name: "John Arthur Clark",
+    name: "Richard M. Ivey",
     description:
-      "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
-    image: A4.src,
+      "Philanthropist and Education Advocate, namesake of the Ivey Business School",
+    image: A5.src,
     width: 620,
     height: 842,
     link: "",
   },
     {
-    name: "John Arthur Clark",
+    name: "Gabriel Macht",
     description:
-      "Commander of the 72nd Seaforth Highlanders at the Battle of Vimy Ridge",
-    image: A4.src,
+      "American actor, plays Harvey Specter in  Suits",
+    image: A6.src,
     width: 620,
     height: 842,
     link: "",

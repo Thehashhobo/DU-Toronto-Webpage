@@ -8,6 +8,16 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
+  question: "How Can I Join Delta Upsilon?",
+  answer: "You can join Delta Upsilon by attending our recruitment events, where you’ll get to know our brothers and learn more about our values. You can also reach out to our Recruitment Chair directly, we’re always excited to connect with potential new members.",
+
+  },
+  {
+  question: "What is Rush?",
+  answer:
+    '"Rush", or our main recruitment period, occurs during August/September and December/January and it is when you receive an invitation, but we recruit all year round for prospective members. Follow us on social media to check for dates and events!',
+  },
+  {
     question: "What is Delta Upsilon?",
     answer:
       "Founded in 1834, Delta Upsilon is the sixth oldest fraternity and first non-secret fraternity. Being a Social Fraternity, DU is an international men's organization focused on its four founding principles. The Toronto chapter upholds these values.",
@@ -16,16 +26,6 @@ const faqs: FAQ[] = [
     question: "Who can join Delta Upsilon?",
     answer:
       "We welcome all undergraduate men from all Toronto universities who are looking for community, leadership development, and a better university experience.",
-  },
-  {
-    question: "What is Rush?",
-    answer:
-      '"Rush", or our main recruitment period, occurs during August/September and December/January and it is when you receive an invitation, but we recruit all year round for prospective members. Follow us on social media to check for dates and events!',
-  },
-  {
-    question: "Do I have to live in the fraternity house to join?",
-    answer:
-      "No. Living in the house is completely optional and subject to availability. Many of our members live off-campus or in residence, but many do choose to live in the House because of its cheaper price.",
   },
   {
     question: "Is there a financial cost to join?",
@@ -74,7 +74,8 @@ const FaqItem = ({ question, answer }: FAQ) => {
   
     return (
       <div
-        className={`mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
+        id="faq"
+        className={`scroll-mt-50 mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
           isOpen ? "bg-blue-50" : "hover:bg-blue-50"
         }`}
       >
