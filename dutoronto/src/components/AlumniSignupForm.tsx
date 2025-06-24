@@ -13,7 +13,10 @@ export default function AlumniSignupForm() {
     e.preventDefault();
     const form = formRef.current;
     
-    if (!form) return;
+    if (!form) {
+      console.log("Form ref is null!");
+      return;
+    }
 
     // Extract and log the form data
     const formData = new FormData(form);
@@ -69,7 +72,7 @@ export default function AlumniSignupForm() {
         />
         <input
           type="email"
-          name="EMAIL" 
+          name="MERGE0" 
           required
           placeholder="Enter your email"
           className="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -110,7 +113,7 @@ export default function AlumniSignupForm() {
             <span className="text-3xl mb-2">🎉</span>
             <p className="mb-4 text-center">
               Thank you for signing up!<br />
-              You've been added to our alumni mailing list.
+              You&apos;ve been added to our alumni mailing list.
             </p>
             <button
               className="mt-2 px-6 py-2 bg-primary text-white rounded-md font-bold hover:bg-primary/90 transition"
