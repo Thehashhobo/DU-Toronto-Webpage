@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 // Fix alwaysScrolledRoutes (should be array of strings, not a single string)
-const alwaysScrolledRoutes = ["/contact", "/membership"];
+const alwaysScrolledRoutes = ["/contact", "/membership", "/about"];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -119,7 +119,7 @@ export default function Navbar() {
           </Link>
           {/* Hamburger menu (mobile and medium only) */}
           <button
-            onClick={() => { handleToggleMenu(); setIsMenuOpen(true); setScrolled(true); }}
+            onClick={() => { handleToggleMenu(); setScrolled(true); }}
             type="button"
             className="lg:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >

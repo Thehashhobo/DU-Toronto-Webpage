@@ -124,20 +124,16 @@ export default function Footer() {
           {/* Designer/Builder Credit */}
           <p className="text-xs md:text-sm mt-2 md:mt-0 text-black">
             Designed and built by{" "}
-            <Link href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+            <Link href="https://www.jerrywjn.com/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
               Jerry W
             </Link>
             ,{" "}
-            <Link href="https://thehashhobo.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+            <Link href="https://mikhskaz.com/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
               Michael
             </Link>
             ,{" "}
             <Link href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
               Varun
-            </Link>
-            , and{" "}
-            <Link href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
-              Devyansh
             </Link>
           </p>
         </div>
