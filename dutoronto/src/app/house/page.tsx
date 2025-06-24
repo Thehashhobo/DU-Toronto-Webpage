@@ -60,9 +60,6 @@ const houseHistoryText = (
             Share a Home With Your Brothers
           </p>
           <div className="grid grid-cols-1 max-w-screen-md mt-2">
-            {/* <a href="/services" className="btn">
-              Learn More
-            </a> */}
             <a href="/contact" className="btn">
               Contact Us
             </a>
