@@ -126,7 +126,7 @@ const membersCards = [
     width: 1024,
     height: 1536,
     description:
-      "We are always looking for new members who share our values and commitment to excellence.",
+      "Hey, I’m Azaryah Mendes. At the time I’m writing this, I’m entering my second year at UofT in Rotman Commerce. I’m in charge of recruitment here at DU so I wanted to take the chance to speak about why I joined. When I first committed to UofT I had no intention of rushing a frat but I wanted to try new things. I ended up at a rush event where I met a group of guys that were genuine, fun, and goal-oriented. The people here push each other to be the best version of themselves. They strive to make the community and society better. That’s what made me want to join and that’s why our rush slogan is “building better men”. ",
     image: az.src,
     linkedin: "https://www.linkedin.com/in/azaryah-mendes-61417a300/",
     instagram: "https://www.instagram.com/azaryah_mendes/",
@@ -135,7 +135,7 @@ const membersCards = [
     position: "Minister of Finance",
     name: "Alexander Mansourov",
     description:
-      "Build friendships and connections that will last a lifetime.",
+      "Hi, I'm Alex! I’m from Vaughan and am currently studying Economics. I’ve served as VP of Administration and now proudly serve as VP of Finance at DU. What I love most about DU is that there’s always something fun happening—there’s never a dull moment. Outside of academics and fraternity commitments, you can find me at home or at the gym.",
     image: alex.src,
     linkedin: "https://www.linkedin.com/in/alexander-mansourov-170283248/",
     instagram: "https://www.instagram.com/alexboneless/",
@@ -153,7 +153,7 @@ const membersCards = [
     position: "Minister of Risk Management",
     name: "Tony Yousefi",
     description:
-      "Live in a house that is more than just a place to stay.",
+      "My name is Ariaman and I’m from Newmarket, ON. Currently studying human biology at the University of Toronto and pursuing medical school. I joined Delta Upsilon in my first year at the UofT, drawn by its strong history and reputation on campus and nationwide. The fraternity fosters responsibility and offers great opportunities for leadership. I have since been elected as the minister of Risk Management and Associate Member Educator, and work closely with the Delta Upsilon national headquarters to ensure a positive and worthwhile experience for the members of the chapter.",
     image: tony.src,
     linkedin: "https://www.linkedin.com/in/ariaman-yousefi-976092257/",
     instagram: "https://www.instagram.com/ariaman.y/",
@@ -171,7 +171,7 @@ const membersCards = [
     position: "Minister of External Relations",
     name: "Adrian Cachia",
     description:
-      "Live in a house that is more than just a place to stay.",
+      "Hello! My name is Adrian, I grew up in Vaughan Ontario, and I study Molecular Biology at the University of Toronto. I am the former Delta Upsilon Social Chair, and current Minister of External Relations. My favourite DU memory would have to be the first rush event I attended where I met everyone who would end up being some of my closest friends in the future. Fun fact: I like to think I’m the best in the house at smash bros!",
     image: adrian.src,
     // facebook: "https://facebook.com/",
     linkedin: "https://www.linkedin.com/",
