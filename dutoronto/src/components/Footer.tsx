@@ -135,6 +135,10 @@ export default function Footer() {
             <Link href="https://www.linkedin.com/in/varun-spillai/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
               Varun
             </Link>
+            , and{" "}
+            <Link href="https://www.linkedin.com/in/devyanshsharma/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
+              Devyansh
+            </Link>
           </p>
         </div>
       </footer>

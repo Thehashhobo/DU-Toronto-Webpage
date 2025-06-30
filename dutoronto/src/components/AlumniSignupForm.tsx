@@ -4,21 +4,44 @@ import { useRef, useState } from "react";
 export default function AlumniSignupForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Mailchimp form action URL
   const MAILCHIMP_URL =
     "https://gmail.us21.list-manage.com/subscribe/post?u=c737f8f42138ba60d17fcf3e3&id=ec9a310e85";
-  // Handles form submission via hidden iframe to avoid redirect
-  const handleSubmit = (e: React.FormEvent) => {
+  
+  // Google Apps Script Web App URL (replace with your actual URL)
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwiSz95PD6USxGz7FO_6dv8m7-4KyzOGARDDgqBGhlAbvp-YAfBN_xugULKks5MW7wnLw/exec";
+
+  // Send data to Google Sheets
+  const sendToGoogleSheets = async (formData: FormData) => {
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+      });
+      
+      const result = await response.json();
+      console.log('Google Sheets response:', result);
+      return result.success;
+    } catch (error) {
+      console.error('Error sending to Google Sheets:', error);
+      return false;
+    }
+  };
+
+  // Handles form submission
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const form = formRef.current;
+    setIsSubmitting(true);
     
+    const form = formRef.current;
     if (!form) {
-      console.log("Form ref is null!");
+      setIsSubmitting(false);
       return;
     }
 
-    // Extract and log the form data
+    // Extract form data
     const formData = new FormData(form);
     const requestBody: Record<string, string> = {};
 
@@ -28,22 +51,33 @@ export default function AlumniSignupForm() {
 
     console.log("Request body:", requestBody);
 
-    // Create a hidden iframe for submission
-    const iframe = document.createElement("iframe");
-    iframe.name = "hidden_iframe";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
+    try {
+      // Send to Google Sheets first
+      const googleSheetsSuccess = await sendToGoogleSheets(formData);
+      console.log('Google Sheets submission:', googleSheetsSuccess ? 'Success' : 'Failed');
 
-    form.target = "hidden_iframe";
-    form.submit();
-    console.log("Form submitted:", form);
-    console.log("response", );
+      // Send to Mailchimp (existing code)
+      const iframe = document.createElement("iframe");
+      iframe.name = "hidden_iframe";
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
 
-    setTimeout(() => {
-      setShowPopup(true);
-      document.body.removeChild(iframe);
-      form.reset();
-    }, 1200); // Wait for Mailchimp to process (adjust if needed)
+      form.target = "hidden_iframe";
+      form.submit();
+      console.log("Form submitted to Mailchimp");
+
+      // Show success popup after short delay
+      setTimeout(() => {
+        setShowPopup(true);
+        setIsSubmitting(false);
+        document.body.removeChild(iframe);
+        form.reset();
+      }, 1200);
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,7 +138,7 @@ export default function AlumniSignupForm() {
           type="submit"
           className="px-6 py-2 bg-primary text-white rounded-md font-bold hover:bg-primary/90 transition"
         >
-          Sign Up
+          {isSubmitting ? 'Submitting...' : 'Sign Up'}
         </button>
       </form>
       {showPopup && (

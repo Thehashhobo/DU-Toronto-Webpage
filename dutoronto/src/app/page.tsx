@@ -106,7 +106,7 @@ const membersCards = [
     position: "President",
     name: "Devyansh Sharma",
     description:
-      "Learn more about our fraternity, our values, and our commitment",
+      "Hi, I'm Dev Sharma. I was born in Winnipeg, Manitoba, and I'm currently studying Honours Finance with minors in Cybersecurity, Economics, and Gender Studies. This summer, I'm working in Texas as a Sales Solution Architect intern. I've had the chance to serve in several leadership roles with DU Toronto, including Class President, VP External Relations, Social Media Director, Intermittent President, and President in both 2024 and 2025. One of my favourite memories is the DU Toronto 125th Anniversary Weekend Celebration. Fun fact about me: I’m the undisputed champ at cup pong.",
     image: dev.src,
     linkedin: "https://www.linkedin.com/in/devyanshsharma/",
     instagram: "https://www.instagram.com/devsharma_7/",
@@ -115,7 +115,7 @@ const membersCards = [
     position: "Vice President", 
     name: "Aaron Feigenbaum",
     description:
-      "Live in a house that is more than just a place to stay.",
+      "Hey I’m Aaron, born and raised in Toronto and I am now studying Sports Media at The University of Toronto. Outside of school I am a Professional Actor for the ACTRA union of Canada. I have held the positions of Social Chair, VP of External Relations and now Vice President. My favourite memory of DU is the yearly ski trips we take to Montreal. A random fact is I can name any One Direction song within 15 seconds",
     image: aaron.src,
     linkedin: "https://www.linkedin.com/in/aaron-feigenbaum-5388a8345/",
     instagram: "https://www.instagram.com/aaron.feigs/",
@@ -144,7 +144,7 @@ const membersCards = [
     position: "Minister of Brotherhood Excellence",
     name: "Arav Kekane",
     description:
-      "Live in a house that is more than just a place to stay.",
+      "Dedicated to fostering a strong sense of community, connection, and personal growth within the brotherhood.",
     image: arav.src,
     linkedin: "https://www.linkedin.com/in/aravkekane/",
     instagram: "https://www.instagram.com/aravkekane/",
