@@ -162,7 +162,7 @@ const membersCards = [
     position: "Minister of Administration",
     name: "David van Geilswyk",
     description:
-      "Live in a house that is more than just a place to stay.",
+      "Hi, I’m David. I was born and raised in Scarborough (Toronto) and I currently study Aerospace Engineering. Being a part of DU was one of the best decisions of my life and I am happy to support my brothers as VP of Administration. The best part of being here is the people you meet along the way. Outside of academics I focus on work and the gym when I’m not watching movies to pass time.",
     image: david.src,
     linkedin: "https://www.linkedin.com/",
     instagram: "https://www.instagram.com/dvang_4/",
