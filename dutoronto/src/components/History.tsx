@@ -72,7 +72,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1834
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                 A group of Williams students led by sophomores Stephen Field, Lewis Lockwood and Francis Tappan, met for the first time on Tuesday, Nov. 4, 1834, at the Freshman Recitation Room of the West College Building to form what they would call the Social Fraternity.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1847
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                 In 1847, Delta Upsilon’s founders at Williams College joined forces with like-minded non-secret fraternities from Union, Middlebury, and Amherst to form the Anti-Secret Confederation (ACS). United by the motto Ouden Adelon (“Nothing Secret”), they promoted justice and open, liberal education in contrast to the secrecy of other fraternities.
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1864
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                 Over the next two decades, nine more chapters joined the ACS, though some disbanded by 1864. At that year’s convention, the confederation nearly dissolved due to low attendance—until a last-minute delegate from Rutgers arrived, establishing quorum. This pivotal moment led to renewed discussions and the official adoption of the name Delta Upsilon, already used by several chapters.
               </p>
             </div>
@@ -153,7 +153,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1865 - 1898
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                 By 1865, just a year after adopting the name Delta Upsilon, the Fraternity had expanded to 15 chapters across the Northeast. In 1898, it became an international organization with the founding of its first Canadian chapter at McGill University in Montreal.
               </p>
             </div>
@@ -180,7 +180,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1899
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                 The Delta Upsilon Toronto Chapter was officially installed in Dec. 15, 1899. Located at the University of Toronto, it played a key role in expanding DU’s presence beyond the United States and reinforcing its commitment to non-secret, merit-based brotherhood across borders.
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 1909
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                Following rapid growth in the early 1900s, Delta Upsilon was officially incorporated in New York in 1909. This led to the creation of a Board of Directors and an Assembly of Graduate Trustees, with Charles Evans Hughes serving as the Fraternity’s first president. That same year, DU also became a founding member of the North-American Interfraternity Conference (NIC).
               </p>
             </div>
@@ -234,7 +234,7 @@ export default function History() {
               <time className="block mb-2 text-md md:text-xl lg:text-3xl font-normal leading-none text-primary">
                 2001 - 2007
               </time>
-              <p className="text-base font-normal text-textColor  text-balance">
+              <p className="text-base font-normal text-textColor break-words whitespace-normal">
                At the turn of the millennium, Delta Upsilon had established 148 chapters. Following the installation of its 150th chapter (Northwestern State Chapter) in 2001, the Fraternity focused solely on reopening closed chapters until 2007.
               </p>
             </div>

@@ -97,7 +97,7 @@ export default function Footer() {
             {/* Footer Info */}
             <div className="bg-gray-900 rounded-2xl p-4 flex flex-col items-center">
               <h3 className="text-3xl text-white md:text-4xl font-bold uppercase mb-4 text-center ">General Inquiries</h3>
-              <p className="text-primary text-lg lg:text-xl mb-2 text-nowrap mx-3">
+              <p className="text-primary text-lg lg:text-xl mb-2 text-center px-3">
                 <strong>Location:</strong> 182 St George St Toronto, ON
               </p>
               {/* <p className="mb-2">

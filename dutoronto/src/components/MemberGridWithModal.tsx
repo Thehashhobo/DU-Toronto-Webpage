@@ -1,6 +1,6 @@
 'use client';
 import MemberCard from './MemberCard';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface Member {
@@ -17,7 +17,21 @@ interface Member {
 
 export default function MemberGridWithModal({ members }: { members: Member[] }) {
   const [selected, setSelected] = useState<Member | null>(null);
-  // uncomment to use modal functionality
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selected]);
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto">
@@ -30,11 +44,10 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
         ))}
       </div>
 
-      {/* member details not used rigth now */}
-      {/* Uncomment to use modal functionality */}
+      {/* Modal */}
       {selected && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
-          <div className="bg-white rounded-xl max-w-lg w-full relative shadow-2xl transform transition-all">
+          <div className="bg-white rounded-xl max-w-lg w-full max-h-[90vh] relative shadow-2xl transform transition-all flex flex-col">
             <button
               className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-colors z-10"
               onClick={() => setSelected(null)}
@@ -42,8 +55,8 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
               ×
             </button>
             
-            {/* Member Image */}
-            <div className="relative h-100 w-full overflow-hidden rounded-t-xl">
+            {/* Member Image - Fixed height */}
+            <div className="relative h-90 w-full overflow-hidden rounded-t-xl flex-shrink-0">
               <Image
                 src={selected.image}
                 alt={selected.name}
@@ -58,8 +71,8 @@ export default function MemberGridWithModal({ members }: { members: Member[] }) 
               </div>
             </div>
             
-            {/* Member Details */}
-            <div className="p-6">
+            {/* Member Details - Scrollable */}
+            <div className="p-6 overflow-y-auto flex-1">
               <p className="text-gray-700 leading-relaxed mb-4">{selected.description}</p>
               
               {/* Social Media Links */}
