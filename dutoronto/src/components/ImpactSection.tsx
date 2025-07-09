@@ -220,7 +220,7 @@ const ImpactSection = () => {
                     key={statIndex} // Using index as key
                     className={`bg-gray-900 text-white p-3 rounded-lg shadow-md ${stat.isFullWidth ? 'col-span-2' : ''}`}
                   >
-                    <h3 className="impact-tab-title">{stat.value}</h3>
+                    <h3 className="text-3xl font-bold">{stat.value}</h3>
                     <p className="text-lg">{stat.description}</p>
                   </div>
                 ))}
