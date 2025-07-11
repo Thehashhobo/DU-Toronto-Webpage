@@ -1,7 +1,7 @@
 import MembershipHeader from "../../../public/images/MembershipHeader.webp";
-import QuickFactsSection from "./QuickFactsSection";
-import ImpactSection from "./ImpactSection";
-import FAQSection from "./FAQSection";
+import QuickFactsSection from "../../components/QuickFactsSection";
+import ImpactSection from "../../components/ImpactSection";
+import FAQSection from "../../components/FAQSection";
 import type { Metadata } from 'next';
 
 export const generateMetadata = (): Metadata => ({
