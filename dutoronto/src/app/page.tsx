@@ -84,7 +84,7 @@ export default function Home() {
   {
     title: "Alumni",
     description:
-      "Build relatinoship and brotherly connections that will last a lifetime.",
+      "Build relationship and brotherly connections that will last a lifetime.",
     image: a3.src,
     width: 2290,
     height: 2994,
