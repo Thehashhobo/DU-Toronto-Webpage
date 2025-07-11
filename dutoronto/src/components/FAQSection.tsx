@@ -1,11 +1,29 @@
-"use client";
+/**
+ * @file Contains FAQ section component for the Delta Upsilon Toronto website.
+ * It displays a list of frequently asked questions and their answers in an accordion style.
+ */
+
+"use client"; // This file uses React hooks, so it must be a client component
+
 import { useState } from "react";
 
+/**
+ * @interface FAQ
+ * @description Represents a single FAQ item with a question and answer.
+ * @property {string} question - The question being asked.
+ * @property {string} answer - The answer to the question.
+ */
 interface FAQ {
   question: string;
   answer: string;
 }
 
+/**
+ * @constant faqs
+ * @description An array of FAQ items that will be displayed in the FAQ section.
+ * Each item contains a question and its corresponding answer.
+ * @type {FAQ[]}
+ */
 const faqs: FAQ[] = [
   {
   question: "How Can I Join Delta Upsilon?",
@@ -55,7 +73,7 @@ const faqs: FAQ[] = [
   {
     question: "How will the fraternity affect my GPA?",
     answer:
-      "Minimally. Our Chapter requires members to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
+      "Positively. Our Chapter requires members to maintain a minimum cGPA and we offer support to those who need it. Many of our Brothers are in competitive programs.",
   },
   {
     question: "Is hazing allowed?",
@@ -65,43 +83,62 @@ const faqs: FAQ[] = [
   {
     question: "How can I learn more or get involved?",
     answer:
-      "Come to a recruitment event, or reach out to our recruitment chair!",
+      "Come to a recruitment event, reach out to our recruitment chair, or fill out the rush form in our Instagram, @dutoronto, bio.",
   },
 ];
 
+/**
+ * @function FaqItem
+ * @description Represents a single FAQ item component that displays a question and answer in an accordion style.
+ * It uses React hooks to manage the open/closed state of the answer panel.
+ * @param {FAQ} props - The FAQ item containing a question and answer.
+ * @param {string} props.question - The question to display.
+ * @param {string} props.answer - The answer to display.
+ * @returns {JSX.Element} The rendered FAQ item component.
+ */
 const FaqItem = ({ question, answer }: FAQ) => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    return (
+  /**
+   * @property {boolean} isOpen - State to track whether the answer panel is open or closed.
+   * @property {function} setIsOpen - Function to update the isOpen state.
+   */
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      id="faq"
+      className={`scroll-mt-50 mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
+        isOpen ? "bg-blue-50" : "hover:bg-blue-50"
+      }`}
+    >
+      {/* Button to toggle answer visibility */}
+      <button
+        onClick={() => setIsOpen(o => !o)}
+        aria-expanded={isOpen}
+        className="w-full p-4 items-center cursor-pointer focus:outline-none min-h-22 text-center">
+        <span className="text-lg text-gray-900 text-center">
+          {question}
+        </span>
+
+      </button>
+
+      {/* Answer and animates visibility */}
       <div
-        id="faq"
-        className={`scroll-mt-50 mb-6 w-full self-start rounded-sm border border-gray-200 bg-white shadow-sm transition-colors duration-200 ${
-          isOpen ? "bg-blue-50" : "hover:bg-blue-50"
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-60 opacity-100 rounded-b-xl" : "max-h-0 opacity-0"
         }`}
       >
-        {/* QUESTION BUTTON ─ no text limit, but a baseline height */}
-        <button
-          onClick={() => setIsOpen(o => !o)}
-          aria-expanded={isOpen}
-          className="w-full p-4 items-center cursor-pointer focus:outline-none min-h-22 text-center">
-          <span className="text-lg text-gray-900 text-center">
-            {question}
-          </span>
-  
-        </button>
-  
-        {/* ANSWER PANEL */}
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-60 opacity-100 rounded-b-xl" : "max-h-0 opacity-0"
-          }`}
-        >
-          <p className="p-4 pt-0 text-sm text-gray-700">{answer}</p>
-        </div>
+        <p className="p-4 pt-0 text-sm text-gray-700">{answer}</p>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
+/**
+ * @function FAQSection
+ * @description Represents the FAQ section component that displays a grid of FAQ items.
+ * It maps over the faqs array and renders each FaqItem component.
+ * @returns {JSX.Element} The rendered FAQ section component.
+ */
 const FAQSection = () => {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
@@ -109,10 +146,7 @@ const FAQSection = () => {
         Frequently Asked Questions
       </h2>
 
-      {/*
-        We use `columns-*` utilities to create independent vertical flows.
-        `break-inside-avoid` on each item stops them splitting across columns.
-      */}
+      {/* Grid container for the FAQ items */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-start">
         {faqs.map((faq) => (
           <FaqItem key={faq.question} {...faq} />
@@ -122,5 +156,8 @@ const FAQSection = () => {
   )
 }
 
-
+/**
+ * @exports FAQSection
+ * @description Exports the FAQSection component.
+ */
 export default FAQSection;
