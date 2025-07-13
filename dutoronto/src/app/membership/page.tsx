@@ -5,15 +5,15 @@ import FAQSection from "../../components/FAQSection";
 import type { Metadata } from 'next';
 
 export const generateMetadata = (): Metadata => ({
-  title: "Membership | Delta Upsilon Toronto",
+  title: "Membership",
   description: "Learn what it means to become a member of Delta Upsilon at U of T. Explore our values, recruitment process, and lifelong brotherhood.",
   alternates: {
-    canonical: "https://dutoronto.org/membership",
+    canonical: "/membership",
   },
   openGraph: {
     title: "Join DU Toronto",
     description: "Discover the benefits of membership in Canada’s oldest non-secret fraternity. Get involved today.",
-    url: "https://dutoronto.org/membership",
+    url: "/membership",
     images: [
       {
         url: "/images/MembershipHeader.webp",

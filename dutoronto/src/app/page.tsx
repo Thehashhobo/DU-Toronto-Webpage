@@ -15,52 +15,35 @@ import a1 from "../../public/images/about.webp";
 import a2 from "../../public/images/pin.webp";
 import a3 from "../../public/images/alumni.webp";
 import Image from "next/image";
-import Head from "next/head";
 
-
-
+import { Metadata } from "next";
 import React, { Suspense } from "react";
 
 const MemberGridWithModal = React.lazy(() => import("../components/MemberGridWithModal"));
 
-export default function Home() {
-    const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "Delta Upsilon – University of Toronto Chapter",
-    "alternateName": "DU Toronto",
-    "legalName": "Delta Upsilon Fraternity - Toronto Chapter",
-    "url": "https://dutoronto.org",
-    "logo": "https://dutoronto.org/images/Coat%20of%20Arms.webp",
-    "description": "Delta Upsilon is a non-secret, values-based fraternity founded on the principles of justice, character, friendship, and culture. The Toronto Chapter, founded in 1898, is Canada's oldest DU chapter.",
-    "foundingDate": "1899-12-15",
-    "sameAs": [
-      "https://www.instagram.com/dutoronto",
-      "https://www.facebook.com/DUToronto/"
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Delta Upsilon Toronto Chapter - Building Better Men Since 1899. Join Canada's oldest non-secret fraternity at University of Toronto and discover brotherhood, leadership, and lifelong connections.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Delta Upsilon Toronto - Building Better Men Since 1899",
+    description: "Join Canada's oldest non-secret fraternity at University of Toronto. Discover brotherhood, leadership, philanthropy, and our historic chapter house at 182 St George St.",
+    url: "/",
+    images: [
+      {
+        url: "/images/Coat of Arms.webp",
+        width: 300,
+        height: 351,
+        alt: "Delta Upsilon Toronto Chapter Coat of Arms",
+      },
     ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "182 St George Street",
-      "addressLocality": "Toronto",
-      "addressRegion": "ON",
-      "postalCode": "M5R 2N3",
-      "addressCountry": "CA"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-647-545-7141",  
-      "email": "dutorontochapter@gmail.com", 
-      "contactType": "Customer Support"
-    },
-    "telephone": "+1-647-545-7141",
-    "email": "dutorontochapter@gmail.com",
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "minValue": 10,
-      "maxValue": 40
-    },
-    "naics": "813410", // NAICS code for Civic and Social Organizations
+  },
 };
+
+export default function Home() {
+
 
   const animatedCards = [
   {
@@ -180,12 +163,6 @@ const membersCards = [
 ];
   return (
     <>
-    <Head>
-      <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-    </Head>
     <main className="flex flex-col min-h-screen justify-start items-start">
       <section
         className="relative w-full h-[70vh] md:h-[100vh] bg-cover bg-center justify-start overflow-hidden"

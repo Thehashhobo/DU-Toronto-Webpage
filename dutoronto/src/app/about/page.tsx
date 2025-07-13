@@ -14,15 +14,15 @@ import TextHistory from "@/components/TextHistory";
 import type { Metadata } from 'next';
 
 export const generateMetadata = (): Metadata => ({
-  title: "About Us | Delta Upsilon Toronto",
+  title: "About Us",
   description: "Learn more about the mission, history, and values at Delta Upsilon Toronto Chapter.",
   alternates: {
-    canonical: "https://dutoronto.org/about",
+    canonical: "/about",
   },
   openGraph: {
     title: "About Delta Upsilon Toronto",
     description: "Explore our story, values, and commitment to building better men since 1899.",
-    url: "https://dutoronto.org/about",
+    url: "/about",
     images: [
       {
         url: "/images/H1.webp",

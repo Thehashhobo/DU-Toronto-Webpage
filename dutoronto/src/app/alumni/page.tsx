@@ -5,15 +5,15 @@ import Collage from "../../../public/images/ap2.webp"
 import AlumniSignupForm from "../../components/AlumniSignupForm";
 
 export const generateMetadata = (): Metadata => ({
-  title: "Alumni | Delta Upsilon Toronto",
+  title: "Alumni",
   description: "Stay connected with the Delta Upsilon Toronto alumni community. Learn how to get involved, support the chapter, and attend future events.",
   alternates: {
-    canonical: "https://dutoronto.org/alumni",
+    canonical: "/alumni",
   },
   openGraph: {
     title: "DU Toronto Alumni Network",
     description: "Reconnect and support the next generation of brothers through our growing alumni community.",
-    url: "https://dutoronto.org/alumni",
+    url: "/alumni",
     images: [
       {
         url: "/images/ap2.webp",

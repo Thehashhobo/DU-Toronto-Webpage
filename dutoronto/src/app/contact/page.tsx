@@ -6,15 +6,15 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 
 export const generateMetadata = (): Metadata => ({
-  title: "Contact Us | Delta Upsilon Toronto",
+  title: "Contact Us",
   description: "Have questions or want to get in touch with Delta Upsilon Toronto? Reach out to our chapter leadership today.",
   alternates: {
-    canonical: "https://dutoronto.org/contact",
+    canonical: "/contact",
   },
   openGraph: {
     title: "Contact Delta Upsilon Toronto",
     description: "Get in touch with our executive team and learn more about our chapter at the University of Toronto.",
-    url: "https://dutoronto.org/contact",
+    url: "/contact",
     images: [
       {
         url: '/images/Coat of Arms.webp', // 1200×630 JPEG <150 kB

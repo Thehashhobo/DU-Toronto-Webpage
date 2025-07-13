@@ -10,15 +10,15 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 
 export const generateMetadata = (): Metadata => ({
-  title: "Our Chapter House | Delta Upsilon Toronto",
+  title: "Our Chapter House",
   description: "Explore the historic Delta Upsilon chapter house at 182 St. George Street. Learn more about our home and its legacy at U of T.",
   alternates: {
-    canonical: "https://dutoronto.org/house",
+    canonical: "/house",
   },
   openGraph: {
     title: "Visit Our DU Toronto Chapter House",
     description: "Take a look inside our historic home in the heart of downtown Toronto and see where brotherhood lives.",
-    url: "https://dutoronto.org/house",
+    url: "/house",
     images: [
       {
         url: "/images/H1.webp",
