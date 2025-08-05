@@ -22,14 +22,14 @@ import React, { Suspense } from "react";
 const MemberGridWithModal = React.lazy(() => import("../components/MemberGridWithModal"));
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Delta Upsilon Toronto Chapter - Building Better Men Since 1899. Join Canada's oldest non-secret fraternity at University of Toronto and discover brotherhood, leadership, and lifelong connections.",
+  title: "Delta Upsilon Toronto — World's Oldest Non-Secret Fraternity",
+  description: "Delta Upsilon Toronto Chapter - Building Better Men Since 1899. Discover brotherhood, leadership, and lifelong connections.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Delta Upsilon Toronto - Building Better Men Since 1899",
-    description: "Join Canada's oldest non-secret fraternity at University of Toronto. Discover brotherhood, leadership, philanthropy, and our historic chapter house at 182 St George St.",
+    description: "Join Canada's oldest non-secret fraternity at University of Toronto. Discover brotherhood, leadership and our historic chapter house at 182 St George St.",
     url: "/",
     images: [
       {
@@ -179,12 +179,14 @@ const membersCards = [
           Your browser does not support the video tag.
         </video>
         {/* Overlay and Content */}
-        <div className="font-[family-name:var(--font-Germ)] relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
-          <p className="xl:text-4xl text-3xl text-[#ffffffd6] text-center mt-2 mb-2 ml-0.5 mr-0.5 relative -translate-y-3 tracking-wide">
-            Delta Upsilon 
-          </p>
-          <h1 className="font-[family-name:var(--font-Roboto)] text-4xl uppercase text-center font-bold md:text-7xl ml-0.5 mr-0.5 relative -translate-y-3">
-            Toronto Chapter
+        <div className="relative z-10 flex flex-col pt-18 md:pt-1 items-center justify-center h-full text-white bg-black/60">
+          <h1 className="font-[family-name:var(--font-Roboto)] text-center font-bold relative -translate-y-3">
+            <span className="font-[family-name:var(--font-Germ)] block xl:text-4xl text-3xl text-[#ffffffd6] mt-2 mb-2 ml-0.5 mr-0.5 tracking-wide font-normal">
+              Delta Upsilon
+            </span>
+            <span className="block text-4xl uppercase md:text-7xl ml-0.5 mr-0.5">
+              Toronto Chapter
+            </span>
           </h1>
           <p className="font-[family-name:var(--font-Cabin)] text-primary text-2xl text-center mt-2 ml-0.5 mr-0.5 relative -translate-y-3">
             Building Better Men Since 1899

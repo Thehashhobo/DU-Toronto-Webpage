@@ -119,9 +119,9 @@ const houseHistoryText = (
       {/* Content */}
       <div className="relative z-10 max-w-3xl xl:top-[-30]">
         <p className="text-sm uppercase tracking-wide text-gray-500 mb-2">Delta House</p>
-        <h1 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-serif font-bold text-gray-800 mb-4 md:mx-14">
+        <h2 className="text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-serif font-bold text-gray-800 mb-4 md:mx-14">
           A Home That Fosters <span className="italic">Brotherhood</span>, Growth, and Comfort
-        </h1>
+        </h2>
         <p className="text-lg text-gray-600 mb-6 md:mx-24">
           Our fraternity house isn’t just a place to live — it’s a community built to support your academic, social, and personal development. Enjoy access to an industrial-grade kitchen, dedicated study library, spacious TV rooms, in house Gym, and pool rooms for leisure and bonding. It’s more than housing — it’s home.
         </p>

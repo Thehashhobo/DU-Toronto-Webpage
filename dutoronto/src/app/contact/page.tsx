@@ -50,7 +50,7 @@ export default function Contact() {
           <div className="flex flex-col flex-1 md:max-w-[50vw] mx-auto px-4 md:pl-16 mt-6">
               {/* Recruitment */ }
               <div className="md:ml-4 ml-0">
-                  <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Membership Inquires</h1>
+                  <h2 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Membership Inquires</h2>
                   <p className="mb-4">
                     For questions related to membership,{" "}
                     <span className="whitespace-nowrap">please contact our Minister of Recruitment.</span>
@@ -90,7 +90,7 @@ export default function Contact() {
 
               {/* Alumni */ }
               <div className="md:ml-4 ml-0">
-                  <h1 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h1>
+                  <h2 className="text-3xl xl:text-4xl font-bold mb-2 text-center">Alumni Inquires</h2>
                   <p className="mb-4">
                     For questions related to alumni and events,{" "}
                     <span className="whitespace-nowrap">please contact our Minister of External Relations.</span>
