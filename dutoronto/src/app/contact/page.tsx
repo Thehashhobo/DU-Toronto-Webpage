@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import {InstagramFilled} from '@ant-design/icons';
-import adrian from "../../../public/exec/adrian.webp"
-import az from "../../../public/exec/az.webp";
+import ian from "../../../public/exec/ian.webp"
+import adam from "../../../public/exec/adam.webp";
 import Image from "next/image";
 import type { Metadata } from 'next';
 
@@ -29,17 +29,17 @@ export const generateMetadata = (): Metadata => ({
 
 export default function Contact() {
   const recruitment = {
-    name: "Azaryah Mendes",
-    phone: "+1 (647)-274-0504",
-    email: "mendesazaryah@gmail.com",
-    instagram: "https://www.instagram.com/azaryah_mendes/",
+    name: "Adam Ratanshi",
+    phone: "+1 (437) 855-2773",
+    email: "adamaliratanshi@gmail.com",
+    instagram: "https://www.instagram.com/adamaliratanshi/",
   }
 
   const alumni = {
-    name: "Adrian Cachia",
-    phone: "+1 (647) 545-7141",
-    email: "adriancachia7@gmail.com",
-    instagram: "https://www.instagram.com/adrian_cachia/",
+    name: "Ian Murray",
+    phone: "+1 (240) 676-8460",
+    email: "murrayian647@gmail.com",
+    instagram: "https://www.instagram.com/ian.y.murray/",
     }   
  
 
@@ -58,7 +58,7 @@ export default function Contact() {
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                     <Image
-                      src={az}
+                      src={adam}
                       quality={100}
                       width={1024}
                       height={1536}
@@ -98,7 +98,7 @@ export default function Contact() {
                   <div className="flex flex-row lg:gap-12 gap-4 mb-6">
                     <div className="relative w-36 h-42 mb-4">
                       <Image
-                        src={adrian}
+                        src={ian}
                         width={2832}
                         height={4340}
                         alt="Recruitment"
