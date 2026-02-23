@@ -2,14 +2,14 @@ import H1 from "../../public/images/H1.webp";
 import F1 from "../../public/images/private/F2.webp";
 import WhyDu from "@/components/WhyDu";
 import AnimatedCard from "@/components/AnimatedCard";
-import dev from "../../public/exec/dev2.webp"
-import aaron from "../../public/exec/aaron.webp"
-import az from "../../public/exec/az.webp";
+import michael from "../../public/exec/michael.webp"
+import micah from "../../public/exec/micah.webp"
+import adam from "../../public/exec/adam.webp";
 import alex from "../../public/exec/alex.webp"
-import arav from "../../public/exec/arav.webp"
-import tony from "../../public/exec/tony.webp"
+// import arav from "../../public/exec/arav.webp"
+import avery from "../../public/exec/avery.webp"
 import david from "../../public/exec/david.webp"
-import adrian from "../../public/exec/adrian.webp"
+import ian from "../../public/exec/ian.webp"
 
 import a1 from "../../public/images/about.webp";
 import a2 from "../../public/images/pin.webp";
@@ -87,59 +87,59 @@ export default function Home() {
 const membersCards = [
   {
     position: "President",
-    name: "Devyansh Sharma",
+    name: "Michael Atrach",
     description:
-      "Hi, I'm Dev Sharma. I was born in Winnipeg, Manitoba, and I'm currently studying Honours Finance with minors in Cybersecurity, Economics, and Gender Studies. This summer, I'm working in Texas as a Sales Solution Architect intern. I've had the chance to serve in several leadership roles with DU Toronto, including Class President, VP External Relations, Social Media Director, Intermittent President, and President in both 2024 and 2025. One of my favourite memories is the DU Toronto 125th Anniversary Weekend Celebration. Fun fact about me: I’m the undisputed champ at cup pong.",
-    image: dev.src,
-    linkedin: "https://www.linkedin.com/in/devyanshsharma/",
-    instagram: "https://www.instagram.com/devsharma_7/",
+      "",
+    image: michael.src,
+    // linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/michaelatrach13/",
   },
   {
     position: "Vice President", 
-    name: "Aaron Feigenbaum",
+    name: "Mikhail Skazhenyuk",
     description:
-      "Hey I’m Aaron, born and raised in Toronto and I am now studying Sports Media at The University of Toronto. Outside of school I am a Professional Actor for the ACTRA union of Canada. I have held the positions of Social Chair, VP of External Relations and now Vice President. My favourite memory of DU is the yearly ski trips we take to Montreal. A random fact is I can name any One Direction song within 15 seconds",
-    image: aaron.src,
-    linkedin: "https://www.linkedin.com/in/aaron-feigenbaum-5388a8345/",
-    instagram: "https://www.instagram.com/aaron.feigs/",
+      "",
+    image: micah.src,
+    linkedin: "https://www.linkedin.com/in/mikhail-skazhenyuk-1b44bb271/",
+    instagram: "https://www.instagram.com/mikhskaz/",
   },
   {
     position: "Minister of Recruitment",
-    name: "Azaryah Mendes",
+    name: "Adam Ratanshi",
     width: 1024,
     height: 1536,
     description:
-      "Hey, I’m Azaryah Mendes. At the time I’m writing this, I’m entering my second year at UofT in Rotman Commerce. I’m in charge of recruitment here at DU so I wanted to take the chance to speak about why I joined. When I first committed to UofT I had no intention of rushing a frat but I wanted to try new things. I ended up at a rush event where I met a group of guys that were genuine, fun, and goal-oriented. The people here push each other to be the best version of themselves. They strive to make the community and society better. That’s what made me want to join and that’s why our rush slogan is “building better men”. ",
-    image: az.src,
-    linkedin: "https://www.linkedin.com/in/azaryah-mendes-61417a300/",
-    instagram: "https://www.instagram.com/azaryah_mendes/",
+      "",
+    image: adam.src,
+    linkedin: "https://www.linkedin.com/in/adam-ratanshi-139482270/",
+    instagram: "https://www.instagram.com/adamaliratanshi/",
   },
   {
     position: "Minister of Finance",
     name: "Alexander Mansourov",
     description:
-      "Hi, I'm Alex! I’m from Vaughan and am currently studying Economics. I’ve served as VP of Administration and now proudly serve as VP of Finance at DU. What I love most about DU is that there’s always something fun happening—there’s never a dull moment. Outside of academics and fraternity commitments, you can find me at home or at the gym.",
+      "Hi, I'm Alex! I’m from Vaughan and am currently studying Economics. I’ve served as VP of Administration and now proudly serve as VP of Finance for a second term at DU. What I love most about DU is that there’s always something fun happening—there’s never a dull moment. Outside of academics and fraternity commitments, you can find me at home or at the gym.",
     image: alex.src,
     linkedin: "https://www.linkedin.com/in/alexander-mansourov-170283248/",
-    instagram: "https://www.instagram.com/alexboneless/",
+    // instagram: "https://www.instagram.com/",
   },
-  {
-    position: "Minister of Brotherhood Excellence",
-    name: "Arav Kekane",
-    description:
-      "Dedicated to fostering a strong sense of community, connection, and personal growth within the brotherhood.",
-    image: arav.src,
-    linkedin: "https://www.linkedin.com/in/aravkekane/",
-    instagram: "https://www.instagram.com/aravkekane/",
-  },
+  // {
+  //   position: "Minister of Brotherhood Excellence",
+  //   name: "Arav Kekane",
+  //   description:
+  //     "Dedicated to fostering a strong sense of community, connection, and personal growth within the brotherhood.",
+  //   image: arav.src,
+  //   linkedin: "https://www.linkedin.com/in/aravkekane/",
+  //   instagram: "https://www.instagram.com/aravkekane/",
+  // },
     {
     position: "Minister of Risk Management",
-    name: "Tony Yousefi",
+    name: "Avery Lomonaco",
     description:
-      "My name is Ariaman and I’m from Newmarket, ON. Currently studying human biology at the University of Toronto and pursuing medical school. I joined Delta Upsilon in my first year at the UofT, drawn by its strong history and reputation on campus and nationwide. The fraternity fosters responsibility and offers great opportunities for leadership. I have since been elected as the minister of Risk Management and Associate Member Educator, and work closely with the Delta Upsilon national headquarters to ensure a positive and worthwhile experience for the members of the chapter.",
-    image: tony.src,
-    linkedin: "https://www.linkedin.com/in/ariaman-yousefi-976092257/",
-    instagram: "https://www.instagram.com/ariaman.y/",
+      "",
+    image: avery.src,
+    // linkedin: "https://www.linkedin.com/in/",
+    instagram: "https://www.instagram.com/avery.lomonaco/",
   },
   {
     position: "Minister of Administration",
@@ -147,18 +147,18 @@ const membersCards = [
     description:
       "Hi, I’m David. I was born and raised in Scarborough (Toronto) and I currently study Aerospace Engineering. Being a part of DU was one of the best decisions of my life and I am happy to support my brothers as VP of Administration. The best part of being here is the people you meet along the way. Outside of academics I focus on work and the gym when I’m not watching movies to pass time.",
     image: david.src,
-    linkedin: "https://www.linkedin.com/",
+    // linkedin: "https://www.linkedin.com/",
     instagram: "https://www.instagram.com/dvang_4/",
   },
     {
     position: "Minister of External Relations",
-    name: "Adrian Cachia",
+    name: "Ian Murray",
     description:
       "Hello! My name is Adrian, I grew up in Vaughan Ontario, and I study Molecular Biology at the University of Toronto. I am the former Delta Upsilon Social Chair, and current Minister of External Relations. My favourite DU memory would have to be the first rush event I attended where I met everyone who would end up being some of my closest friends in the future. Fun fact: I like to think I’m the best in the house at smash bros!",
-    image: adrian.src,
+    image: ian.src,
     // facebook: "https://facebook.com/",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/adrian_cachia/",
+    // linkedin: "https://www.linkedin.com/",
+    instagram: "https://www.instagram.com/ian.y.murray/",
   },
 ];
   return (
