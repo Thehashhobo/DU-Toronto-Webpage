@@ -71,8 +71,8 @@ export const executives: Executive[] = [
     image: "/exec/ian.webp",
     imageWidth: 2832,
     imageHeight: 4340,
-    description:
-      "Hello! My name is Adrian, I grew up in Vaughan Ontario, and I study Molecular Biology at the University of Toronto. I am the former Delta Upsilon Social Chair, and current Minister of External Relations. My favourite DU memory would have to be the first rush event I attended where I met everyone who would end up being some of my closest friends in the future. Fun fact: I like to think I'm the best in the house at smash bros!",
+    // description:
+    //   "",
     instagram: "https://www.instagram.com/ian.y.murray/",
     phone: "+1 (240) 676-8460",
     email: "murrayian647@gmail.com",
