@@ -86,8 +86,8 @@ export default function Footer() {
           <address className="not-italic space-y-2 text-sm text-gray-300">
             <p>182 St George St<br />Toronto, ON M5R 2N3</p>
             <p>
-              <a href="tel:+14319983452" className="hover:text-[#edc058] transition-colors">
-                +1 (431) 998-3452
+              <a href="footer-tel" className="hover:text-[#edc058] transition-colors">
+                +1 (647) 971-1776
               </a>
             </p>
             <p>
@@ -107,12 +107,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} Delta Upsilon Toronto — All rights reserved.</p>
           <p>
-            Designed &amp; built by{" "}
+            Designed &amp; built by Brothers{" "}
             <Link href="https://www.jerrywjn.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#edc058] transition-colors">Jerry W</Link>
             ,{" "}
-            <Link href="https://mikhskaz.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#edc058] transition-colors">Michael</Link>
+            <Link href="https://mikhskaz.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#edc058] transition-colors">Mikhail S</Link>
             {" "}&amp;{" "}
-            <Link href="https://www.linkedin.com/in/devyanshsharma/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#edc058] transition-colors">Devyansh</Link>
+            <Link href="https://www.linkedin.com/in/devyanshsharma/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#edc058] transition-colors">Devyansh S</Link>
           </p>
         </div>
       </div>

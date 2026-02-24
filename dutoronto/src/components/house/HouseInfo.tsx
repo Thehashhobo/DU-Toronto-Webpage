@@ -20,7 +20,7 @@ export default function HouseInfo() {
         <div key={index} className="border-b border-gray-200 last:border-b-0">
           <button
             onClick={() => toggle(index)}
-            className="w-full flex items-center justify-between gap-4 py-4 text-left focus:outline-none group"
+            className="cursor-pointer w-full flex items-center justify-between gap-4 py-4 text-left focus:outline-none group"
           >
             <span className={`font-[family-name:var(--font-Roboto)] font-bold text-base md:text-lg transition-colors ${openIndex === index ? "text-[#0F52BA]" : "text-[#1a1a2e] group-hover:text-[#0F52BA]"}`}>
               {section.title}

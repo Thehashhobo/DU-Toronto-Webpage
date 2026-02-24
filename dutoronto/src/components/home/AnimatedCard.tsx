@@ -62,10 +62,10 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   });
 
   return (
-    <Link href={link} className="items-center mx-auto flex-shrink-0">
+    <Link href={link} className="items-center mx-auto flex-shrink-0 xl:flex-shrink xl:w-full">
       <div
         ref={cardRef}
-        className={`relative min-w-[16rem] w-64 md:w-72 h-96 md:h-[420px] overflow-hidden shadow-xl cursor-pointer flex-shrink-0
+        className={`relative min-w-[16rem] w-64 md:w-72 xl:w-full h-96 md:h-[420px] overflow-hidden shadow-xl cursor-pointer flex-shrink-0
           ${inView ? (isDesktop ? "animate-fade-in-scale" : "") : "opacity-0"}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -84,6 +84,20 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
           style={overlayStyle}
           className="absolute inset-0 bg-[#0c1a2e] pointer-events-none"
         />
+
+        {/* Gold corner brackets — appear on hover */}
+        <div className={`absolute top-3 left-3 z-20 transition-all duration-300 ${hovered ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 -translate-x-1 -translate-y-1"}`}>
+          <div className="w-4 h-4 border-l-[2px] border-t-[2px] border-[#edc058]" />
+        </div>
+        <div className={`absolute top-3 right-3 z-20 transition-all duration-300 ${hovered ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 translate-x-1 -translate-y-1"}`}>
+          <div className="w-4 h-4 border-r-[2px] border-t-[2px] border-[#edc058]" />
+        </div>
+        <div className={`absolute bottom-3 left-3 z-20 transition-all duration-300 ${hovered ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 -translate-x-1 translate-y-1"}`}>
+          <div className="w-4 h-4 border-l-[2px] border-b-[2px] border-[#edc058]" />
+        </div>
+        <div className={`absolute bottom-3 right-3 z-20 transition-all duration-300 ${hovered ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 translate-x-1 translate-y-1"}`}>
+          <div className="w-4 h-4 border-r-[2px] border-b-[2px] border-[#edc058]" />
+        </div>
 
         {/* Gold bottom border that appears on hover */}
         <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-[#edc058] transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`} />

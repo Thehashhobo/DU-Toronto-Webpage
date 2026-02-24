@@ -44,8 +44,11 @@ const MemberCard: React.FC<MemberCardProps> = ({
         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
       />
 
-      {/* Gradient overlay — always present, darkens on hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity duration-300" />
+      {/* Gradient overlay — always present, deepens on hover */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent group-hover:from-black/90 transition-all duration-400" />
+
+      {/* Animated gold bottom bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#edc058] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400 ease-out" />
 
       {/* Name / position — slides up on hover */}
       <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300">

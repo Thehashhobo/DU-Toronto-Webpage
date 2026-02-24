@@ -4,7 +4,8 @@ import Image from "next/image";
 import { blogPosts } from "@/data/news";
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-CA", {
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-CA", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -48,7 +49,7 @@ export default function BlogFeed() {
 
             {/* Optional image */}
             {post.image && (
-              <div className="w-full h-52 overflow-hidden">
+              <div className="w-full overflow-hidden" style={{ height: post.imageDisplayHeight ?? 208 }}>
                 <Image
                   src={post.image}
                   alt={post.imageAlt ?? post.title}

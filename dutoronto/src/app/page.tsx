@@ -81,19 +81,29 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-          {/* Eyebrow */}
-          <span
-            className="eyebrow text-[#edc058]/80 tracking-[0.25em] mb-4 text-xs"
-            style={{ textShadow: "0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)" }}
-          >
-            Since 1899 &nbsp;·&nbsp; Canada&apos;s Oldest Non-Secret Fraternity
-          </span>
+          {/* Eyebrow with flanking lines */}
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <div className="hidden sm:block h-px w-10 bg-[#edc058]/40" />
+            <span
+              className="eyebrow text-[#edc058]/80 tracking-[0.25em] text-xs"
+              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)" }}
+            >
+              Canada&apos;s Oldest Non-Secret Fraternity
+            </span>
+            <div className="hidden sm:block h-px w-10 bg-[#edc058]/40" />
+          </div>
 
           {/* Title */}
           <h1 className="text-white text-center" style={{ textShadow: "0 2px 6px rgba(0,0,0,0.95), 0 4px 24px rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.5)" }}>
-            <span className="font-[family-name:var(--font-Germ)] block text-3xl md:text-4xl xl:text-5xl text-white/80 mb-2 font-normal tracking-wide">
+            <span className="font-[family-name:var(--font-Germ)] block text-3xl md:text-4xl xl:text-5xl text-white/80 font-normal tracking-wide">
               Delta Upsilon
             </span>
+            {/* Decorative diamond separator */}
+            <div className="flex items-center justify-center gap-3 my-2.5">
+              <div className="h-px w-16 bg-[#edc058]/30" />
+              <div className="w-1.5 h-1.5 bg-[#edc058]/55 rotate-45 flex-shrink-0" />
+              <div className="h-px w-16 bg-[#edc058]/30" />
+            </div>
             <span className="font-[family-name:var(--font-Roboto)] block text-5xl md:text-7xl xl:text-8xl font-black uppercase tracking-tight">
               Toronto Chapter
             </span>
@@ -101,7 +111,7 @@ export default function Home() {
 
           {/* Tagline */}
           <p
-            className="font-[family-name:var(--font-Cabin)] text-[#edc058] text-lg md:text-xl mt-4 tracking-wide"
+            className="font-[family-name:var(--font-Cabin)] text-[#edc058] text-lg md:text-xl mt-5 tracking-wide"
             style={{ textShadow: "0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)" }}
           >
             Building Better Men Since 1899
@@ -123,7 +133,7 @@ export default function Home() {
       <section className="bg-[#f8f7f0] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Text */}
-          <div className="flex-1 order-2 md:order-1">
+          <div className="flex-1 order-2 md:order-1 border-l-2 border-[#edc058]/25 pl-6">
             <p className="eyebrow text-[#0F52BA]/70 mb-3">About Our Chapter</p>
             <h2 className="font-[family-name:var(--font-Roboto)] text-3xl md:text-4xl xl:text-5xl font-black text-[#1a1a2e] leading-tight mb-5">
               Not your typical fraternity.
@@ -147,7 +157,7 @@ export default function Home() {
               height={351}
               src="/images/Coat of Arms.webp"
               alt="Delta Upsilon Coat of Arms"
-              className="h-44 md:h-56 w-auto drop-shadow-md"
+              className="h-44 md:h-56 w-auto drop-shadow-[0_8px_40px_rgba(237,192,88,0.22)] hover:drop-shadow-[0_12px_48px_rgba(237,192,88,0.35)] transition-all duration-500"
               style={{ objectFit: "contain" }}
             />
           </div>
@@ -155,13 +165,14 @@ export default function Home() {
       </section>
 
       {/* ── Explore cards (dark navy) ────────────────── */}
-      <section className="bg-[#0c1a2e] py-16 md:py-20">
+      <section className="bg-[#0c1a2e] pt-16 md:pt-20">
         <div className="max-w-7xl mx-auto px-6">
           <p className="eyebrow text-[#edc058]/60 mb-3">Explore</p>
-          <h2 className="font-[family-name:var(--font-Roboto)] text-3xl md:text-4xl font-black text-white mb-10 uppercase tracking-tight">
+          <h2 className="font-[family-name:var(--font-Roboto)] text-3xl md:text-4xl font-black text-white mb-4 uppercase tracking-tight">
             Everything DU Toronto
           </h2>
-          <div className="flex flex-row gap-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#edc058]/20 md:grid md:grid-cols-4">
+          <div className="h-px w-20 bg-gradient-to-r from-[#edc058]/70 to-transparent mb-10" />
+          <div className="flex flex-row gap-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#edc058]/20 xl:grid xl:grid-cols-4 xl:overflow-x-visible">
             {animatedCards.map((card, idx) => (
               <AnimatedCard key={card.title + idx} {...card} />
             ))}
@@ -180,6 +191,7 @@ export default function Home() {
             <span className="text-[#edc058]">Own Your Journey</span>{" "}
             with those who elevate you
           </h2>
+          <div className="h-px w-16 bg-gradient-to-r from-[#edc058]/60 to-transparent mb-4" />
           <p className="font-[family-name:var(--font-Cabin)] text-gray-500 mb-10 max-w-xl">
             Meet the executive team leading Delta Upsilon Toronto. Click any card to learn more.
           </p>

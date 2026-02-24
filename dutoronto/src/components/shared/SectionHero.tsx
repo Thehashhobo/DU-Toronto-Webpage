@@ -38,13 +38,17 @@ export default function SectionHero({
       <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/65" />
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        {/* Eyebrow label */}
-        <span
-          className="eyebrow text-[#edc058]/80 mb-3 tracking-[0.25em]"
-          style={{ textShadow: "0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)" }}
-        >
-          Delta Upsilon Toronto
-        </span>
+        {/* Eyebrow label with flanking lines */}
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="h-px w-8 bg-[#edc058]/40" />
+          <span
+            className="eyebrow text-[#edc058]/80 tracking-[0.25em]"
+            style={{ textShadow: "0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)" }}
+          >
+            Delta Upsilon Toronto
+          </span>
+          <div className="h-px w-8 bg-[#edc058]/40" />
+        </div>
 
         {/* Main title */}
         <h1

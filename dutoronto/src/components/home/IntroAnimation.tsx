@@ -44,8 +44,10 @@ export default function IntroAnimation() {
         className="fixed inset-0 z-[102] flex flex-col items-center justify-center pointer-events-none"
         style={{
           opacity: exiting ? 0 : 1,
-          transition: exiting ? "opacity 250ms ease-out" : "opacity 600ms ease-out",
-          transitionDelay: exiting ? "0ms" : "0ms",
+          transitionProperty: "opacity",
+          transitionDuration: exiting ? "250ms" : "600ms",
+          transitionTimingFunction: "ease-out",
+          transitionDelay: "0ms",
         }}
       >
         {/* Coat of arms */}
@@ -82,7 +84,9 @@ export default function IntroAnimation() {
           className="font-[family-name:var(--font-Cabin)] text-white/50 text-[10px] tracking-[0.45em] uppercase mt-3"
           style={{
             opacity: exiting ? 0 : 1,
-            transition: "opacity 250ms ease-out",
+            transitionProperty: "opacity",
+            transitionDuration: "250ms",
+            transitionTimingFunction: "ease-out",
             transitionDelay: exiting ? "0ms" : "600ms",
             animation: !exiting ? "slide-up 0.5s ease-out 400ms both" : undefined,
           }}

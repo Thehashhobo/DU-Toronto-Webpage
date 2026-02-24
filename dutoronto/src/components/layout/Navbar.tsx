@@ -40,9 +40,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-20 top-0 left-0 transition-all duration-300 ${
+      className={`fixed w-full z-20 top-0 left-0 transition-all duration-400 ${
         isScrolled || isMenuOpen
-          ? "bg-[#f8f7f0] shadow-sm border-b border-black/5"
+          ? "bg-[#f8f7f0]/95 backdrop-blur-md shadow-sm border-b border-[#edc058]/20"
           : "bg-transparent"
       }`}
     >
@@ -83,7 +83,7 @@ export default function Navbar() {
               >
                 {label}
                 {isActive(href) && (
-                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#edc058]" />
+                  <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-gradient-to-r from-[#edc058]/60 via-[#edc058] to-[#edc058]/60" />
                 )}
               </Link>
             ))}

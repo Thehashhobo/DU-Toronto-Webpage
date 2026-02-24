@@ -64,6 +64,21 @@ const slides: Slide[] = [
     label: "Build Your Legacy",
     sublabel: "Canada's Oldest Non-Secret Fraternity",
   },
+  {
+    kind: "image",
+    src: "/images/news/cntower.webp",
+    width: 2000,
+    height: 3250,
+    alt: "Formals",
+    label: "Celebrate your Brotherhood",
+    sublabel: "Iconic Events at Toronto's Venues",
+  },
+  {
+    kind: "video",
+    src: "/images/carousel/boat.mov",
+    label: "Lifelong Memories",
+    sublabel: "Make unforgettable memories with your Brothers",
+  }
 ];
 
 const DURATION = 7000;

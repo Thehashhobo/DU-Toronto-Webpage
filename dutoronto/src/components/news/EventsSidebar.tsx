@@ -1,12 +1,17 @@
 import React from "react";
 import { upcomingEvents } from "@/data/events";
 
+const MONTHS_SHORT = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const MONTHS_LONG  = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const WEEKDAYS     = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
 function formatEventDate(iso: string) {
-  const d = new Date(iso);
+  const [year, month, day] = iso.split("-").map(Number);
+  const weekday = WEEKDAYS[new Date(year, month - 1, day).getDay()];
   return {
-    day: d.toLocaleDateString("en-CA", { day: "2-digit" }),
-    month: d.toLocaleDateString("en-CA", { month: "short" }).toUpperCase(),
-    full: d.toLocaleDateString("en-CA", { weekday: "long", month: "long", day: "numeric", year: "numeric" }),
+    day:   String(day).padStart(2, "0"),
+    month: MONTHS_SHORT[month - 1],
+    full:  `${weekday}, ${MONTHS_LONG[month - 1]} ${day}, ${year}`,
   };
 }
 

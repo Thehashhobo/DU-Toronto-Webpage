@@ -8,59 +8,72 @@ export interface BlogPost {
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  /** Height (px) of the displayed image container. Defaults to 208 (h-52). */
+  imageDisplayHeight?: number;
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "winter-2026-initiation",
-    title: "Winter 2026 Associate Member Class Initiated",
-    date: "2026-02-15",
+    id: "philanthropy-drive-2026",
+    title: "Egg a DUck Philanthropy W26",
+    date: "2026-02-03",
     excerpt:
-      "We are proud to welcome the newest brothers into the Delta Upsilon Toronto Chapter. The Winter 2026 class demonstrated exceptional dedication, character, and brotherhood throughout their associate member period.",
+      "This semester's philanthropy 'Egg a DUck' exceeded all expectations. Brothers, alumni, and greek life community members came together for a day of fundraising, raising hundreds of dollars for the Global Service Initiative.",
+    tag: "Philanthropy",
+    image: "/images/news/eggaduck.webp",
+    imageWidth: 4032,
+    imageHeight: 3024,
+    imageDisplayHeight: 400,
+  },
+  {
+    id: "winter-2026-pinning",
+    title: "Winter 2026 Associate Member Class Pinned",
+    date: "2026-01-31",
+    excerpt:
+      "We are proud to welcome the newest Associate Members into the Delta Upsilon Toronto Chapter. We're excited to see them grow and contribute to our brotherhood.",
     tag: "Brotherhood",
     image: "/images/carousel/c1.webp",
     imageAlt: "Associate Member Class Winter 2026",
     imageWidth: 2000,
     imageHeight: 3250,
+    imageDisplayHeight: 400,
   },
   {
-    id: "philanthropy-drive-2026",
-    title: "Annual Philanthropy Drive Raises $3,200 for SickKids",
-    date: "2026-01-20",
+    id: "2026-exec",
+    title: "Introducing the 2026 Executive Team",
+    date: "2026-01-05",
     excerpt:
-      "This year's philanthropy drive exceeded all expectations. Brothers, alumni, and community members came together for a week of fundraising events, raising over $3,200 for the Hospital for Sick Children.",
-    tag: "Philanthropy",
+      "We are excited to announce the 2026 executive team for the Delta Upsilon Toronto Chapter. These dedicated Brothers will lead our Chapter to new heights in the coming year.",
+    tag: "Brotherhood",
+    image: "/images/news/exec26.webp",
+    imageAlt: "2026 Executive Team",
+    imageWidth: 2000,
+    imageDisplayHeight: 400,
   },
   {
-    id: "chapter-house-restoration",
-    title: "Historic Chapter House Restoration Project Underway",
-    date: "2025-12-05",
+    id: "fall-2025-formal",
+    title: "What Colour is the CN Tower?",
+    date: "2025-12-03",
     excerpt:
-      "The chapter has begun a restoration project to preserve the original crown-moulding and wainscotting at 182 St. George Street, maintaining the heritage designation under the Ontario Heritage Act.",
-    tag: "Chapter News",
-    image: "/images/snow.webp",
-    imageAlt: "Delta Upsilon house in winter",
-    imageWidth: 3000,
-    imageHeight: 2250,
+      "The Delta Upsilon Toronto Chapter hosted its Fall formal at Toronto's landmark, the CN Tower. The event was a great success, with over 100 Brothers and guests attending.",
+    tag: "Brotherhood",
+    image: "/images/news/cntower.webp",
+    imageAlt: "CN Tower Formal 2025",
+    imageWidth: 2000,
+    imageHeight: 3250,
+    imageDisplayHeight: 400,
   },
   {
-    id: "intramural-hockey-champions",
-    title: "DU Toronto Wins U of T Intramural Hockey Championship",
-    date: "2025-11-18",
+    id: "alumni-bbq-2023",
+    title: "Alumni BBQ 2023",
+    date: "2023-8-19",
     excerpt:
-      "After a thrilling finals game, the Delta Upsilon hockey team claimed the U of T intramural championship title for the second consecutive year. The team's hard work and camaraderie paid off in a memorable victory.",
-    tag: "Athletics",
-  },
-  {
-    id: "alumni-weekend-2025",
-    title: "Alumni Weekend 2025 — A Night to Remember",
-    date: "2025-10-30",
-    excerpt:
-      "Over 60 alumni returned to 182 St. George for Alumni Weekend 2025. The event featured a house tour, a panel discussion with notable brothers, and a formal dinner celebrating decades of brotherhood.",
+      "Alumni returned to 182 St. George for Alumni BBQ Weekend. The event featured a house tour, our new dog, and yummy food cooked up by our Brothers.",
     tag: "Alumni",
-    image: "/images/ap2.webp",
+    image: "/images/news/bbq.webp",
     imageAlt: "DU Toronto alumni collage",
     imageWidth: 898,
     imageHeight: 1056,
+    imageDisplayHeight: 400,
   },
 ];

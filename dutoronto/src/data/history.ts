@@ -71,14 +71,14 @@ export const historyMilestones: HistoryMilestone[] = [
     title: "Covid-19 Pandemic",
     date: "2019 – 2022",
     description:
-      "The global pandemic of 2019–2022 significantly impacted Delta Upsilon's operations and activities. Delta Upsilon Toronto saw its membership drop significantly during this time.",
+      "The global pandemic of Covid-19 significantly impacted Delta Upsilon's operations and activities. Delta Upsilon Toronto saw its membership drop significantly during this time.",
     desktopWidth: "md:w-[25vw]",
   },
   {
     title: "Growth Under Leadership",
     date: "2023 - 2025",
     description:
-      "Under the leadership of an excellent executive team with Dev Sharma as President, Delta Upsilon Toronto experienced significant growth and became an iconic fixture of campus life. At one point our membership totaled 53 members.",
+      "Under the leadership of an excellent executive team with Dev Sharma as President, Delta Upsilon Toronto experienced significant growth and became an iconic fixture of campus life. Our membership more than doubled during this period.",
     desktopWidth: "md:w-[25vw]",
   },
 ];
