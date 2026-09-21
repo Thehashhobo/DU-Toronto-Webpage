@@ -69,7 +69,7 @@ export const historyMilestones: HistoryMilestone[] = [
   },
   {
     title: "Covid-19 Pandemic",
-    date: "2019 – 2022",
+    date: "2019 – 2021",
     description:
       "The global pandemic of Covid-19 significantly impacted Delta Upsilon's operations and activities. Delta Upsilon Toronto saw its membership drop significantly during this time.",
     desktopWidth: "md:w-[25vw]",
