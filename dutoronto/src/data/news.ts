@@ -14,6 +14,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "winter-formal-2026",
+    title: "Winter Formal 2026",
+    date: "2026-04-01",
+    excerpt:
+      "The Brothers celebrated the end of the Winter 2026 Semester at The Pearl.",
+    tag: "Brotherhood",
+    image: "/images/news/winter26.webp",
+    imageWidth: 4032,
+    imageHeight: 3024,
+    imageDisplayHeight: 400,
+  },
+  {
     id: "philanthropy-drive-2026",
     title: "Egg a DUck Philanthropy W26",
     date: "2026-02-03",
@@ -44,7 +56,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-01-05",
     excerpt:
       "We are excited to announce the 2026 executive team for the Delta Upsilon Toronto Chapter. These dedicated Brothers will lead our Chapter to new heights in the coming year.",
-    tag: "Brotherhood",
+    tag: "Executive",
     image: "/images/news/exec26.webp",
     imageAlt: "2026 Executive Team",
     imageWidth: 2000,
