@@ -74,11 +74,11 @@ export const historyMilestones: HistoryMilestone[] = [
       "The global pandemic of Covid-19 significantly impacted Delta Upsilon's operations and activities. Delta Upsilon Toronto saw its membership drop significantly during this time.",
     desktopWidth: "md:w-[25vw]",
   },
-  {
-    title: "Growth Under Leadership",
-    date: "2023 - 2025",
-    description:
-      "Under the leadership of an excellent executive team with Dev Sharma as President, Delta Upsilon Toronto experienced significant growth and became an iconic fixture of campus life. Our membership more than doubled during this period.",
-    desktopWidth: "md:w-[25vw]",
-  },
+  // {
+  //   title: "Growth Under Leadership",
+  //   date: "2023 - 2025",
+  //   description:
+  //     "Under the leadership of an excellent executive team and innovative changes spearheaded by Mikhail Skazhenyuk, Delta Upsilon Toronto experienced significant growth and became an iconic fixture of campus life. Our membership more than doubled during this period.",
+  //   desktopWidth: "md:w-[25vw]",
+  // },
 ];
