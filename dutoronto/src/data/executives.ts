@@ -58,13 +58,21 @@ export const executives: Executive[] = [
     instagram: "https://www.instagram.com/avery.lomonaco/",
   },
   {
-    position: "Minister of Administration",
-    name: "David van Geilswyk",
-    image: "/exec/david.webp",
+    position: "Minister of Brotherhood Excellence",
+    name: "YoungJin Han",
+    image: "/exec/youngjin.webp",
     description:
-      "Hi, I'm David. I was born and raised in Scarborough (Toronto) and I currently study Aerospace Engineering. Being a part of DU was one of the best decisions of my life and I am happy to support my brothers as VP of Administration. The best part of being here is the people you meet along the way. Outside of academics I focus on work and the gym when I'm not watching movies to pass time.",
-    instagram: "https://www.instagram.com/dvang_4/",
+    "Hi I’m YoungJin! I was born in Anyang Korea, moved to Arnprior Ontario at 8 and now reside in Toronto for the University of Toronto where I study Kinesiology & Physical Education hoping to be a doctor one day. I am extremely grateful to have the brotherhood excellence position where I was able to introduce the physical well-being aspect to the chapter. I work to improve my fellow brother’s health, also placing an emphasis on mental health and academic aid. Outside the chapter you can find me at the gym or going to try different foods!",
+    instagram: "https://www.instagram.com/youngjin_han",
   },
+  // {
+  //   position: "Minister of Administration",
+  //   name: "David van Geilswyk",
+  //   image: "/exec/david.webp",
+  //   description:
+  //     "Hi, I'm David. I was born and raised in Scarborough (Toronto) and I currently study Aerospace Engineering. Being a part of DU was one of the best decisions of my life and I am happy to support my brothers as VP of Administration. The best part of being here is the people you meet along the way. Outside of academics I focus on work and the gym when I'm not watching movies to pass time.",
+  //   instagram: "https://www.instagram.com/dvang_4/",
+  // },
   {
     position: "Minister of External Relations",
     name: "Ian Murray",
