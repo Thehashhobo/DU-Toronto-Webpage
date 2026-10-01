@@ -1,8 +1,8 @@
 import ContactForm from "@/components/contact/ContactForm";
-import { InstagramFilled } from "@ant-design/icons";
-import Image from "next/image";
+// import { InstagramFilled } from "@ant-design/icons";
+// import Image from "next/image";
 import type { Metadata } from "next";
-import { executives } from "@/data/executives";
+// import { executives } from "@/data/executives";
 
 export const generateMetadata = (): Metadata => ({
   title: "Contact Us",
@@ -18,73 +18,74 @@ export const generateMetadata = (): Metadata => ({
   },
 });
 
-/** Reusable exec contact card */
-function ExecContactCard({
-  name,
-  image,
-  imageWidth,
-  imageHeight,
-  phone,
-  email,
-  instagram,
-}: {
-  name: string;
-  image: string;
-  imageWidth?: number;
-  imageHeight?: number;
-  phone?: string;
-  email?: string;
-  instagram?: string;
-}) {
-  return (
-    <div className="flex gap-6 items-start">
-      {/* Photo */}
-      <div className="relative flex-shrink-0 w-28 h-36 md:w-32 md:h-40 overflow-hidden bg-gray-100">
-        <Image
-          src={image}
-          width={imageWidth || 800}
-          height={imageHeight || 1067}
-          alt={name}
-          className="w-full h-full object-cover object-top"
-          sizes="150px"
-        />
-        {instagram && (
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-0 right-0 w-9 h-9 flex items-center justify-center bg-[#edc058] text-[#0c1a2e] text-base hover:bg-[#f5d27a] transition-colors"
-          >
-            <InstagramFilled />
-          </a>
-        )}
-      </div>
-
-      {/* Info */}
-      <div className="flex flex-col gap-1 text-sm font-[family-name:var(--font-Cabin)]">
-        <p className="font-bold text-base text-[#1a1a2e]">{name}</p>
-        {phone && (
-          <p className="text-gray-600">
-            <span className="text-xs uppercase tracking-wider font-bold text-gray-400 mr-2">Phone</span>
-            <a href={`tel:${phone}`} className="hover:text-[#0F52BA] transition-colors">{phone}</a>
-          </p>
-        )}
-        {email && (
-          <p className="text-gray-600">
-            <span className="text-xs uppercase tracking-wider font-bold text-gray-400 mr-2">Email</span>
-            <a href={`mailto:${email}`} className="hover:text-[#0F52BA] transition-colors break-all">{email}</a>
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
-
+// Executive contact cards are temporarily hidden.
+// /** Reusable exec contact card */
+// function ExecContactCard({
+//   name,
+//   image,
+//   imageWidth,
+//   imageHeight,
+//   phone,
+//   email,
+//   instagram,
+// }: {
+//   name: string;
+//   image: string;
+//   imageWidth?: number;
+//   imageHeight?: number;
+//   phone?: string;
+//   email?: string;
+//   instagram?: string;
+// }) {
+//   return (
+//     <div className="flex gap-6 items-start">
+//       {/* Photo */}
+//       <div className="relative flex-shrink-0 w-28 h-36 md:w-32 md:h-40 overflow-hidden bg-gray-100">
+//         <Image
+//           src={image}
+//           width={imageWidth || 800}
+//           height={imageHeight || 1067}
+//           alt={name}
+//           className="w-full h-full object-cover object-top"
+//           sizes="150px"
+//         />
+//         {instagram && (
+//           <a
+//             href={instagram}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="absolute bottom-0 right-0 w-9 h-9 flex items-center justify-center bg-[#edc058] text-[#0c1a2e] text-base hover:bg-[#f5d27a] transition-colors"
+//           >
+//             <InstagramFilled />
+//           </a>
+//         )}
+//       </div>
+//
+//       {/* Info */}
+//       <div className="flex flex-col gap-1 text-sm font-[family-name:var(--font-Cabin)]">
+//         <p className="font-bold text-base text-[#1a1a2e]">{name}</p>
+//         {phone && (
+//           <p className="text-gray-600">
+//             <span className="text-xs uppercase tracking-wider font-bold text-gray-400 mr-2">Phone</span>
+//             <a href={`tel:${phone}`} className="hover:text-[#0F52BA] transition-colors">{phone}</a>
+//           </p>
+//         )}
+//         {email && (
+//           <p className="text-gray-600">
+//             <span className="text-xs uppercase tracking-wider font-bold text-gray-400 mr-2">Email</span>
+//             <a href={`mailto:${email}`} className="hover:text-[#0F52BA] transition-colors break-all">{email}</a>
+//           </p>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+//
 export default function Contact() {
   // Pull contact info directly from the centralised executives data file.
   // To update these contacts, edit src/data/executives.ts.
-  const recruitment = executives.find((e) => e.position === "Minister of Recruitment");
-  const external = executives.find((e) => e.position === "Minister of External Relations");
+  // const recruitment = executives.find((e) => e.position === "Minister of Recruitment");
+  // const external = executives.find((e) => e.position === "Minister of External Relations");
 
   return (
     <main className="flex flex-col min-h-screen bg-[#f8f7f0]">
@@ -102,12 +103,13 @@ export default function Contact() {
       <div className="h-px bg-gradient-to-r from-transparent via-[#edc058] to-transparent" />
 
       {/* Main content */}
-      <section className="max-w-7xl mx-auto w-full px-6 py-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <section className="max-w-7xl mx-auto w-full px-6 py-14">
 
-        {/* Left: exec contacts */}
+        {/* Membership and alumni inquiries are temporarily hidden.
+        Left: exec contacts
         <div className="flex flex-col gap-10">
 
-          {/* Membership */}
+          Membership
           <div>
             <h2 className="font-[family-name:var(--font-Roboto)] text-2xl font-black text-[#1a1a2e] uppercase mb-1">
               Membership Inquiries
@@ -119,7 +121,7 @@ export default function Contact() {
             {recruitment && <ExecContactCard {...recruitment} />}
           </div>
 
-          {/* Alumni */}
+          Alumni
           <div>
             <h2 className="font-[family-name:var(--font-Roboto)] text-2xl font-black text-[#1a1a2e] uppercase mb-1">
               Alumni Inquiries
@@ -131,14 +133,12 @@ export default function Contact() {
             {external && <ExecContactCard {...external} />}
           </div>
 
-          {/* General note */}
-          <p className="font-[family-name:var(--font-Cabin)] text-gray-500 text-sm border-l-2 border-[#edc058] pl-4">
-            For all other inquiries, fill in the contact form and we will get back to you as soon as possible.
-          </p>
         </div>
 
-        {/* Right: contact form */}
-        <div>
+        */}
+
+        {/* Centered contact form */}
+        <div className="w-full max-w-xl mx-auto">
           <ContactForm />
         </div>
       </section>

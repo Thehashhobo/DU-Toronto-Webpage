@@ -3,10 +3,10 @@ import AnimatedCard from "@/components/home/AnimatedCard";
 import IntroAnimation from "@/components/home/IntroAnimation";
 import Image from "next/image";
 import { Metadata } from "next";
-import React, { Suspense } from "react";
-import { executives } from "@/data/executives";
+// import React, { Suspense } from "react";
+// import { executives } from "@/data/executives";
 
-const MemberGridWithModal = React.lazy(() => import("@/components/home/MemberGridWithModal"));
+// const MemberGridWithModal = React.lazy(() => import("@/components/home/MemberGridWithModal"));
 
 export const metadata: Metadata = {
   title: "Delta Upsilon Toronto — World's Oldest Non-Secret Fraternity",
@@ -184,6 +184,7 @@ export default function Home() {
       <WhyDu />
 
       {/* ── Executive Team (cream) ──────────────────── */}
+      {/* Executive cards and their contact links are temporarily hidden.
       <section className="bg-[#f8f7f0] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="eyebrow text-[#0F52BA]/70 mb-3">Our Leadership</p>
@@ -201,6 +202,7 @@ export default function Home() {
           </Suspense>
         </div>
       </section>
+      */}
 
     </main>
   );

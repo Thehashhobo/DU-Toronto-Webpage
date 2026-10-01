@@ -86,9 +86,9 @@ export default function Footer() {
           <address className="not-italic space-y-2 text-sm text-gray-300">
             <p>182 St George St<br />Toronto, ON M5R 2N3</p>
             <p>
-              <a href="footer-tel" className="hover:text-[#edc058] transition-colors">
+              {/* <a href="footer-tel" className="hover:text-[#edc058] transition-colors">
                 +1 (647) 971-1776
-              </a>
+              </a> */}
             </p>
             <p>
               <a
