@@ -9,7 +9,7 @@ import type { Metadata } from "next";
  * Set RUSH_URL to your recruitment form link when rush is active.
  * Leave as an empty string ("") to disable the button and show the off-season tooltip.
  */
-const RUSH_URL = "https://forms.gle/3G8fHWks8zkmUh4F7";
+const RUSH_URL = "https://forms.gle/sfSZGzxnn2jBUtD87";
 
 export const generateMetadata = (): Metadata => ({
   title: "Membership",
